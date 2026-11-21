@@ -761,10 +761,26 @@
       pool = [...questionBank.questions];
     }
 
+    // Progressive difficulty based on solo.roundNumber
+    const rn = solo.roundNumber || 1;
+    let diffPool = pool;
+    if (rn <= 2) {
+      const p = pool.filter(q => (q.difficulty || 1) <= 2);
+      if (p.length > 0) diffPool = p;
+    } else if (rn <= 4) {
+      const p = pool.filter(q => (q.difficulty || 1) >= 2);
+      if (p.length > 0) diffPool = p;
+    } else {
+      const p3 = pool.filter(q => (q.difficulty || 1) >= 3);
+      const p2 = pool.filter(q => (q.difficulty || 1) >= 2);
+      if (p3.length > 0) diffPool = p3;
+      else if (p2.length > 0) diffPool = p2;
+    }
+
     // Balanced ~50/50 selection between photo questions and text_only questions
-    const photoPool = pool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
-    const textPool = pool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
-    let targetPool = pool;
+    const photoPool = diffPool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
+    const textPool = diffPool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
+    let targetPool = diffPool;
     if (photoPool.length > 0 && textPool.length > 0) {
       const pCnt = solo.photoCount || 0;
       const tCnt = solo.textCount || 0;
@@ -778,11 +794,16 @@
       targetPool = textPool;
     }
 
-    const q = targetPool[Math.floor(Math.random() * targetPool.length)];
-    solo.usedIds.add(q.id);
-    const isPhoto = q.type === 'two_images' || (q.type === 'one_image' && q.image);
+    const rawQ = targetPool[Math.floor(Math.random() * targetPool.length)];
+    solo.usedIds.add(rawQ.id);
+    const isPhoto = rawQ.type === 'two_images' || (rawQ.type === 'one_image' && rawQ.image);
     if (isPhoto) solo.photoCount = (solo.photoCount || 0) + 1;
     else solo.textCount = (solo.textCount || 0) + 1;
+
+    // Dynamic bluff/decoy image (55% chance to show the WRONG answer's verified photo)
+    const q = (rawQ.type === 'one_image' && rawQ.decoyImage && Math.random() < 0.55)
+      ? { ...rawQ, image: rawQ.decoyImage, isDecoyShown: true }
+      : rawQ;
     solo.currentQuestion = q;
     solo.phase = 'question';
     solo.timeLeft = solo.settings.answerTime || 10;

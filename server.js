@@ -429,11 +429,27 @@ function pickRandomQuestion(room, categoryId = null) {
     if (catPool.length > 0) pool = catPool;
   }
 
-  // Balanced ~50/50 selection between photo questions and text_only questions
-  const photoPool = pool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
-  const textPool = pool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
+  // Progressive difficulty based on roundNumber (1-2: easy/med, 3-4: med/hard, 5+: hard)
+  const rn = room.roundNumber || 1;
+  let diffPool = pool;
+  if (rn <= 2) {
+    const p = pool.filter(q => (q.difficulty || 1) <= 2);
+    if (p.length > 0) diffPool = p;
+  } else if (rn <= 4) {
+    const p = pool.filter(q => (q.difficulty || 1) >= 2);
+    if (p.length > 0) diffPool = p;
+  } else {
+    const p3 = pool.filter(q => (q.difficulty || 1) >= 3);
+    const p2 = pool.filter(q => (q.difficulty || 1) >= 2);
+    if (p3.length > 0) diffPool = p3;
+    else if (p2.length > 0) diffPool = p2;
+  }
 
-  let targetPool = pool;
+  // Balanced ~50/50 selection between photo questions and text_only questions
+  const photoPool = diffPool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
+  const textPool = diffPool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
+
+  let targetPool = diffPool;
   if (photoPool.length > 0 && textPool.length > 0) {
     const pCnt = room.photoCount || 0;
     const tCnt = room.textCount || 0;
@@ -447,12 +463,17 @@ function pickRandomQuestion(room, categoryId = null) {
     targetPool = textPool;
   }
 
-  const chosen = targetPool[Math.floor(Math.random() * targetPool.length)];
-  room.usedQuestionIds.add(chosen.id);
-  const isPhoto = chosen.type === 'two_images' || (chosen.type === 'one_image' && chosen.image);
+  const rawChosen = targetPool[Math.floor(Math.random() * targetPool.length)];
+  room.usedQuestionIds.add(rawChosen.id);
+  const isPhoto = rawChosen.type === 'two_images' || (rawChosen.type === 'one_image' && rawChosen.image);
   if (isPhoto) room.photoCount = (room.photoCount || 0) + 1;
   else room.textCount = (room.textCount || 0) + 1;
-  return chosen;
+
+  // Dynamic bluff/decoy image (55% chance to show the WRONG answer's verified photo when available)
+  if (rawChosen.type === 'one_image' && rawChosen.decoyImage && Math.random() < 0.55) {
+    return { ...rawChosen, image: rawChosen.decoyImage, isDecoyShown: true };
+  }
+  return rawChosen;
 }
 
 function startReadyPhase(room) {
