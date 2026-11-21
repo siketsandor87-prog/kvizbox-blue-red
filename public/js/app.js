@@ -409,6 +409,8 @@
     solo.roundNumber = 0;
     solo.score = 0;
     solo.usedIds.clear();
+    solo.photoCount = 0;
+    solo.textCount = 0;
     solo.currentCategoryId = null;
     solo.answered = null;
     solo.phase = 'ready';
@@ -513,8 +515,29 @@
       solo.usedIds.clear();
       pool = [...questionBank.questions];
     }
-    const q = pool[Math.floor(Math.random() * pool.length)];
+
+    // Balanced ~50/50 selection between photo questions and text_only questions
+    const photoPool = pool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
+    const textPool = pool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
+    let targetPool = pool;
+    if (photoPool.length > 0 && textPool.length > 0) {
+      const pCnt = solo.photoCount || 0;
+      const tCnt = solo.textCount || 0;
+      const wantPhoto = pCnt === 0 && tCnt === 0
+        ? Math.random() < 0.7
+        : (pCnt <= tCnt ? Math.random() < 0.68 : Math.random() < 0.32);
+      targetPool = wantPhoto ? photoPool : textPool;
+    } else if (photoPool.length > 0) {
+      targetPool = photoPool;
+    } else if (textPool.length > 0) {
+      targetPool = textPool;
+    }
+
+    const q = targetPool[Math.floor(Math.random() * targetPool.length)];
     solo.usedIds.add(q.id);
+    const isPhoto = q.type === 'two_images' || (q.type === 'one_image' && q.image);
+    if (isPhoto) solo.photoCount = (solo.photoCount || 0) + 1;
+    else solo.textCount = (solo.textCount || 0) + 1;
     solo.currentQuestion = q;
     solo.phase = 'question';
     solo.timeLeft = solo.settings.answerTime || 10;

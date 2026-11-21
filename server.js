@@ -220,7 +220,6 @@ function getAvailableCategories(room) {
 function pickRandomQuestion(room, categoryId = null) {
   let pool = questionBank.questions.filter(q => !room.usedQuestionIds.has(q.id));
   if (pool.length === 0) {
-    // Reset used pool if all 124+ questions were exhausted in a marathon session
     room.usedQuestionIds.clear();
     pool = [...questionBank.questions];
   }
@@ -228,8 +227,30 @@ function pickRandomQuestion(room, categoryId = null) {
     const catPool = pool.filter(q => q.category === categoryId);
     if (catPool.length > 0) pool = catPool;
   }
-  const chosen = pool[Math.floor(Math.random() * pool.length)];
+
+  // Balanced ~50/50 selection between photo questions and text_only questions
+  const photoPool = pool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
+  const textPool = pool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
+
+  let targetPool = pool;
+  if (photoPool.length > 0 && textPool.length > 0) {
+    const pCnt = room.photoCount || 0;
+    const tCnt = room.textCount || 0;
+    const wantPhoto = pCnt === 0 && tCnt === 0
+      ? Math.random() < 0.7
+      : (pCnt <= tCnt ? Math.random() < 0.68 : Math.random() < 0.32);
+    targetPool = wantPhoto ? photoPool : textPool;
+  } else if (photoPool.length > 0) {
+    targetPool = photoPool;
+  } else if (textPool.length > 0) {
+    targetPool = textPool;
+  }
+
+  const chosen = targetPool[Math.floor(Math.random() * targetPool.length)];
   room.usedQuestionIds.add(chosen.id);
+  const isPhoto = chosen.type === 'two_images' || (chosen.type === 'one_image' && chosen.image);
+  if (isPhoto) room.photoCount = (room.photoCount || 0) + 1;
+  else room.textCount = (room.textCount || 0) + 1;
   return chosen;
 }
 
@@ -238,6 +259,8 @@ function startReadyPhase(room) {
   room.phase = 'ready';
   room.roundNumber = 0;
   room.usedQuestionIds.clear();
+  room.photoCount = 0;
+  room.textCount = 0;
   room.lastPickerId = null;
   room.currentCategoryId = null;
   room.currentQuestion = null;
