@@ -203,6 +203,15 @@
     qOneBlueBtn: document.getElementById('q-one-blue-btn'),
     qOneAlarm: document.getElementById('q-one-alarm'),
 
+    qLayoutText: document.getElementById('q-layout-text'),
+    qTextCatBadge: document.getElementById('q-text-cat-badge'),
+    qTextCatIcon: document.getElementById('q-text-cat-icon'),
+    qTextCatName: document.getElementById('q-text-cat-name'),
+    qTextQuestion: document.getElementById('q-text-question'),
+    qTextRedBtn: document.getElementById('q-text-red-btn'),
+    qTextBlueBtn: document.getElementById('q-text-blue-btn'),
+    qTextAlarm: document.getElementById('q-text-alarm'),
+
     resultOverlay: document.getElementById('result-overlay'),
     mpAnsweredPill: document.getElementById('mp-answered-pill'),
 
@@ -293,7 +302,11 @@
     .then(data => {
       questionBank = data;
       if (els.soloBankInfo) {
-        els.soloBankInfo.textContent = `${data.questions.length} képes kérdés • ${data.categories.length} témakör`;
+        const photoCnt = data.questions.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image)).length;
+        const textCnt = data.questions.length - photoCnt;
+        els.soloBankInfo.textContent = textCnt > 0
+          ? `${data.questions.length} kérdés (${photoCnt} képes + ${textCnt} szöveges) • ${data.categories.length} témakör`
+          : `${data.questions.length} képes kérdés • ${data.categories.length} témakör`;
       }
     })
     .catch(() => {});
@@ -639,6 +652,8 @@
   function updateQuestionAlarms(seconds) {
     if (!els.qLayoutTwo.classList.contains('hidden')) {
       setAlarm(els.qTwoAlarm, seconds);
+    } else if (!els.qLayoutText.classList.contains('hidden')) {
+      setAlarm(els.qTextAlarm, seconds);
     } else {
       setAlarm(els.qOneAlarm, seconds);
     }
@@ -651,6 +666,7 @@
     if (q.type === 'two_images') {
       els.qLayoutTwo.classList.remove('hidden');
       els.qLayoutOne.classList.add('hidden');
+      els.qLayoutText.classList.add('hidden');
       els.qTwoText.textContent = q.question;
       if (els.qTwoRedImg.dataset.qid !== q.id) {
         els.qTwoRedImg.dataset.qid = q.id;
@@ -665,9 +681,31 @@
       els.qCardBlue.classList.toggle('reveal-correct', revealedCorrect === 'blue');
       els.qCardRed.classList.toggle('reveal-dim', revealedCorrect && revealedCorrect !== 'red');
       els.qCardBlue.classList.toggle('reveal-dim', revealedCorrect && revealedCorrect !== 'blue');
+    } else if (q.type === 'text_only' || !q.image) {
+      els.qLayoutText.classList.remove('hidden');
+      els.qLayoutTwo.classList.add('hidden');
+      els.qLayoutOne.classList.add('hidden');
+
+      const catObj = questionBank.categories.find(c => c.id === q.category);
+      els.qTextCatIcon.textContent = catObj ? catObj.icon : '❓';
+      els.qTextCatName.textContent = catObj ? catObj.name : (q.categoryName || 'KVÍZ');
+      els.qTextCatBadge.style.setProperty('--cat-color', catObj?.color || '#ffde59');
+
+      els.qTextQuestion.textContent = q.question;
+      els.qTextRedBtn.textContent = q.redText;
+      els.qTextBlueBtn.textContent = q.blueText;
+      setAlarm(els.qTextAlarm, timeLeft);
+
+      els.qTextRedBtn.classList.toggle('selected', chosen === 'red');
+      els.qTextBlueBtn.classList.toggle('selected', chosen === 'blue');
+      els.qTextRedBtn.classList.toggle('reveal-correct', revealedCorrect === 'red');
+      els.qTextBlueBtn.classList.toggle('reveal-correct', revealedCorrect === 'blue');
+      els.qTextRedBtn.classList.toggle('reveal-dim', revealedCorrect && revealedCorrect !== 'red');
+      els.qTextBlueBtn.classList.toggle('reveal-dim', revealedCorrect && revealedCorrect !== 'blue');
     } else {
       els.qLayoutOne.classList.remove('hidden');
       els.qLayoutTwo.classList.add('hidden');
+      els.qLayoutText.classList.add('hidden');
       els.qOneText.textContent = q.question;
       els.qOneRedBtn.textContent = q.redText;
       els.qOneBlueBtn.textContent = q.blueText;
@@ -1107,6 +1145,8 @@
   els.qCardBlue.addEventListener('click', () => triggerColorInput('blue'));
   els.qOneRedBtn.addEventListener('click', () => triggerColorInput('red'));
   els.qOneBlueBtn.addEventListener('click', () => triggerColorInput('blue'));
+  els.qTextRedBtn.addEventListener('click', () => triggerColorInput('red'));
+  els.qTextBlueBtn.addEventListener('click', () => triggerColorInput('blue'));
   els.btnDecStop.addEventListener('click', () => triggerColorInput('red'));
   els.btnDecContinue.addEventListener('click', () => triggerColorInput('blue'));
 
