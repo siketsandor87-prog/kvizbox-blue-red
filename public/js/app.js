@@ -135,6 +135,7 @@
   // ==================== DOM ELEMENTS ====================
   const screens = {
     home: document.getElementById('screen-home'),
+    soloSettings: document.getElementById('screen-solo-settings'),
     lobby: document.getElementById('screen-lobby'),
     ready: document.getElementById('screen-ready'),
     category: document.getElementById('screen-category'),
@@ -157,6 +158,12 @@
     inputPlayerName: document.getElementById('input-player-name'),
     inputRoomCode: document.getElementById('input-room-code'),
     btnSolo: document.getElementById('btn-solo'),
+    soloBankInfo: document.getElementById('solo-bank-info'),
+    soloSettingCatFreq: document.getElementById('solo-setting-cat-freq'),
+    soloSettingTime: document.getElementById('solo-setting-time'),
+    soloSettingAllowStop: document.getElementById('solo-setting-allow-stop'),
+    btnSoloBack: document.getElementById('btn-solo-back'),
+    btnSoloLaunch: document.getElementById('btn-solo-launch'),
     btnCreateRoom: document.getElementById('btn-create-room'),
     btnJoinRoom: document.getElementById('btn-join-room'),
     homeError: document.getElementById('home-error'),
@@ -169,7 +176,7 @@
     lobbySettingsCol: document.getElementById('lobby-settings-col'),
     settingTime: document.getElementById('setting-time'),
     settingAllowStop: document.getElementById('setting-allow-stop'),
-    settingCatPicker: document.getElementById('setting-cat-picker'),
+    settingCatFreq: document.getElementById('setting-cat-freq'),
     btnLeaveRoom: document.getElementById('btn-leave-room'),
     btnStartMp: document.getElementById('btn-start-mp'),
     lobbyWaitMsg: document.getElementById('lobby-wait-msg'),
@@ -229,17 +236,26 @@
   let networkInfo = { lanUrl: window.location.origin };
 
   // Solo state
+  const savedSoloSettings = (() => {
+    try { return JSON.parse(localStorage.getItem('kvizbox_solo_settings') || '{}'); } catch { return {}; }
+  })();
   const solo = {
     phase: 'idle',
     roundNumber: 0,
     score: 0,
     usedIds: new Set(),
+    currentCategoryId: null,
     currentQuestion: null,
     timeLeft: 0,
     timer: null,
     timeout: null,
     answered: null,
-    bestScore: Number(localStorage.getItem('kvizbox_solo_best') || 0)
+    bestScore: Number(localStorage.getItem('kvizbox_solo_best') || 0),
+    settings: {
+      categoryPickEvery: savedSoloSettings.categoryPickEvery !== undefined ? Number(savedSoloSettings.categoryPickEvery) : 1,
+      answerTime: Number(savedSoloSettings.answerTime) || 10,
+      allowStop: savedSoloSettings.allowStop !== undefined ? Boolean(savedSoloSettings.allowStop) : true
+    }
   };
 
   // Multiplayer state
@@ -274,7 +290,12 @@
   // Preload question bank & network info
   fetch('/api/questions')
     .then(r => r.json())
-    .then(data => { questionBank = data; })
+    .then(data => {
+      questionBank = data;
+      if (els.soloBankInfo) {
+        els.soloBankInfo.textContent = `${data.questions.length} képes kérdés • ${data.categories.length} témakör`;
+      }
+    })
     .catch(() => {});
 
   fetch('/api/network-info')
@@ -336,14 +357,35 @@
     if (solo.timeout) { clearTimeout(solo.timeout); solo.timeout = null; }
   }
 
+  function openSoloSettings() {
+    window.kvizSound.ensureContext();
+    window.kvizSound.buttonClick('red');
+    els.soloSettingCatFreq.value = String(solo.settings.categoryPickEvery);
+    els.soloSettingTime.value = String(solo.settings.answerTime);
+    els.soloSettingAllowStop.checked = solo.settings.allowStop;
+    if (questionBank.questions.length) {
+      els.soloBankInfo.textContent = `${questionBank.questions.length} képes kérdés • ${questionBank.categories.length} témakör`;
+    }
+    updateArcadeButtons(false);
+    showScreen('soloSettings');
+  }
+
+  function saveSoloSettingsFromUI() {
+    solo.settings.categoryPickEvery = Number(els.soloSettingCatFreq.value);
+    solo.settings.answerTime = Number(els.soloSettingTime.value) || 10;
+    solo.settings.allowStop = els.soloSettingAllowStop.checked;
+    localStorage.setItem('kvizbox_solo_settings', JSON.stringify(solo.settings));
+  }
+
   async function startSoloGame() {
     window.kvizSound.ensureContext();
     window.kvizSound.buttonClick('red');
-    if (!questionBank.questions.length) {
-      try {
-        const res = await fetch('/api/questions');
-        questionBank = await res.json();
-      } catch (e) {
+    saveSoloSettingsFromUI();
+    try {
+      const res = await fetch('/api/questions');
+      questionBank = await res.json();
+    } catch (e) {
+      if (!questionBank.questions.length) {
         showHomeError('Nem sikerült betölteni a kérdésbankot!');
         return;
       }
@@ -354,6 +396,7 @@
     solo.roundNumber = 0;
     solo.score = 0;
     solo.usedIds.clear();
+    solo.currentCategoryId = null;
     solo.answered = null;
     solo.phase = 'ready';
 
@@ -386,8 +429,15 @@
     els.hudScore.textContent = `${solo.score} PONT`;
     els.hudCategory.classList.add('hidden');
 
-    // Category picker in solo too!
-    soloStartCategoryPick();
+    const pickEvery = solo.settings.categoryPickEvery;
+    const shouldPickNow = pickEvery > 0 && ((solo.roundNumber - 1) % pickEvery === 0);
+
+    if (shouldPickNow) {
+      soloStartCategoryPick();
+    } else {
+      const catId = pickEvery > 0 ? solo.currentCategoryId : null;
+      soloPickQuestion(catId);
+    }
   }
 
   function soloStartCategoryPick() {
@@ -439,7 +489,10 @@
 
   function soloPickQuestion(categoryId) {
     clearSoloTimers();
-    let pool = questionBank.questions.filter(q => !solo.usedIds.has(q.id) && q.category === categoryId);
+    if (categoryId) solo.currentCategoryId = categoryId;
+    let pool = categoryId
+      ? questionBank.questions.filter(q => !solo.usedIds.has(q.id) && q.category === categoryId)
+      : questionBank.questions.filter(q => !solo.usedIds.has(q.id));
     if (pool.length === 0) {
       pool = questionBank.questions.filter(q => !solo.usedIds.has(q.id));
     }
@@ -451,7 +504,7 @@
     solo.usedIds.add(q.id);
     solo.currentQuestion = q;
     solo.phase = 'question';
-    solo.timeLeft = 10;
+    solo.timeLeft = solo.settings.answerTime || 10;
 
     const cat = questionBank.categories.find(c => c.id === q.category);
     els.hudCategory.textContent = cat ? `${cat.icon} ${cat.name}` : q.category;
@@ -493,7 +546,7 @@
       els.hudScore.textContent = `${solo.score} PONT`;
       solo.timeout = setTimeout(() => {
         els.resultOverlay.classList.add('hidden');
-        if (solo.roundNumber >= 3) {
+        if (solo.settings.allowStop && solo.roundNumber >= 3) {
           soloStartDecision();
         } else {
           soloNextRound();
@@ -779,10 +832,10 @@
       // Sync settings
       els.settingTime.value = String(state.settings.answerTime);
       els.settingAllowStop.checked = state.settings.allowStop;
-      els.settingCatPicker.checked = state.settings.categoryPickerEnabled;
+      els.settingCatFreq.value = String(state.settings.categoryPickEvery ?? 1);
       els.settingTime.disabled = !isHost;
       els.settingAllowStop.disabled = !isHost;
-      els.settingCatPicker.disabled = !isHost;
+      els.settingCatFreq.disabled = !isHost;
 
       els.btnStartMp.classList.toggle('hidden', !isHost);
       els.lobbyWaitMsg.classList.toggle('hidden', isHost);
@@ -1007,7 +1060,9 @@
   els.btnBackHome.addEventListener('click', returnToHome);
   els.btnLeaveRoom.addEventListener('click', returnToHome);
 
-  els.btnSolo.addEventListener('click', startSoloGame);
+  els.btnSolo.addEventListener('click', openSoloSettings);
+  els.btnSoloBack.addEventListener('click', () => showScreen('home'));
+  els.btnSoloLaunch.addEventListener('click', startSoloGame);
   els.btnCreateRoom.addEventListener('click', createMultiplayerRoom);
   els.btnJoinRoom.addEventListener('click', joinMultiplayerRoom);
 
@@ -1021,13 +1076,13 @@
       socket.emit('room:settings', {
         answerTime: Number(els.settingTime.value),
         allowStop: els.settingAllowStop.checked,
-        categoryPickerEnabled: els.settingCatPicker.checked
+        categoryPickEvery: Number(els.settingCatFreq.value)
       });
     }
   };
   els.settingTime.addEventListener('change', emitSettings);
   els.settingAllowStop.addEventListener('change', emitSettings);
-  els.settingCatPicker.addEventListener('change', emitSettings);
+  els.settingCatFreq.addEventListener('change', emitSettings);
 
   els.btnStartMp.addEventListener('click', () => {
     window.kvizSound.ensureContext();

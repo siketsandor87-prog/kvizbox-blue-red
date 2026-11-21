@@ -91,6 +91,45 @@
           <div class="welcome-footer">JÓ SZÓRAKOZÁST KÍVÁNUNK!</div>
         </section>
 
+        <!-- ==================== 1B. SOLO SETTINGS SCREEN ==================== -->
+        <section id="screen-solo-settings" class="screen">
+          <div class="solo-settings-header">
+            <h2 class="solo-settings-title">🎮 1 SZEMÉLYES BEÁLLÍTÁSOK</h2>
+            <div id="solo-bank-info" class="solo-bank-info">Kérdésbank betöltése...</div>
+          </div>
+
+          <div class="solo-settings-card">
+            <label class="setting-row">
+              <span>Témakör választás:</span>
+              <select id="solo-setting-cat-freq">
+                <option value="1">Minden kérdés előtt</option>
+                <option value="2">Minden 2. körben</option>
+                <option value="3">Minden 3. körben</option>
+                <option value="4">Minden 4. körben</option>
+                <option value="0">Állandóan random</option>
+              </select>
+            </label>
+            <label class="setting-row">
+              <span>Válaszidő:</span>
+              <select id="solo-setting-time">
+                <option value="8">8 másodperc</option>
+                <option value="10" selected>10 másodperc</option>
+                <option value="12">12 másodperc</option>
+                <option value="15">15 másodperc</option>
+              </select>
+            </label>
+            <label class="setting-row">
+              <span>Megállás (3. kérdéstől):</span>
+              <input id="solo-setting-allow-stop" type="checkbox" checked />
+            </label>
+          </div>
+
+          <div class="lobby-footer" style="margin-top: auto;">
+            <button id="btn-solo-back" class="menu-btn menu-btn-dark">← VISSZA</button>
+            <button id="btn-solo-launch" class="menu-btn menu-btn-solo">🚀 JÁTÉK INDÍTÁSA</button>
+          </div>
+        </section>
+
         <!-- ==================== 2. MULTIPLAYER LOBBY ==================== -->
         <section id="screen-lobby" class="screen">
           <div class="lobby-top">
@@ -126,8 +165,14 @@
                 <input id="setting-allow-stop" type="checkbox" checked />
               </label>
               <label class="setting-row">
-                <span>Random témakör választó:</span>
-                <input id="setting-cat-picker" type="checkbox" checked />
+                <span>Témakör választás:</span>
+                <select id="setting-cat-freq">
+                  <option value="1" selected>Minden kérdés előtt</option>
+                  <option value="2">Minden 2. körben</option>
+                  <option value="3">Minden 3. körben</option>
+                  <option value="4">Minden 4. körben</option>
+                  <option value="0">Állandóan random</option>
+                </select>
               </label>
             </div>
           </div>

@@ -239,6 +239,7 @@ function startReadyPhase(room) {
   room.roundNumber = 0;
   room.usedQuestionIds.clear();
   room.lastPickerId = null;
+  room.currentCategoryId = null;
   room.currentQuestion = null;
   room.revealData = null;
 
@@ -284,10 +285,14 @@ function startNextRound(room) {
     p.lastResult = null;
   }
 
-  if (room.settings.categoryPickerEnabled) {
+  const pickEvery = Number(room.settings.categoryPickEvery ?? 1);
+  const shouldPickNow = pickEvery > 0 && ((room.roundNumber - 1) % pickEvery === 0);
+
+  if (shouldPickNow) {
     startCategoryPickPhase(room, active);
   } else {
-    const q = pickRandomQuestion(room);
+    const catId = pickEvery > 0 ? room.currentCategoryId : null;
+    const q = pickRandomQuestion(room, catId);
     startQuestionPhase(room, q);
   }
 }
@@ -323,7 +328,8 @@ function startCategoryPickPhase(room, activePlayers) {
     if (room.timeLeft <= 0) {
       clearRoomTimers(room);
       const randCat = room.categoryOptions[Math.floor(Math.random() * room.categoryOptions.length)];
-      const q = pickRandomQuestion(room, randCat?.id);
+      room.currentCategoryId = randCat?.id || null;
+      const q = pickRandomQuestion(room, room.currentCategoryId);
       startQuestionPhase(room, q);
     } else {
       emitRoomState(room);
@@ -458,7 +464,7 @@ io.on('connection', (socket) => {
         categoryPickTime: 10,
         allowStop: true,
         allowStopFrom: 3,
-        categoryPickerEnabled: true
+        categoryPickEvery: 1
       },
       players: new Map(),
       usedQuestionIds: new Set(),
@@ -534,8 +540,8 @@ io.on('connection', (socket) => {
     if (typeof patch.allowStop === 'boolean') {
       room.settings.allowStop = patch.allowStop;
     }
-    if (typeof patch.categoryPickerEnabled === 'boolean') {
-      room.settings.categoryPickerEnabled = patch.categoryPickerEnabled;
+    if ([0, 1, 2, 3, 4].includes(Number(patch.categoryPickEvery))) {
+      room.settings.categoryPickEvery = Number(patch.categoryPickEvery);
     }
     emitRoomState(room);
   });
@@ -581,6 +587,7 @@ io.on('connection', (socket) => {
     if (!valid) return;
 
     clearRoomTimers(room);
+    room.currentCategoryId = categoryId;
     const q = pickRandomQuestion(room, categoryId);
     startQuestionPhase(room, q);
   });
