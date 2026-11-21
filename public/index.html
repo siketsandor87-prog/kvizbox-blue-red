@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#3a0808" />
+  <title>KVIZBOX BLUE-RED – Think & Drink Pub Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="cabinet">
+    <!-- TOP CABINET MARQUEE -->
+    <header class="marquee">
+      <div class="marquee-left">
+        <button id="btn-home-top" class="icon-btn hidden" title="Főmenü">🏠</button>
+      </div>
+      <div class="marquee-brand">
+        <span class="brand-kvizbox">KVIZBOX</span>
+        <span class="brand-bluered"><span class="txt-blue">BLUE</span>-<span class="txt-red">RED</span></span>
+      </div>
+      <div class="marquee-right">
+        <button id="btn-mute" class="icon-btn" title="Hang ki/be">🔊</button>
+      </div>
+    </header>
+
+    <!-- ARCADE MONITOR BEZEL + YELLOW FRAME -->
+    <main class="monitor-bezel">
+      <div class="monitor-screen">
+        <!-- Procedural cracked lava background -->
+        <div class="lava-bg" aria-hidden="true"></div>
+
+        <!-- Subtle top HUD inside screen -->
+        <div id="screen-hud" class="screen-hud hidden">
+          <div class="hud-left">
+            <span id="hud-round" class="hud-pill">1. kérdés</span>
+            <span id="hud-category" class="hud-pill hud-cat hidden"></span>
+          </div>
+          <div class="hud-right">
+            <span id="hud-alive" class="hud-pill hud-alive hidden">👥 0 talpon</span>
+            <span id="hud-score" class="hud-pill hud-score">0 PONT</span>
+          </div>
+        </div>
+
+        <!-- Spectator Banner (multiplayer when stopped/eliminated) -->
+        <div id="spectator-banner" class="spectator-banner hidden"></div>
+
+        <!-- ==================== 1. HOME / WELCOME SCREEN ==================== -->
+        <section id="screen-home" class="screen active">
+          <div class="home-header">
+            <h1 class="welcome-title">ÜDVÖZÖLJÜK JÁTÉKUNKBAN!</h1>
+            <div class="neon-logo-wrap home-logo" data-logo="thinkdrink"></div>
+          </div>
+
+          <div class="welcome-rules">
+            <p class="rule-free">Ingyenes kiadás – <span class="hl-cyan">pénzbedobás nélkül!</span></p>
+            <p>A helyes válasz megjelölésére <span class="hl-cyan">8–10 másodperc</span> áll rendelkezésre, a <span class="badge-red">PIROS</span> és <span class="badge-blue">KÉK</span> gombok segítségével.</p>
+            <p>A 3. kérdés után bármikor <strong>megállhatsz</strong> a biztos pontokért, vagy tovább kockáztathatsz!</p>
+          </div>
+
+          <div class="home-actions">
+            <button id="btn-solo" class="menu-btn menu-btn-solo">
+              <span class="menu-btn-icon">🎮</span>
+              <span class="menu-btn-text">
+                <strong>1 SZEMÉLYES JÁTÉK</strong>
+                <small>Azonnali indulás • Rekord: <span id="solo-best-label">0</span> pont</small>
+              </span>
+            </button>
+
+            <div class="mp-card">
+              <div class="mp-name-row">
+                <input id="input-player-name" type="text" maxlength="18" placeholder="Add meg a neved (pl. Peti)..." autocomplete="off" />
+              </div>
+              <div class="mp-buttons-row">
+                <button id="btn-create-room" class="menu-btn menu-btn-red">
+                  <span>👑 SZOBA LÉTREHOZÁSA</span>
+                </button>
+                <div class="join-group">
+                  <input id="input-room-code" type="text" maxlength="4" placeholder="KÓD" autocomplete="off" />
+                  <button id="btn-join-room" class="menu-btn menu-btn-blue">
+                    <span>CSATLAKOZÁS</span>
+                  </button>
+                </div>
+              </div>
+              <p id="home-error" class="error-msg hidden"></p>
+            </div>
+          </div>
+
+          <div class="welcome-footer">JÓ SZÓRAKOZÁST KÍVÁNUNK!</div>
+        </section>
+
+        <!-- ==================== 2. MULTIPLAYER LOBBY ==================== -->
+        <section id="screen-lobby" class="screen">
+          <div class="lobby-top">
+            <div>
+              <div class="lobby-label">SZOBAKÓD</div>
+              <div id="lobby-code" class="lobby-code">----</div>
+            </div>
+            <div class="lobby-qr-box">
+              <img id="lobby-qr" alt="QR kód csatlakozáshoz" />
+              <div id="lobby-url" class="lobby-url"></div>
+            </div>
+          </div>
+
+          <div class="lobby-body">
+            <div class="lobby-players-col">
+              <h3>JÁTÉKOSOK (<span id="lobby-player-count">0</span>)</h3>
+              <ul id="lobby-players" class="player-list"></ul>
+            </div>
+
+            <div id="lobby-settings-col" class="lobby-settings-col">
+              <h3>BEÁLLÍTÁSOK</h3>
+              <label class="setting-row">
+                <span>Válaszidő:</span>
+                <select id="setting-time">
+                  <option value="8">8 másodperc</option>
+                  <option value="10" selected>10 másodperc</option>
+                  <option value="12">12 másodperc</option>
+                  <option value="15">15 másodperc</option>
+                </select>
+              </label>
+              <label class="setting-row">
+                <span>Megállás (3. kérdéstől):</span>
+                <input id="setting-allow-stop" type="checkbox" checked />
+              </label>
+              <label class="setting-row">
+                <span>Random témakör választó:</span>
+                <input id="setting-cat-picker" type="checkbox" checked />
+              </label>
+            </div>
+          </div>
+
+          <div class="lobby-footer">
+            <button id="btn-leave-room" class="menu-btn menu-btn-dark">← KILÉPÉS</button>
+            <button id="btn-start-mp" class="menu-btn menu-btn-solo">🚀 JÁTÉK INDÍTÁSA</button>
+            <div id="lobby-wait-msg" class="wait-msg hidden">Várakozás a játékvezető indítására...</div>
+          </div>
+        </section>
+
+        <!-- ==================== 3. READY SCREEN ("FELKÉSZÜLNI") ==================== -->
+        <section id="screen-ready" class="screen screen-center">
+          <div class="neon-logo-wrap ready-logo" data-logo="thinkdrink"></div>
+          <div class="ready-title">FELKÉSZÜLNI</div>
+          <div id="ready-countdown" class="ready-number">3</div>
+        </section>
+
+        <!-- ==================== 4. CATEGORY PICK SCREEN ==================== -->
+        <section id="screen-category" class="screen">
+          <div class="cat-header">
+            <div class="cat-title-wrap">
+              <div id="cat-picker-badge" class="cat-picker-badge">TÉMAKÖR VÁLASZTÁS</div>
+              <h2 id="cat-prompt" class="cat-prompt">Válassz témakört a következő kérdéshez!</h2>
+            </div>
+            <div class="alarm-wrap small-alarm" id="cat-alarm"></div>
+          </div>
+          <div id="cat-grid" class="cat-grid"></div>
+        </section>
+
+        <!-- ==================== 5. QUESTION SCREEN ==================== -->
+        <section id="screen-question" class="screen">
+          <!-- Type A: Two Images Layout -->
+          <div id="q-layout-two" class="q-layout q-layout-two hidden">
+            <div class="q-two-top">
+              <div class="question-box" id="q-two-text"></div>
+              <div class="neon-logo-wrap q-logo" data-logo="thinkdrink"></div>
+            </div>
+            <div class="q-two-media">
+              <div class="q-img-card q-card-red" data-choice="red">
+                <div class="q-img-frame"><img id="q-two-red-img" alt="Piros válasz képe" /></div>
+                <div class="q-color-label label-red">PIROS</div>
+              </div>
+              <div class="alarm-wrap q-alarm-center" id="q-two-alarm"></div>
+              <div class="q-img-card q-card-blue" data-choice="blue">
+                <div class="q-img-frame"><img id="q-two-blue-img" alt="Kék válasz képe" /></div>
+                <div class="q-color-label label-blue">KÉK</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Type B: One Image + Two Text Buttons Layout -->
+          <div id="q-layout-one" class="q-layout q-layout-one hidden">
+            <div class="q-one-top">
+              <div class="q-one-img-wrap">
+                <img id="q-one-img" alt="Kérdés képe" />
+              </div>
+              <div class="q-one-right">
+                <div class="neon-logo-wrap q-logo" data-logo="thinkdrink"></div>
+                <div class="question-box" id="q-one-text"></div>
+              </div>
+            </div>
+            <div class="q-one-bottom">
+              <div class="q-answer-col">
+                <button class="glossy-answer glossy-red" id="q-one-red-btn" data-choice="red"></button>
+                <div class="q-color-label label-red">PIROS</div>
+              </div>
+              <div class="alarm-wrap q-alarm-center" id="q-one-alarm"></div>
+              <div class="q-answer-col">
+                <button class="glossy-answer glossy-blue" id="q-one-blue-btn" data-choice="blue"></button>
+                <div class="q-color-label label-blue">KÉK</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Giant 3D Checkmark / Red X Overlay -->
+          <div id="result-overlay" class="result-overlay hidden"></div>
+
+          <!-- Multiplayer answer waiting pill -->
+          <div id="mp-answered-pill" class="mp-answered-pill hidden">Válasz rögzítve! Várakozás a többiekre...</div>
+        </section>
+
+        <!-- ==================== 6. DECISION SCREEN ("VÁLASSZON!") ==================== -->
+        <section id="screen-decision" class="screen">
+          <div class="decision-grid">
+            <!-- Left: Alarm + Beer Mug + Current Score + MEGÁLL -->
+            <div class="decision-side decision-left">
+              <div class="alarm-wrap" id="dec-alarm"></div>
+              <div class="neon-icon-mug" aria-hidden="true"></div>
+              <div id="dec-current-val" class="dec-amount">200 PONT</div>
+              <button id="btn-dec-stop" class="glossy-answer glossy-red dec-btn">MEGÁLL</button>
+            </div>
+
+            <!-- Center: VÁLASSZON! + 11-step Ladder -->
+            <div class="decision-center">
+              <div class="decision-title">VÁLASSZON!</div>
+              <div id="decision-ladder" class="ladder-box"></div>
+            </div>
+
+            <!-- Right: Think & Drink Logo + Neon ? + Next Score + TOVÁBB -->
+            <div class="decision-side decision-right">
+              <div class="neon-logo-wrap dec-logo" data-logo="thinkdrink"></div>
+              <div class="neon-icon-qmark" aria-hidden="true">?</div>
+              <div id="dec-next-val" class="dec-amount dec-amount-next">400 PONT</div>
+              <button id="btn-dec-continue" class="glossy-answer glossy-blue dec-btn">TOVÁBB</button>
+            </div>
+          </div>
+          <div id="dec-status-pill" class="mp-answered-pill hidden"></div>
+        </section>
+
+        <!-- ==================== 7. GAME OVER / PODIUM SCREEN ==================== -->
+        <section id="screen-gameover" class="screen screen-center">
+          <div class="neon-logo-wrap over-logo" data-logo="thinkdrink"></div>
+          <div id="gameover-title" class="gameover-title">A JÁTÉKNAK VÉGE</div>
+          <div id="gameover-subtitle" class="gameover-subtitle"></div>
+
+          <div id="gameover-leaderboard" class="leaderboard-wrap hidden"></div>
+
+          <div class="gameover-actions">
+            <button id="btn-play-again" class="menu-btn menu-btn-solo">🔄 ÚJ JÁTÉK</button>
+            <button id="btn-back-home" class="menu-btn menu-btn-dark">🏠 FŐMENÜ</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- BOTTOM PHYSICAL ARCADE CONSOLE DECK (PIROS & KÉK BUTTONS) -->
+    <footer class="console-deck">
+      <div class="deck-panel deck-panel-red">
+        <button id="arcade-btn-red" class="arcade-btn arcade-btn-red" aria-label="Piros gomb">
+          <span>PIROS</span>
+        </button>
+      </div>
+      <div class="deck-center-badge">
+        <div class="tikett-label">KVIZBOX</div>
+        <div class="tikett-slot"></div>
+      </div>
+      <div class="deck-panel deck-panel-blue">
+        <button id="arcade-btn-blue" class="arcade-btn arcade-btn-blue" aria-label="Kék gomb">
+          <span>KÉK</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/sound.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

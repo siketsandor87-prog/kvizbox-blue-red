@@ -1,0 +1,14 @@
+{
+  "name": "kvizbox-blue-red",
+  "version": "1.0.0",
+  "description": "KVIZBOX BLUE-RED (Think & Drink Pub Quiz) – Egyjátékos és többjátékos böngészős kvízjáték",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  }
+}
