@@ -157,6 +157,7 @@
 
     authLoggedOut: document.getElementById('auth-logged-out'),
     authLoggedIn: document.getElementById('auth-logged-in'),
+    authHint: document.getElementById('auth-hint'),
     googleSigninBtn: document.getElementById('google-signin-btn'),
     btnGoogleUnconfigured: document.getElementById('btn-google-unconfigured'),
     authAvatar: document.getElementById('auth-avatar'),
@@ -348,6 +349,7 @@
     if (auth.user) {
       els.authLoggedOut.classList.add('hidden');
       els.authLoggedIn.classList.remove('hidden');
+      if (els.authHint) els.authHint.classList.add('hidden');
       els.authName.textContent = auth.user.name || 'Játékos';
       const rankTxt = auth.rank ? ` • #${auth.rank}.` : '';
       els.authMeta.textContent = `Rekord: ${auth.user.bestScore || 0} PT${rankTxt}`;
@@ -368,6 +370,7 @@
     } else {
       els.authLoggedIn.classList.add('hidden');
       els.authLoggedOut.classList.remove('hidden');
+      if (els.authHint) els.authHint.classList.remove('hidden');
     }
   }
 
@@ -469,7 +472,15 @@
   }
 
   async function submitScoreToAccount(score, round, gameMode) {
-    if (!auth.token) return;
+    if (!auth.token) {
+      if (score > 0) {
+        els.gameoverRecordBadge.textContent = '💡 Tipp: Jelentkezz be Google fiókkal a főmenüben, hogy a rekordjaid elmentődjenek a ranglistára!';
+        els.gameoverRecordBadge.classList.add('guest-tip');
+        els.gameoverRecordBadge.classList.remove('hidden');
+      }
+      return;
+    }
+    els.gameoverRecordBadge.classList.remove('guest-tip');
     try {
       const res = await fetch('/api/scores', {
         method: 'POST',
