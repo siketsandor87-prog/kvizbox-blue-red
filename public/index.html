@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <div class="cabinet">
@@ -61,6 +62,26 @@
           </div>
 
           <div class="home-actions">
+            <div class="auth-rank-bar">
+              <div id="auth-logged-out" class="auth-slot">
+                <div id="google-signin-btn" class="google-btn-host"></div>
+                <button id="btn-google-unconfigured" class="auth-setup-btn hidden" type="button">
+                  <span>G</span> Google bejelentkezés
+                </button>
+              </div>
+              <div id="auth-logged-in" class="auth-profile hidden">
+                <img id="auth-avatar" class="auth-avatar" alt="Profilkép" referrerpolicy="no-referrer" />
+                <div class="auth-info">
+                  <div id="auth-name" class="auth-name">Játékos</div>
+                  <div id="auth-meta" class="auth-meta">Rekord: 0 PT</div>
+                </div>
+                <button id="btn-logout" class="auth-logout-btn" title="Kijelentkezés">Kilépés</button>
+              </div>
+              <button id="btn-leaderboard" class="menu-btn menu-btn-gold" type="button">
+                <span>🏆 RANGLISTA</span>
+              </button>
+            </div>
+
             <button id="btn-solo" class="menu-btn menu-btn-solo">
               <span class="menu-btn-icon">🎮</span>
               <span class="menu-btn-text">
@@ -127,6 +148,23 @@
           <div class="lobby-footer" style="margin-top: auto;">
             <button id="btn-solo-back" class="menu-btn menu-btn-dark">← VISSZA</button>
             <button id="btn-solo-launch" class="menu-btn menu-btn-solo">🚀 JÁTÉK INDÍTÁSA</button>
+          </div>
+        </section>
+
+        <!-- ==================== 1C. GLOBAL LEADERBOARD SCREEN ==================== -->
+        <section id="screen-leaderboard" class="screen">
+          <div class="solo-settings-header">
+            <h2 class="solo-settings-title">🏆 GLOBÁLIS RANGLISTA</h2>
+            <div id="lb-total-info" class="solo-bank-info">Betöltés...</div>
+          </div>
+
+          <div id="lb-my-banner" class="lb-my-banner hidden"></div>
+
+          <div id="global-leaderboard-list" class="global-lb-list"></div>
+
+          <div class="lobby-footer" style="margin-top: auto;">
+            <button id="btn-lb-back" class="menu-btn menu-btn-dark">← VISSZA</button>
+            <button id="btn-lb-refresh" class="menu-btn menu-btn-blue">🔄 FRISSÍTÉS</button>
           </div>
         </section>
 
@@ -313,11 +351,13 @@
           <div class="neon-logo-wrap over-logo" data-logo="thinkdrink"></div>
           <div id="gameover-title" class="gameover-title">A JÁTÉKNAK VÉGE</div>
           <div id="gameover-subtitle" class="gameover-subtitle"></div>
+          <div id="gameover-record-badge" class="gameover-record-badge hidden"></div>
 
           <div id="gameover-leaderboard" class="leaderboard-wrap hidden"></div>
 
           <div class="gameover-actions">
             <button id="btn-play-again" class="menu-btn menu-btn-solo">🔄 ÚJ JÁTÉK</button>
+            <button id="btn-gameover-lb" class="menu-btn menu-btn-gold">🏆 RANGLISTA</button>
             <button id="btn-back-home" class="menu-btn menu-btn-dark">🏠 FŐMENÜ</button>
           </div>
         </section>

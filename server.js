@@ -4,6 +4,7 @@ const { Server } = require('socket.io');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
+const crypto = require('crypto');
 const QRCode = require('qrcode');
 
 const app = express();
@@ -88,6 +89,206 @@ app.get('/api/questions', (req, res) => {
     categories: questionBank.categories,
     questions: questionBank.questions,
     baseLadder: BASE_LADDER
+  });
+});
+
+// ==================== GOOGLE AUTH & LEADERBOARD ====================
+const GOOGLE_CLIENT_ID = (process.env.GOOGLE_CLIENT_ID || '').trim();
+const SESSION_SECRET = (process.env.SESSION_SECRET || (GOOGLE_CLIENT_ID ? `kvizbox_${GOOGLE_CLIENT_ID}` : 'kvizbox_local_dev_secret_key')).trim();
+const LEADERBOARD_PATH = path.join(__dirname, 'data', 'leaderboard.json');
+
+function loadLeaderboardStore() {
+  try {
+    if (fs.existsSync(LEADERBOARD_PATH)) {
+      const parsed = JSON.parse(fs.readFileSync(LEADERBOARD_PATH, 'utf8'));
+      if (parsed && typeof parsed.users === 'object') return parsed;
+    }
+  } catch (e) {
+    console.warn('Could not read leaderboard.json, starting fresh:', e.message);
+  }
+  return { users: {} };
+}
+
+let leaderboardStore = loadLeaderboardStore();
+
+function saveLeaderboardStore() {
+  try {
+    const tmp = LEADERBOARD_PATH + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(leaderboardStore, null, 2), 'utf8');
+    fs.renameSync(tmp, LEADERBOARD_PATH);
+  } catch (e) {
+    console.error('Failed to save leaderboard.json:', e.message);
+  }
+}
+
+function signSessionToken(payload) {
+  const data = { ...payload, exp: Date.now() + 30 * 24 * 60 * 60 * 1000 };
+  const b64 = Buffer.from(JSON.stringify(data), 'utf8').toString('base64url');
+  const sig = crypto.createHmac('sha256', SESSION_SECRET).update(b64).digest('base64url');
+  return `${b64}.${sig}`;
+}
+
+function verifySessionToken(token) {
+  if (!token || typeof token !== 'string' || !token.includes('.')) return null;
+  const [b64, sig] = token.split('.');
+  const expected = crypto.createHmac('sha256', SESSION_SECRET).update(b64).digest('base64url');
+  try {
+    if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
+    const data = JSON.parse(Buffer.from(b64, 'base64url').toString('utf8'));
+    if (!data.sub || (data.exp && Date.now() > data.exp)) return null;
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function getAuthUserFromReq(req) {
+  const hdr = req.headers.authorization || '';
+  if (!hdr.startsWith('Bearer ')) return null;
+  const payload = verifySessionToken(hdr.slice(7).trim());
+  if (!payload) return null;
+  return leaderboardStore.users[payload.sub] || null;
+}
+
+function getSortedLeaderboard() {
+  return Object.values(leaderboardStore.users)
+    .sort((a, b) => {
+      if ((b.bestScore || 0) !== (a.bestScore || 0)) return (b.bestScore || 0) - (a.bestScore || 0);
+      if ((b.bestRound || 0) !== (a.bestRound || 0)) return (b.bestRound || 0) - (a.bestRound || 0);
+      return (b.gamesPlayed || 0) - (a.gamesPlayed || 0);
+    });
+}
+
+function getUserRank(sub) {
+  const sorted = getSortedLeaderboard();
+  const idx = sorted.findIndex(u => u.sub === sub);
+  return { rank: idx >= 0 ? idx + 1 : null, totalPlayers: sorted.length };
+}
+
+function publicUser(u) {
+  return {
+    sub: u.sub,
+    name: u.name,
+    picture: u.picture || null,
+    bestScore: u.bestScore || 0,
+    bestRound: u.bestRound || 0,
+    gamesPlayed: u.gamesPlayed || 0,
+    updatedAt: u.updatedAt || null
+  };
+}
+
+app.get('/api/auth/config', (req, res) => {
+  res.json({
+    enabled: Boolean(GOOGLE_CLIENT_ID),
+    googleClientId: GOOGLE_CLIENT_ID || null
+  });
+});
+
+app.post('/api/auth/google', async (req, res) => {
+  try {
+    if (!GOOGLE_CLIENT_ID) {
+      return res.status(503).json({ ok: false, error: 'A Google bejelentkezés még nincs konfigurálva a szerveren (GOOGLE_CLIENT_ID).' });
+    }
+    const credential = String(req.body?.credential || '').trim();
+    if (!credential) {
+      return res.status(400).json({ ok: false, error: 'Hiányzó Google hitelesítő adat.' });
+    }
+
+    // Verify ID token directly with Google's tokeninfo endpoint
+    const verifyRes = await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(credential)}`);
+    if (!verifyRes.ok) {
+      return res.status(401).json({ ok: false, error: 'Érvénytelen vagy lejárt Google token.' });
+    }
+    const info = await verifyRes.json();
+    if (info.aud !== GOOGLE_CLIENT_ID || !info.sub) {
+      return res.status(401).json({ ok: false, error: 'A Google token nem ehhez az alkalmazáshoz tartozik.' });
+    }
+
+    const sub = String(info.sub);
+    const displayName = String(info.name || info.given_name || 'Játékos').trim().slice(0, 28);
+    const picture = info.picture ? String(info.picture) : null;
+    const localBest = Number(req.body?.localBestScore) || 0;
+
+    let user = leaderboardStore.users[sub];
+    if (!user) {
+      const safeLocalBest = (Number.isInteger(localBest) && localBest > 0 && localBest <= 500000) ? localBest : 0;
+      user = {
+        sub,
+        name: displayName,
+        picture,
+        bestScore: safeLocalBest,
+        bestRound: 0,
+        gamesPlayed: 0,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      leaderboardStore.users[sub] = user;
+    } else {
+      user.name = displayName;
+      if (picture) user.picture = picture;
+      if (Number.isInteger(localBest) && localBest > (user.bestScore || 0) && localBest <= 500000) {
+        user.bestScore = localBest;
+      }
+      user.updatedAt = new Date().toISOString();
+    }
+    saveLeaderboardStore();
+
+    const token = signSessionToken({ sub });
+    const { rank, totalPlayers } = getUserRank(sub);
+    res.json({ ok: true, token, user: publicUser(user), rank, totalPlayers });
+  } catch (err) {
+    console.error('Google auth error:', err);
+    res.status(500).json({ ok: false, error: 'Szerverhiba a Google bejelentkezés során.' });
+  }
+});
+
+app.get('/api/auth/me', (req, res) => {
+  const user = getAuthUserFromReq(req);
+  if (!user) return res.status(401).json({ ok: false, error: 'Nincs érvényes bejelentkezés.' });
+  const { rank, totalPlayers } = getUserRank(user.sub);
+  res.json({ ok: true, user: publicUser(user), rank, totalPlayers });
+});
+
+app.post('/api/scores', (req, res) => {
+  const user = getAuthUserFromReq(req);
+  if (!user) return res.status(401).json({ ok: false, error: 'A rekord mentéséhez jelentkezz be Google fiókkal.' });
+
+  const score = Math.max(0, Math.min(500000, Math.floor(Number(req.body?.score) || 0)));
+  const round = Math.max(0, Math.min(500, Math.floor(Number(req.body?.round) || 0)));
+
+  user.gamesPlayed = (user.gamesPlayed || 0) + 1;
+  let isNewRecord = false;
+  if (score > (user.bestScore || 0)) {
+    user.bestScore = score;
+    isNewRecord = true;
+  }
+  if (round > (user.bestRound || 0)) {
+    user.bestRound = round;
+  }
+  user.updatedAt = new Date().toISOString();
+  saveLeaderboardStore();
+
+  const { rank, totalPlayers } = getUserRank(user.sub);
+  res.json({ ok: true, isNewRecord, user: publicUser(user), rank, totalPlayers });
+});
+
+app.get('/api/leaderboard', (req, res) => {
+  const sorted = getSortedLeaderboard();
+  const top = sorted.slice(0, 50).map((u, idx) => ({
+    rank: idx + 1,
+    ...publicUser(u)
+  }));
+  const meUser = getAuthUserFromReq(req);
+  let me = null;
+  if (meUser) {
+    const idx = sorted.findIndex(u => u.sub === meUser.sub);
+    me = { rank: idx >= 0 ? idx + 1 : null, ...publicUser(meUser) };
+  }
+  res.json({
+    ok: true,
+    totalPlayers: sorted.length,
+    leaderboard: top,
+    me
   });
 });
 

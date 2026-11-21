@@ -141,7 +141,8 @@
     category: document.getElementById('screen-category'),
     question: document.getElementById('screen-question'),
     decision: document.getElementById('screen-decision'),
-    gameover: document.getElementById('screen-gameover')
+    gameover: document.getElementById('screen-gameover'),
+    leaderboard: document.getElementById('screen-leaderboard')
   };
 
   const els = {
@@ -153,6 +154,23 @@
     hudAlive: document.getElementById('hud-alive'),
     hudScore: document.getElementById('hud-score'),
     spectatorBanner: document.getElementById('spectator-banner'),
+
+    authLoggedOut: document.getElementById('auth-logged-out'),
+    authLoggedIn: document.getElementById('auth-logged-in'),
+    googleSigninBtn: document.getElementById('google-signin-btn'),
+    btnGoogleUnconfigured: document.getElementById('btn-google-unconfigured'),
+    authAvatar: document.getElementById('auth-avatar'),
+    authName: document.getElementById('auth-name'),
+    authMeta: document.getElementById('auth-meta'),
+    btnLogout: document.getElementById('btn-logout'),
+    btnLeaderboard: document.getElementById('btn-leaderboard'),
+    lbTotalInfo: document.getElementById('lb-total-info'),
+    lbMyBanner: document.getElementById('lb-my-banner'),
+    globalLeaderboardList: document.getElementById('global-leaderboard-list'),
+    btnLbBack: document.getElementById('btn-lb-back'),
+    btnLbRefresh: document.getElementById('btn-lb-refresh'),
+    gameoverRecordBadge: document.getElementById('gameover-record-badge'),
+    btnGameoverLb: document.getElementById('btn-gameover-lb'),
 
     soloBestLabel: document.getElementById('solo-best-label'),
     inputPlayerName: document.getElementById('input-player-name'),
@@ -315,6 +333,222 @@
     .then(r => r.json())
     .then(info => { networkInfo = info; })
     .catch(() => {});
+
+  // ==================== GOOGLE AUTH & LEADERBOARD ====================
+  const auth = {
+    token: localStorage.getItem('kvizbox_auth_token') || null,
+    user: null,
+    rank: null,
+    googleClientId: null,
+    gsiInitialized: false,
+    prevScreenBeforeLb: 'home'
+  };
+
+  function renderAuthUI() {
+    if (auth.user) {
+      els.authLoggedOut.classList.add('hidden');
+      els.authLoggedIn.classList.remove('hidden');
+      els.authName.textContent = auth.user.name || 'Játékos';
+      const rankTxt = auth.rank ? ` • #${auth.rank}.` : '';
+      els.authMeta.textContent = `Rekord: ${auth.user.bestScore || 0} PT${rankTxt}`;
+      if (auth.user.picture) {
+        els.authAvatar.src = auth.user.picture;
+        els.authAvatar.classList.remove('hidden');
+      } else {
+        els.authAvatar.classList.add('hidden');
+      }
+      if ((auth.user.bestScore || 0) > solo.bestScore) {
+        solo.bestScore = auth.user.bestScore;
+        localStorage.setItem('kvizbox_solo_best', String(solo.bestScore));
+        els.soloBestLabel.textContent = solo.bestScore;
+      }
+      if (!els.inputPlayerName.value.trim() && auth.user.name) {
+        els.inputPlayerName.value = auth.user.name.slice(0, 18);
+      }
+    } else {
+      els.authLoggedIn.classList.add('hidden');
+      els.authLoggedOut.classList.remove('hidden');
+    }
+  }
+
+  async function handleGoogleCredential(response) {
+    if (!response?.credential) return;
+    try {
+      const res = await fetch('/api/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          credential: response.credential,
+          localBestScore: solo.bestScore || 0
+        })
+      });
+      const data = await res.json();
+      if (!data.ok) {
+        showHomeError(data.error || 'Sikertelen Google bejelentkezés.');
+        return;
+      }
+      showHomeError('');
+      auth.token = data.token;
+      auth.user = data.user;
+      auth.rank = data.rank;
+      localStorage.setItem('kvizbox_auth_token', data.token);
+      renderAuthUI();
+    } catch {
+      showHomeError('Hálózati hiba a Google bejelentkezés során.');
+    }
+  }
+
+  function tryRenderGoogleButton() {
+    if (!auth.googleClientId) return;
+    if (window.google?.accounts?.id) {
+      if (!auth.gsiInitialized) {
+        window.google.accounts.id.initialize({
+          client_id: auth.googleClientId,
+          callback: handleGoogleCredential
+        });
+        auth.gsiInitialized = true;
+      }
+      els.googleSigninBtn.innerHTML = '';
+      window.google.accounts.id.renderButton(els.googleSigninBtn, {
+        theme: 'filled_black',
+        size: 'medium',
+        shape: 'pill',
+        text: 'signin_with',
+        locale: 'hu'
+      });
+      els.btnGoogleUnconfigured.classList.add('hidden');
+    } else {
+      setTimeout(tryRenderGoogleButton, 400);
+    }
+  }
+
+  async function initGoogleAuth() {
+    try {
+      const cfgRes = await fetch('/api/auth/config');
+      const cfg = await cfgRes.json();
+      auth.googleClientId = cfg.googleClientId || null;
+      if (auth.googleClientId) {
+        tryRenderGoogleButton();
+      } else {
+        els.btnGoogleUnconfigured.classList.remove('hidden');
+      }
+    } catch {
+      // ignore
+    }
+
+    if (auth.token) {
+      try {
+        const meRes = await fetch('/api/auth/me', {
+          headers: { Authorization: `Bearer ${auth.token}` }
+        });
+        if (meRes.ok) {
+          const data = await meRes.json();
+          if (data.ok && data.user) {
+            auth.user = data.user;
+            auth.rank = data.rank;
+          }
+        } else {
+          auth.token = null;
+          localStorage.removeItem('kvizbox_auth_token');
+        }
+      } catch {
+        // offline or transient
+      }
+    }
+    renderAuthUI();
+  }
+
+  function logoutGoogle() {
+    auth.token = null;
+    auth.user = null;
+    auth.rank = null;
+    localStorage.removeItem('kvizbox_auth_token');
+    try { window.google?.accounts?.id?.disableAutoSelect(); } catch {}
+    renderAuthUI();
+    if (auth.googleClientId) tryRenderGoogleButton();
+  }
+
+  async function submitScoreToAccount(score, round, gameMode) {
+    if (!auth.token) return;
+    try {
+      const res = await fetch('/api/scores', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${auth.token}`
+        },
+        body: JSON.stringify({ score, round, mode: gameMode })
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.ok && data.user) {
+        auth.user = data.user;
+        auth.rank = data.rank;
+        renderAuthUI();
+        if (data.isNewRecord && score > 0) {
+          els.gameoverRecordBadge.textContent = `🏆 ÚJ GOOGLE REKORD! #${data.rank}. hely a ranglistán!`;
+          els.gameoverRecordBadge.classList.remove('hidden');
+        } else if (data.rank) {
+          els.gameoverRecordBadge.textContent = `☁️ Mentve a Google fiókodhoz • #${data.rank}. hely (${data.user.bestScore} PT)`;
+          els.gameoverRecordBadge.classList.remove('hidden');
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }
+
+  async function openGlobalLeaderboard(returnScreen = 'home') {
+    auth.prevScreenBeforeLb = returnScreen;
+    els.lbTotalInfo.textContent = 'Betöltés...';
+    els.lbMyBanner.classList.add('hidden');
+    els.globalLeaderboardList.innerHTML = '<div class="glb-empty">Ranglista betöltése...</div>';
+    showScreen('leaderboard');
+
+    try {
+      const headers = auth.token ? { Authorization: `Bearer ${auth.token}` } : {};
+      const res = await fetch('/api/leaderboard', { headers });
+      const data = await res.json();
+      if (!data.ok) throw new Error();
+
+      els.lbTotalInfo.textContent = `${data.totalPlayers} regisztrált játékos • Top 50`;
+
+      if (data.me) {
+        els.lbMyBanner.textContent = `Te: #${data.me.rank}. hely • Rekord: ${data.me.bestScore} PONT (${data.me.gamesPlayed} játék)`;
+        els.lbMyBanner.classList.remove('hidden');
+      } else {
+        els.lbMyBanner.textContent = 'Jelentkezz be Google fiókkal a főmenüben, hogy a rekordod felkerüljön a ranglistára!';
+        els.lbMyBanner.classList.remove('hidden');
+      }
+
+      if (!data.leaderboard.length) {
+        els.globalLeaderboardList.innerHTML = '<div class="glb-empty">Még nincs mentett rekord a ranglistán.<br/>Jelentkezz be Google fiókkal és légy te az első bajnok! 🏆</div>';
+        return;
+      }
+
+      const medals = ['🥇', '🥈', '🥉'];
+      els.globalLeaderboardList.innerHTML = data.leaderboard.map((u, idx) => {
+        const rankLabel = medals[idx] || `${u.rank}.`;
+        const isMe = auth.user && u.sub === auth.user.sub;
+        const avatarHtml = u.picture
+          ? `<img class="glb-avatar" src="${escapeHtml(u.picture)}" alt="" referrerpolicy="no-referrer" />`
+          : `<div class="glb-avatar"></div>`;
+        return `
+          <div class="glb-row ${idx === 0 ? 'rank-1' : ''} ${isMe ? 'is-me' : ''}">
+            <div class="glb-rank">${rankLabel}</div>
+            ${avatarHtml}
+            <div class="glb-name">${escapeHtml(u.name)}${isMe ? ' (Te)' : ''}</div>
+            <div class="glb-meta">${u.bestRound || 0}. kör • ${u.gamesPlayed || 0} játék</div>
+            <div class="glb-score">${u.bestScore} PT</div>
+          </div>
+        `;
+      }).join('');
+    } catch {
+      els.globalLeaderboardList.innerHTML = '<div class="glb-empty">Nem sikerült betölteni a ranglistát. Próbáld újra!</div>';
+    }
+  }
+
+  initGoogleAuth();
 
   function showScreen(name) {
     Object.entries(screens).forEach(([key, el]) => {
@@ -648,12 +882,18 @@
     solo.phase = 'gameover';
     updateArcadeButtons(false);
     els.gameoverLeaderboard.classList.add('hidden');
+    els.gameoverRecordBadge.classList.add('hidden');
+
+    const finalScore = stoppedWithPoints ? solo.score : 0;
+    const survived = stoppedWithPoints ? solo.roundNumber : Math.max(0, solo.roundNumber - 1);
 
     if (stoppedWithPoints && solo.score > solo.bestScore) {
       solo.bestScore = solo.score;
       localStorage.setItem('kvizbox_solo_best', String(solo.bestScore));
       els.soloBestLabel.textContent = solo.bestScore;
     }
+
+    submitScoreToAccount(finalScore, survived, 'solo');
 
     if (stoppedWithPoints) {
       els.gameoverTitle.textContent = 'GRATULÁLUNK!';
@@ -1050,7 +1290,14 @@
       els.gameoverLeaderboard.classList.remove('hidden');
 
       els.btnPlayAgain.classList.toggle('hidden', !isHost);
-      if (phaseChanged) window.kvizSound.victory();
+      if (phaseChanged) {
+        window.kvizSound.victory();
+        els.gameoverRecordBadge.classList.add('hidden');
+        const meRow = lb.find(p => p.id === mp.myId);
+        if (meRow) {
+          submitScoreToAccount(meRow.score || 0, meRow.currentStep || 0, 'multiplayer');
+        }
+      }
     }
 
     mp.lastPhase = state.phase;
@@ -1124,6 +1371,22 @@
   els.btnSolo.addEventListener('click', openSoloSettings);
   els.btnSoloBack.addEventListener('click', () => showScreen('home'));
   els.btnSoloLaunch.addEventListener('click', startSoloGame);
+  els.btnLeaderboard.addEventListener('click', () => {
+    window.kvizSound.ensureContext();
+    window.kvizSound.buttonClick('blue');
+    openGlobalLeaderboard('home');
+  });
+  els.btnGameoverLb.addEventListener('click', () => {
+    window.kvizSound.ensureContext();
+    window.kvizSound.buttonClick('blue');
+    openGlobalLeaderboard('gameover');
+  });
+  els.btnLbBack.addEventListener('click', () => showScreen(auth.prevScreenBeforeLb || 'home'));
+  els.btnLbRefresh.addEventListener('click', () => openGlobalLeaderboard(auth.prevScreenBeforeLb || 'home'));
+  els.btnLogout.addEventListener('click', logoutGoogle);
+  els.btnGoogleUnconfigured.addEventListener('click', () => {
+    showHomeError('A Google bejelentkezéshez állítsd be a GOOGLE_CLIENT_ID környezeti változót a szerveren (Render.com → Environment).');
+  });
   els.btnCreateRoom.addEventListener('click', createMultiplayerRoom);
   els.btnJoinRoom.addEventListener('click', joinMultiplayerRoom);
 
