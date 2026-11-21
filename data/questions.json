@@ -55,8 +55,8 @@
       "category": "allatok",
       "type": "two_images",
       "question": "Melyik képen látható a tüskés pikó?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Dreistachliger_Stichling_unterwasser.jpg/640px-Dreistachliger_Stichling_unterwasser.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Esox_lucius_ZOO_1.jpg/640px-Esox_lucius_ZOO_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_001_red.jpg",
+      "blueImage": "/images/q_001_blue.jpg",
       "correct": "red"
     },
     {
@@ -64,8 +64,8 @@
       "category": "allatok",
       "type": "two_images",
       "question": "Melyik képen látható a vörös panda?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/640px-Grosser_Panda.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Red_Panda_%2824986761703%29.jpg/640px-Red_Panda_%2824986761703%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_002_red.jpg",
+      "blueImage": "/images/q_002_blue.jpg",
       "correct": "blue"
     },
     {
@@ -73,8 +73,8 @@
       "category": "allatok",
       "type": "two_images",
       "question": "Melyik képen látható a gepárd?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Male_cheetah_facing_left_in_South_Africa.jpg/640px-Male_cheetah_facing_left_in_South_Africa.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/African_leopard_male_%28cropped%29.jpg/640px-African_leopard_male_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_003_red.jpg",
+      "blueImage": "/images/q_003_blue.jpg",
       "correct": "red"
     },
     {
@@ -82,8 +82,8 @@
       "category": "allatok",
       "type": "two_images",
       "question": "Melyik képen látható a szurikáta?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Black-Tailed_Prairie_Dog.jpg/640px-Black-Tailed_Prairie_Dog.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Meerkat_%28Suricata_suricatta%29_Tswalu.jpg/640px-Meerkat_%28Suricata_suricatta%29_Tswalu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_004_red.jpg",
+      "blueImage": "/images/q_004_blue.jpg",
       "correct": "blue"
     },
     {
@@ -91,8 +91,8 @@
       "category": "allatok",
       "type": "two_images",
       "question": "Melyik képen látható a tőkés réce?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/640px-Anas_platyrhynchos_male_female_quadrat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/CygneVaires.jpg/640px-CygneVaires.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_005_red.jpg",
+      "blueImage": "/images/q_005_blue.jpg",
       "correct": "red"
     },
     {
@@ -100,7 +100,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Melyik kontinensen őshonos a képen látható állat?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/640px-Koala_climbing_tree.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_006.jpg",
       "redText": "Ausztrália",
       "blueText": "Dél-Amerika",
       "correct": "red"
@@ -110,7 +110,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Milyen állat látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Capybaracropped.jpg/640px-Capybaracropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_007.jpg",
       "redText": "Vombat",
       "blueText": "Kapibara",
       "correct": "blue"
@@ -120,7 +120,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Hány szíve van a képen látható állatnak?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/640px-Octopus2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_008.jpg",
       "redText": "Három",
       "blueText": "Egy",
       "correct": "red"
@@ -130,7 +130,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Mi a neve a képen látható magyar kutyafajtának?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/PuliBlack_wb.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_009.jpg",
       "redText": "Komondor",
       "blueText": "Puli",
       "correct": "blue"
@@ -140,7 +140,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Milyen állat látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg/640px-Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_010.jpg",
       "redText": "Kacsacsőrű emlős",
       "blueText": "Vidra",
       "correct": "red"
@@ -150,7 +150,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Melyik madár látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Toucans_%28Ramphastidae%29.jpg/640px-Toucans_%28Ramphastidae%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_011.jpg",
       "redText": "Flamingó",
       "blueText": "Tukán",
       "correct": "blue"
@@ -160,7 +160,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "A világ leggyorsabb madara zuhanórepülésben:",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg/640px-Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_012.jpg",
       "redText": "Vándorsólyom",
       "blueText": "Szirti sas",
       "correct": "red"
@@ -170,7 +170,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Melyik állat látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Axolotl_ganz.jpg/960px-Axolotl_ganz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_013.jpg",
       "redText": "Gőte",
       "blueText": "Axolotl",
       "correct": "blue"
@@ -180,7 +180,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Melyik hüllő képes a színét gyorsan változtatni?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Panther_Chameleon_738367_%28cropped%29.jpg/640px-Panther_Chameleon_738367_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_014.jpg",
       "redText": "Kaméleon",
       "blueText": "Leguán",
       "correct": "red"
@@ -190,7 +190,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Milyen fajtájú magyar őshonos állat látható a képen?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Magyar_sz%C3%BCrkemarha_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_015.jpg",
       "redText": "Racka juh",
       "blueText": "Magyar szürke marha",
       "correct": "blue"
@@ -200,7 +200,7 @@
       "category": "allatok",
       "type": "one_image",
       "question": "Melyik tengeri emlős látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/640px-Killerwhales_jumping.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_016.jpg",
       "redText": "Kardszárnyú delfin",
       "blueText": "Kék bálna",
       "correct": "red"
@@ -210,7 +210,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Milyen növény látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Ribes_rubrum_1.jpg/960px-Ribes_rubrum_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_017.jpg",
       "redText": "Málna",
       "blueText": "Ribizli",
       "correct": "blue"
@@ -220,7 +220,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Mi a neve a képen látható növénynek?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/640px-Rosa_rubiginosa_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_018.jpg",
       "redText": "Rózsa",
       "blueText": "Parrot tulipán",
       "correct": "red"
@@ -230,7 +230,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Az alábbiak közül melyik a kukorica egyik népi elnevezése?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg/640px-Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_019.jpg",
       "redText": "folyami",
       "blueText": "tengeri",
       "correct": "blue"
@@ -240,8 +240,8 @@
       "category": "novenyek",
       "type": "two_images",
       "question": "Melyik képen látható a levendula?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Single_lavender_flower02.jpg/640px-Single_lavender_flower02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_sky_backdrop.jpg/640px-Sunflower_sky_backdrop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_020_red.jpg",
+      "blueImage": "/images/q_020_blue.jpg",
       "correct": "red"
     },
     {
@@ -249,8 +249,8 @@
       "category": "novenyek",
       "type": "two_images",
       "question": "Melyik képen látható a légyölő galóca?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Boletus_edulis_IT.jpg/640px-Boletus_edulis_IT.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Amanita_muscaria_Aberystwyth_2023.jpg/640px-Amanita_muscaria_Aberystwyth_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_021_red.jpg",
+      "blueImage": "/images/q_021_blue.jpg",
       "correct": "blue"
     },
     {
@@ -258,8 +258,8 @@
       "category": "novenyek",
       "type": "two_images",
       "question": "Melyik képen látható a kaktusz?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Various_Cactaceae.jpg/640px-Various_Cactaceae.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/The_ferns_of_Great_Britain%2C_and_their_allies_the_club-mosses%2C_pepperworts%2C_and_horsetails_%28Pl._2%29_%288515393495%29.jpg/640px-The_ferns_of_Great_Britain%2C_and_their_allies_the_club-mosses%2C_pepperworts%2C_and_horsetails_%28Pl._2%29_%288515393495%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_022_red.jpg",
+      "blueImage": "/images/q_022_blue.jpg",
       "correct": "red"
     },
     {
@@ -267,8 +267,8 @@
       "category": "novenyek",
       "type": "two_images",
       "question": "Melyik képen látható a tulipán?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Narcissus_poeticus_subsp._radiiflorus.1658.jpg/640px-Narcissus_poeticus_subsp._radiiflorus.1658.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99%D7%9D.JPG/640px-%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99%D7%9D.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_023_red.jpg",
+      "blueImage": "/images/q_023_blue.jpg",
       "correct": "blue"
     },
     {
@@ -276,7 +276,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Melyik fűszernövény látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Ocimum_basilicum_8zz.jpg/640px-Ocimum_basilicum_8zz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_024.jpg",
       "redText": "Bazsalikom",
       "blueText": "Rozmaring",
       "correct": "red"
@@ -286,7 +286,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Milyen gyümölcs látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pomegranate_Juice_%282019%29.jpg/640px-Pomegranate_Juice_%282019%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_025.jpg",
       "redText": "Füge",
       "blueText": "Gránátalma",
       "correct": "blue"
@@ -296,7 +296,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Melyik fafajta termése a makk?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Quercus_robur.jpg/640px-Quercus_robur.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_026.jpg",
       "redText": "Tölgy",
       "blueText": "Nyírfa",
       "correct": "red"
@@ -306,7 +306,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Melyik tavaszi virág látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Galanthus_nivalis.jpg/640px-Galanthus_nivalis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_027.jpg",
       "redText": "Ibolya",
       "blueText": "Hóvirág",
       "correct": "blue"
@@ -316,7 +316,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Milyen húsevő növény látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Venus_Flytrap_showing_trigger_hairs.jpg/640px-Venus_Flytrap_showing_trigger_hairs.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_028.jpg",
       "redText": "Vénusz légycsapója",
       "blueText": "Orchidea",
       "correct": "red"
@@ -326,7 +326,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Melyik trópusi gyümölcs látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Pitaya_cross_section_ed2.jpg/640px-Pitaya_cross_section_ed2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_029.jpg",
       "redText": "Mangó",
       "blueText": "Sárkánygyümölcs",
       "correct": "blue"
@@ -336,7 +336,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Milyen természeti jelenség látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg/640px-Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_030.jpg",
       "redText": "Sarki fény",
       "blueText": "Délibáb",
       "correct": "red"
@@ -346,7 +346,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Melyik fa nő a világ legmagasabb fái közé?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/US_199_Redwood_Highway.jpg/640px-US_199_Redwood_Highway.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_031.jpg",
       "redText": "Fűzfa",
       "blueText": "Mamutfenyő",
       "correct": "blue"
@@ -356,7 +356,7 @@
       "category": "novenyek",
       "type": "one_image",
       "question": "Milyen fűszer származik ebből a virágból?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Saffron_-_premium_spice.jpg/640px-Saffron_-_premium_spice.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_032.jpg",
       "redText": "Sáfrány",
       "blueText": "Fahéj",
       "correct": "red"
@@ -366,8 +366,8 @@
       "category": "foldrajz",
       "type": "two_images",
       "question": "Melyik képen látható a budapesti Parlament?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Hungarian_Parliament_Building_from_across_the_Danube%2C_2025-01-11.jpg/640px-Hungarian_Parliament_Building_from_across_the_Danube%2C_2025-01-11.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Palace_of_Westminster_as_seen_from_Westminster_Bridge.jpg/640px-Palace_of_Westminster_as_seen_from_Westminster_Bridge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_033_red.jpg",
+      "blueImage": "/images/q_033_blue.jpg",
       "correct": "red"
     },
     {
@@ -375,8 +375,8 @@
       "category": "foldrajz",
       "type": "two_images",
       "question": "Melyik képen látható a Colosseum?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/640px-The_Parthenon_in_Athens.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/640px-Colosseo_2020.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_034_red.jpg",
+      "blueImage": "/images/q_034_blue.jpg",
       "correct": "blue"
     },
     {
@@ -384,8 +384,8 @@
       "category": "foldrajz",
       "type": "two_images",
       "question": "Melyik képen látható a Machu Picchu?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/640px-Machu_Picchu%2C_2023_%28012%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Al_Deir_Petra.JPG/640px-Al_Deir_Petra.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_035_red.jpg",
+      "blueImage": "/images/q_035_blue.jpg",
       "correct": "red"
     },
     {
@@ -393,8 +393,8 @@
       "category": "foldrajz",
       "type": "two_images",
       "question": "Melyik képen látható a Tádzs Mahal?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/640px-Hagia_Sophia_%28228968325%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/640px-Taj_Mahal_%28Edited%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_036_red.jpg",
+      "blueImage": "/images/q_036_blue.jpg",
       "correct": "blue"
     },
     {
@@ -402,7 +402,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik ország fővárosában áll ez az épület?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_037.jpg",
       "redText": "Franciaország",
       "blueText": "Belgium",
       "correct": "red"
@@ -412,7 +412,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik városban található a képen látható Operaház?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sydney_Opera_House_2026.jpg/640px-Sydney_Opera_House_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_038.jpg",
       "redText": "Melbourne",
       "blueText": "Sydney",
       "correct": "blue"
@@ -422,7 +422,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik magyar tó látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Balaton_Hungary_Landscape.jpg/640px-Balaton_Hungary_Landscape.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_039.jpg",
       "redText": "Balaton",
       "blueText": "Fertő tó",
       "correct": "red"
@@ -432,7 +432,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik ország zászlaja látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/640px-Flag_of_Japan.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_040.png",
       "redText": "Dél-Korea",
       "blueText": "Japán",
       "correct": "blue"
@@ -442,7 +442,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik hegycsúcs a Föld legmagasabb pontja?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg/640px-Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_041.jpg",
       "redText": "Mount Everest",
       "blueText": "K2",
       "correct": "red"
@@ -452,7 +452,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik folyó szeli ketté Budapestet?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/640px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_042.jpg",
       "redText": "Tisza",
       "blueText": "Duna",
       "correct": "blue"
@@ -462,7 +462,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik olasz városban található ez a ferde torony?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/640px-Italy_-_Pisa_-_Leaning_Tower.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_043.jpg",
       "redText": "Pisa",
       "blueText": "Velence",
       "correct": "red"
@@ -472,7 +472,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik országban találhatók a gízai piramisok?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/640px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_044.jpg",
       "redText": "Marokkó",
       "blueText": "Egyiptom",
       "correct": "blue"
@@ -482,7 +482,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik kontinensen található a Szahara sivatag?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Sahara_real_color.jpg/640px-Sahara_real_color.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_045.jpg",
       "redText": "Afrika",
       "blueText": "Ázsia",
       "correct": "red"
@@ -492,7 +492,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik ország zászlaja látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/960px-Flag_of_Canada_%28Pantone%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_046.png",
       "redText": "Svájc",
       "blueText": "Kanada",
       "correct": "blue"
@@ -502,7 +502,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik amerikai város jelképe a Golden Gate híd?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg/640px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_047.jpg",
       "redText": "San Francisco",
       "blueText": "New York",
       "correct": "red"
@@ -512,7 +512,7 @@
       "category": "foldrajz",
       "type": "one_image",
       "question": "Melyik országban található a Fudzsi vulkán?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/640px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_048.jpg",
       "redText": "Kína",
       "blueText": "Japán",
       "correct": "blue"
@@ -522,8 +522,8 @@
       "category": "tortenelem",
       "type": "two_images",
       "question": "Melyik képen látható a Szabadság-szobor?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/960px-Christ_the_Redeemer_-_Cristo_Redentor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_049_red.jpg",
+      "blueImage": "/images/q_049_blue.jpg",
       "correct": "red"
     },
     {
@@ -531,8 +531,8 @@
       "category": "tortenelem",
       "type": "two_images",
       "question": "Melyik képen látható a Stonehenge?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/640px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/640px-Stonehenge2007_07_30.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_050_red.jpg",
+      "blueImage": "/images/q_050_blue.jpg",
       "correct": "blue"
     },
     {
@@ -540,7 +540,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Ki volt Magyarország első királya?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Portrayal_of_Stephen_I%2C_King_of_Hungary_on_the_coronation_pall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_051.jpg",
       "redText": "Szent István",
       "blueText": "Mátyás király",
       "correct": "red"
@@ -550,7 +550,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik évben volt az 1848-as forradalom kitörése?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/March15.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_052.jpg",
       "redText": "Március 12.",
       "blueText": "Március 15.",
       "correct": "blue"
@@ -560,7 +560,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik híres hadvezér látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/960px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_053.jpg",
       "redText": "Napóleon",
       "blueText": "Julius Caesar",
       "correct": "red"
@@ -570,7 +570,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik évben süllyedt el a Titanic?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/RMS_Titanic_3_%28cropped_to_ship%29.jpg/640px-RMS_Titanic_3_%28cropped_to_ship%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_054.jpg",
       "redText": "1922",
       "blueText": "1912",
       "correct": "blue"
@@ -580,7 +580,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Ki volt az első ember, aki a Holdra lépett?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/640px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_055.jpg",
       "redText": "Neil Armstrong",
       "blueText": "Jurij Gagarin",
       "correct": "red"
@@ -590,7 +590,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik ókori birodalomhoz tartoztak a gladiátorok?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gladiators_from_the_Zliten_mosaic_3.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_056.jpg",
       "redText": "Ókori Görögország",
       "blueText": "Római Birodalom",
       "correct": "blue"
@@ -600,7 +600,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik híres fal omlott le 1989-ben?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Berlinermauer.jpg/640px-Berlinermauer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_057.jpg",
       "redText": "Berlini fal",
       "blueText": "Kínai nagy fal",
       "correct": "red"
@@ -610,7 +610,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Ki fedezte fel Amerikát 1492-ben?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg/640px-Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_058.jpg",
       "redText": "Vasco da Gama",
       "blueText": "Kolumbusz Kristóf",
       "correct": "blue"
@@ -620,7 +620,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Ki találta fel a Rubik-kockát?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Rubiks_cube_solved.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_059.jpg",
       "redText": "Rubik Ernő",
       "blueText": "Neumann János",
       "correct": "red"
@@ -630,7 +630,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik magyar királyt hívták „Igazságos”-nak?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Andrea_Mantegna_-_King_Matthias_Corvinus_of_Hungary.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_060.jpg",
       "redText": "Könyves Kálmán",
       "blueText": "Mátyás király",
       "correct": "blue"
@@ -640,7 +640,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik városban áll a Hősök tere?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/HUN-2015-Budapest-Heroes%E2%80%99_Square.jpg/960px-HUN-2015-Budapest-Heroes%E2%80%99_Square.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_061.jpg",
       "redText": "Budapest",
       "blueText": "Debrecen",
       "correct": "red"
@@ -650,7 +650,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Melyik ókori nép építette a viking hajókat?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Moragsoorm.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_062.jpg",
       "redText": "Kelták",
       "blueText": "Vikingek",
       "correct": "blue"
@@ -660,7 +660,7 @@
       "category": "tortenelem",
       "type": "one_image",
       "question": "Ki találta fel a golyóstollat?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/03-BICcristal2008-03-26.jpg/960px-03-BICcristal2008-03-26.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_063.jpg",
       "redText": "Bíró László",
       "blueText": "Irinyi János",
       "correct": "red"
@@ -670,8 +670,8 @@
       "category": "tudomany",
       "type": "two_images",
       "question": "Melyik képen látható a Szaturnusz bolygó?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png/640px-Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_064_red.png",
+      "blueImage": "/images/q_064_blue.png",
       "correct": "red"
     },
     {
@@ -679,8 +679,8 @@
       "category": "tudomany",
       "type": "two_images",
       "question": "Melyik képen látható mikroszkóp?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/100inchHooker.jpg/640px-100inchHooker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Ukrainian_microscope_%28cropped%29.jpg/640px-Ukrainian_microscope_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_065_red.jpg",
+      "blueImage": "/images/q_065_blue.jpg",
       "correct": "blue"
     },
     {
@@ -688,7 +688,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik fizikus dolgozta ki a relativitáselméletet?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/640px-Albert_Einstein_Head_cleaned.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_066.jpg",
       "redText": "Albert Einstein",
       "blueText": "Isaac Newton",
       "correct": "red"
@@ -698,7 +698,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Mi a víz kémiai képlete?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/H2O_2D_labelled.svg/640px-H2O_2D_labelled.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_067.png",
       "redText": "CO₂",
       "blueText": "H₂O",
       "correct": "blue"
@@ -708,7 +708,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik bolygót nevezik „Vörös bolygónak”?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_068.png",
       "redText": "Mars",
       "blueText": "Vénusz",
       "correct": "red"
@@ -718,7 +718,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik szerv pumpálja a vért az emberi testben?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Heart_anterior_exterior_view.png/640px-Heart_anterior_exterior_view.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_069.png",
       "redText": "Tüdő",
       "blueText": "Szív",
       "correct": "blue"
@@ -728,7 +728,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Hány fokon forr a víz normál légnyomáson?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Boilingkettle.jpg/960px-Boilingkettle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_070.jpg",
       "redText": "100 °C",
       "blueText": "80 °C",
       "correct": "red"
@@ -738,7 +738,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik gáz teszi ki a Föld légkörének nagy részét (~78%)?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Top_of_Atmosphere.jpg/640px-Top_of_Atmosphere.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_071.jpg",
       "redText": "Oxigén",
       "blueText": "Nitrogén",
       "correct": "blue"
@@ -748,7 +748,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Mi az arany vegyjele a periódusos rendszerben?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gold-crystals.jpg/640px-Gold-crystals.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_072.jpg",
       "redText": "Au",
       "blueText": "Ag",
       "correct": "red"
@@ -758,7 +758,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik molekula hordozza az örökítőanyagot?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/640px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_073.png",
       "redText": "ATP",
       "blueText": "DNS",
       "correct": "blue"
@@ -768,7 +768,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik a Naprendszer legnagyobb bolygója?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/640px-Jupiter_OPAL_2024.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_074.png",
       "redText": "Jupiter",
       "blueText": "Neptunusz",
       "correct": "red"
@@ -778,7 +778,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Ki fedezte fel a C-vitamint (aszkorbinsavat)?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Szent-Gy%C3%B6rgyi_Albert%2C_Nobel-d%C3%ADjas_%C3%A9s_Kossuth-d%C3%ADjas_orvos%2C_biok%C3%A9mikus._Fortepan_74535.jpg/640px-Szent-Gy%C3%B6rgyi_Albert%2C_Nobel-d%C3%ADjas_%C3%A9s_Kossuth-d%C3%ADjas_orvos%2C_biok%C3%A9mikus._Fortepan_74535.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_075.jpg",
       "redText": "Semmelweis Ignác",
       "blueText": "Szent-Györgyi Albert",
       "correct": "blue"
@@ -788,7 +788,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik mértékegységben mérjük az elektromos feszültséget?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/YX360TRF%28Sanwa%29.JPG/960px-YX360TRF%28Sanwa%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_076.jpg",
       "redText": "Volt",
       "blueText": "Amper",
       "correct": "red"
@@ -798,7 +798,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Hány csontja van nagyjából egy felnőtt embernek?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Human-Skeleton.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_077.jpg",
       "redText": "106",
       "blueText": "206",
       "correct": "blue"
@@ -808,7 +808,7 @@
       "category": "tudomany",
       "type": "one_image",
       "question": "Melyik feltaláló nevéhez fűződik a váltakozó áramú rendszer?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_078.jpg",
       "redText": "Nikola Tesla",
       "blueText": "Thomas Edison",
       "correct": "red"
@@ -818,8 +818,8 @@
       "category": "gasztro",
       "type": "two_images",
       "question": "Melyik képen látható a lángos?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Langos_Eger_Hungary.jpg/960px-Langos_Eger_Hungary.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/640px-Pizza-3007395.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_079_red.jpg",
+      "blueImage": "/images/q_079_blue.jpg",
       "correct": "red"
     },
     {
@@ -827,8 +827,8 @@
       "category": "gasztro",
       "type": "two_images",
       "question": "Melyik képen látható a sushi?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/960px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/640px-Sushi_platter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_080_red.jpg",
+      "blueImage": "/images/q_080_blue.jpg",
       "correct": "blue"
     },
     {
@@ -836,8 +836,8 @@
       "category": "gasztro",
       "type": "two_images",
       "question": "Melyik képen látható a kürtőskalács?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/K%C3%BCrt%C5%91skal%C3%A1cs2011.jpg/960px-K%C3%BCrt%C5%91skal%C3%A1cs2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/640px-Croissant-Petr_Kratochvil.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_081_red.jpg",
+      "blueImage": "/images/q_081_blue.jpg",
       "correct": "red"
     },
     {
@@ -845,7 +845,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Miből készül hagyományosan a sör egyik fő ízesítője?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Jeju_beer_09_%28cropped%29.jpg/640px-Jeju_beer_09_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_082.jpg",
       "redText": "Boróka",
       "blueText": "Komló",
       "correct": "blue"
@@ -855,7 +855,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik magyar leves látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Gulyas080.jpg/960px-Gulyas080.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_083.jpg",
       "redText": "Gulyásleves",
       "blueText": "Halászlé",
       "correct": "red"
@@ -865,7 +865,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik olasz desszert fő összetevője a mascarpone és a kávé?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Tiramisu_-_Raffaele_Diomede.jpg/640px-Tiramisu_-_Raffaele_Diomede.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_084.jpg",
       "redText": "Panna cotta",
       "blueText": "Tiramisu",
       "correct": "blue"
@@ -875,7 +875,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik országból származik a paella?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/01_Paella_Valenciana_original.jpg/960px-01_Paella_Valenciana_original.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_085.jpg",
       "redText": "Spanyolország",
       "blueText": "Portugália",
       "correct": "red"
@@ -885,7 +885,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik koktél alapja a rum, a menta és a lime?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/15-09-26-RalfR-WLC-0072.jpg/640px-15-09-26-RalfR-WLC-0072.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_086.jpg",
       "redText": "Margarita",
       "blueText": "Mojito",
       "correct": "blue"
@@ -895,7 +895,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik fűszer adja a magyar pörkölt piros színét?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Piment%C3%B3n_Tap_de_Cort%C3%AD_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_087.jpg",
       "redText": "Fűszerpaprika",
       "blueText": "Kurkuma",
       "correct": "red"
@@ -905,7 +905,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik híres magyar borvidék itala az Aszú?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Szent_Tam%C3%A1s_Szamorodni_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_088.jpg",
       "redText": "Villány",
       "blueText": "Tokaj",
       "correct": "blue"
@@ -915,7 +915,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik sajt származik Görögországból?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Feta_Cheese.jpg/960px-Feta_Cheese.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_089.jpg",
       "redText": "Feta",
       "blueText": "Gouda",
       "correct": "red"
@@ -925,7 +925,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Miből készül a guacamole krém?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Guacamole_IMGP1271.jpg/960px-Guacamole_IMGP1271.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_090.jpg",
       "redText": "Zöldborsóból",
       "blueText": "Avokádóból",
       "correct": "blue"
@@ -935,7 +935,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik növényből főzik a tequilát?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Paisaje_agavero_de_Jose_Cuervo_en_Tequila%2C_Jalisco.jpg/960px-Paisaje_agavero_de_Jose_Cuervo_en_Tequila%2C_Jalisco.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_091.jpg",
       "redText": "Kék agávé",
       "blueText": "Cukornád",
       "correct": "red"
@@ -945,7 +945,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik híres magyar sütemény látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Dobos_cake_%28Gerbeaud_Confectionery_Budapest_Hungary%29.jpg/960px-Dobos_cake_%28Gerbeaud_Confectionery_Budapest_Hungary%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_092.jpg",
       "redText": "Eszterházy torta",
       "blueText": "Dobostorta",
       "correct": "blue"
@@ -955,7 +955,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Melyik ország konyhájához tartozik a croissant?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/640px-Croissant-Petr_Kratochvil.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_093.jpg",
       "redText": "Franciaország",
       "blueText": "Németország",
       "correct": "red"
@@ -965,7 +965,7 @@
       "category": "gasztro",
       "type": "one_image",
       "question": "Milyen ital a képen látható fekete, krémes habú ír sör?",
-      "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/Guinness_logo_dark_text.svg/640px-Guinness_logo_dark_text.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_094.png",
       "redText": "IPA",
       "blueText": "Stout (Guinness)",
       "correct": "blue"
@@ -975,8 +975,8 @@
       "category": "sport",
       "type": "two_images",
       "question": "Melyik képen látható a vízilabda?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/WaterPolo.JPG/640px-WaterPolo.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/SAP_Arena_Handball_ausverkauft.jpg/640px-SAP_Arena_Handball_ausverkauft.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_095_red.jpg",
+      "blueImage": "/images/q_095_blue.jpg",
       "correct": "red"
     },
     {
@@ -984,8 +984,8 @@
       "category": "sport",
       "type": "two_images",
       "question": "Melyik képen látható a darts tábla?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/ArcheryGermanyEarly1980s-2.jpg/640px-ArcheryGermanyEarly1980s-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Darts_in_a_dartboard.jpg/640px-Darts_in_a_dartboard.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_096_red.jpg",
+      "blueImage": "/images/q_096_blue.jpg",
       "correct": "blue"
     },
     {
@@ -993,7 +993,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány játékos van egyszerre a pályán egy focicsapatban?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/640px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_097.jpg",
       "redText": "11",
       "blueText": "9",
       "correct": "red"
@@ -1003,7 +1003,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik sportág magyar legendája volt Puskás Ferenc?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Ferenc_Puskas_en_1965.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_098.jpg",
       "redText": "Vízilabda",
       "blueText": "Labdarúgás",
       "correct": "blue"
@@ -1013,7 +1013,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány pontot ér a dartsban a piros középpont (Bullseye)?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Darts_in_a_dartboard.jpg/640px-Darts_in_a_dartboard.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_099.jpg",
       "redText": "50 pont",
       "blueText": "25 pont",
       "correct": "red"
@@ -1023,7 +1023,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány karikából áll az olimpiai zászló?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/960px-Olympic_rings_without_rims.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_100.png",
       "redText": "6",
       "blueText": "5",
       "correct": "blue"
@@ -1033,7 +1033,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik városban rendezik a híres wimbledoni tenisztornát?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2013_Australian_Open_-_Guillaume_Rufin.jpg/960px-2013_Australian_Open_-_Guillaume_Rufin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_101.jpg",
       "redText": "London",
       "blueText": "Párizs",
       "correct": "red"
@@ -1043,7 +1043,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik sportágban használnak ütőt és tollaslabdát?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Olympics_2012_Mixed_Doubles_Final.jpg/640px-Olympics_2012_Mixed_Doubles_Final.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_102.jpg",
       "redText": "Squash",
       "blueText": "Tollaslabda",
       "correct": "blue"
@@ -1053,7 +1053,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik magyar versenypályán rendezik a Forma–1 Magyar Nagydíjat?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Hungaroring2026.svg/960px-Hungaroring2026.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_103.png",
       "redText": "Hungaroring",
       "blueText": "Balaton Park",
       "correct": "red"
@@ -1063,7 +1063,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány méter a maratoni futás hivatalos távja?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/BSK_CSOB_MARATON046_%2833791445325%29.jpg/640px-BSK_CSOB_MARATON046_%2833791445325%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_104.jpg",
       "redText": "40 km",
       "blueText": "42,195 km",
       "correct": "blue"
@@ -1073,7 +1073,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik sportágban dobnak hárompontost?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_%282751923597%29.jpg/640px-USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_%282751923597%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_105.jpg",
       "redText": "Kosárlabda",
       "blueText": "Kézilabda",
       "correct": "red"
@@ -1083,7 +1083,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány bábuval kezd egy játékos a sakkban?",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/ChessSet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "image": "/images/q_106.jpg",
       "redText": "12",
       "blueText": "16",
       "correct": "blue"
@@ -1093,7 +1093,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik sportágban versenyzett Hosszú Katinka?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Kazan_2015_-_Hossz%C3%BA_Katinka_200m_backstroke.JPG/960px-Kazan_2015_-_Hossz%C3%BA_Katinka_200m_backstroke.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_107.jpg",
       "redText": "Úszás",
       "blueText": "Kajak-kenu",
       "correct": "red"
@@ -1103,7 +1103,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Melyik sportágat játsszák jégen koronggal?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg/640px-Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_108.jpg",
       "redText": "Curling",
       "blueText": "Jégkorong",
       "correct": "blue"
@@ -1113,7 +1113,7 @@
       "category": "sport",
       "type": "one_image",
       "question": "Hány bábu áll a bowlingpálya végén?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/10-pin-bowling-strike.gif/640px-10-pin-bowling-strike.gif?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_109.gif",
       "redText": "10",
       "blueText": "9",
       "correct": "red"
@@ -1123,8 +1123,8 @@
       "category": "kultura",
       "type": "two_images",
       "question": "Melyik képen látható a cselló (gordonka)?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Cello_front_side.png/640px-Cello_front_side.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Yamaha_Trumpet_YTR-8335LA_crop.jpg/960px-Yamaha_Trumpet_YTR-8335LA_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_110_red.png",
+      "blueImage": "/images/q_110_blue.jpg",
       "correct": "red"
     },
     {
@@ -1132,8 +1132,8 @@
       "category": "kultura",
       "type": "two_images",
       "question": "Melyik képen látható a szaxofon?",
-      "redImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg/960px-A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "blueImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Eight_saxophone_sizes_smaller.png/960px-Eight_saxophone_sizes_smaller.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "redImage": "/images/q_111_red.jpg",
+      "blueImage": "/images/q_111_blue.png",
       "correct": "blue"
     },
     {
@@ -1141,7 +1141,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Ki festette a Mona Lisát?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_112.jpg",
       "redText": "Leonardo da Vinci",
       "blueText": "Michelangelo",
       "correct": "red"
@@ -1151,7 +1151,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Ki festette a „Csillagos éj” című világhírű képet?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/640px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_113.jpg",
       "redText": "Claude Monet",
       "blueText": "Vincent van Gogh",
       "correct": "blue"
@@ -1161,7 +1161,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Hány húrja van egy hagyományos klasszikus gitárnak?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/GuitareClassique5.png/640px-GuitareClassique5.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_114.png",
       "redText": "6",
       "blueText": "4",
       "correct": "red"
@@ -1171,7 +1171,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Ki írta a Rómeó és Júlia című drámát?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/William_Shakespeare_by_John_Taylor%2C_edited.jpg/640px-William_Shakespeare_by_John_Taylor%2C_edited.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_115.jpg",
       "redText": "Charles Dickens",
       "blueText": "William Shakespeare",
       "correct": "blue"
@@ -1181,7 +1181,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik városban adják át az Oscar-díjat?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Dolby_Theater_%28September_2025%29.jpg/960px-Dolby_Theater_%28September_2025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_116.jpg",
       "redText": "Los Angeles",
       "blueText": "New York",
       "correct": "red"
@@ -1191,7 +1191,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik híres magyar zeneszerző látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Franz_Liszt_by_Herman_Biow-_1843.png/640px-Franz_Liszt_by_Herman_Biow-_1843.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_117.png",
       "redText": "Bartók Béla",
       "blueText": "Liszt Ferenc",
       "correct": "blue"
@@ -1201,7 +1201,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik hangszernek vannak fekete és fehér billentyűi?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Steinway_Vienna_002.JPG/640px-Steinway_Vienna_002.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_118.jpg",
       "redText": "Zongora",
       "blueText": "Hárfa",
       "correct": "red"
@@ -1211,7 +1211,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Ki írta a „János vitéz” című elbeszélő költeményt?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Barab%C3%A1s_Pet%C5%91fi.jpg/960px-Barab%C3%A1s_Pet%C5%91fi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_119.jpg",
       "redText": "Arany János",
       "blueText": "Petőfi Sándor",
       "correct": "blue"
@@ -1221,7 +1221,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik zenekar énekese volt Freddie Mercury?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg/640px-Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_120.jpg",
       "redText": "Queen",
       "blueText": "The Beatles",
       "correct": "red"
@@ -1231,7 +1231,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik művészeti ág Oscar-díjas magyar filmje a „Saul fia”?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Ptuj%2C_city_cinema.jpg/960px-Ptuj%2C_city_cinema.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_121.jpg",
       "redText": "Animáció",
       "blueText": "Filmművészet",
       "correct": "blue"
@@ -1241,7 +1241,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik híres szobor látható a képen?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Le_Penseur_by_Rodin_%28Kunsthalle_Bielefeld%29_2014-04-10.JPG/640px-Le_Penseur_by_Rodin_%28Kunsthalle_Bielefeld%29_2014-04-10.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_122.jpg",
       "redText": "A gondolkodó (Rodin)",
       "blueText": "Dávid (Michelangelo)",
       "correct": "red"
@@ -1251,7 +1251,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik országból származik az origami papírhajtogatás?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Cranes_made_by_Origami_paper.jpg/960px-Cranes_made_by_Origami_paper.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_123.jpg",
       "redText": "Kína",
       "blueText": "Japán",
       "correct": "blue"
@@ -1261,7 +1261,7 @@
       "category": "kultura",
       "type": "one_image",
       "question": "Melyik hangszer a rockzenekarok alapvető ütőhangszere?",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Drums_schematic.svg/960px-Drums_schematic.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "image": "/images/q_124.png",
       "redText": "Dobfelszerelés",
       "blueText": "Xilofon",
       "correct": "red"
