@@ -174,6 +174,8 @@
     btnGameoverLb: document.getElementById('btn-gameover-lb'),
 
     soloBestLabel: document.getElementById('solo-best-label'),
+    kidsBestLabel: document.getElementById('kids-best-label'),
+    btnKids: document.getElementById('btn-kids'),
     inputPlayerName: document.getElementById('input-player-name'),
     inputRoomCode: document.getElementById('input-room-code'),
     btnSolo: document.getElementById('btn-solo'),
@@ -261,6 +263,7 @@
   // ==================== APP STATE ====================
   let mode = 'idle'; // 'idle' | 'solo' | 'multiplayer'
   let questionBank = { categories: [], questions: [] };
+  let kidsBank = { categories: [], questions: [] };
   let networkInfo = { lanUrl: window.location.origin };
 
   // Solo state
@@ -268,6 +271,7 @@
     try { return JSON.parse(localStorage.getItem('kvizbox_solo_settings') || '{}'); } catch { return {}; }
   })();
   const solo = {
+    isKidsMode: false,
     phase: 'idle',
     roundNumber: 0,
     score: 0,
@@ -279,12 +283,17 @@
     timeout: null,
     answered: null,
     bestScore: Number(localStorage.getItem('kvizbox_solo_best') || 0),
+    kidsBestScore: Number(localStorage.getItem('kvizbox_kids_best') || 0),
     settings: {
       categoryPickEvery: savedSoloSettings.categoryPickEvery !== undefined ? Number(savedSoloSettings.categoryPickEvery) : 1,
       answerTime: Number(savedSoloSettings.answerTime) || 10,
       allowStop: savedSoloSettings.allowStop !== undefined ? Boolean(savedSoloSettings.allowStop) : true
     }
   };
+
+  function getActiveSoloBank() {
+    return solo.isKidsMode ? kidsBank : questionBank;
+  }
 
   // Multiplayer state
   let socket = null;
@@ -301,6 +310,7 @@
 
   // ==================== INIT ====================
   els.soloBestLabel.textContent = solo.bestScore;
+  if (els.kidsBestLabel) els.kidsBestLabel.textContent = solo.kidsBestScore;
   els.btnMute.textContent = window.kvizSound.muted ? '🔇' : '🔊';
 
   // Restore saved player name
@@ -328,6 +338,11 @@
           : `${data.questions.length} képes kérdés • ${data.categories.length} témakör`;
       }
     })
+    .catch(() => {});
+
+  fetch('/api/kids-questions')
+    .then(r => r.json())
+    .then(data => { kidsBank = data; })
     .catch(() => {});
 
   fetch('/api/network-info')
@@ -582,6 +597,11 @@
   }
 
   function setAlarm(container, seconds) {
+    if (seconds === null || seconds === Infinity) {
+      container.innerHTML = `<div class="alarm-unlimited" title="Nincs időkorlát!"><span class="inf-sym">∞</span><span class="inf-lbl">NYUGIS</span></div>`;
+      container.classList.remove('urgent');
+      return;
+    }
     container.innerHTML = buildAlarmSVG(seconds);
     container.classList.toggle('urgent', seconds <= 3 && seconds > 0);
   }
@@ -650,6 +670,53 @@
     }
 
     mode = 'solo';
+    solo.isKidsMode = false;
+    clearSoloTimers();
+    solo.roundNumber = 0;
+    solo.score = 0;
+    solo.usedIds.clear();
+    solo.photoCount = 0;
+    solo.textCount = 0;
+    solo.currentCategoryId = null;
+    solo.answered = null;
+    solo.phase = 'ready';
+
+    els.hudAlive.classList.add('hidden');
+    els.spectatorBanner.classList.add('hidden');
+    updateArcadeButtons(false);
+    showScreen('ready');
+
+    let count = 3;
+    els.readyCountdown.textContent = count;
+    window.kvizSound.readyBeep(count);
+
+    solo.timer = setInterval(() => {
+      count--;
+      if (count <= 0) {
+        clearSoloTimers();
+        soloNextRound();
+      } else {
+        els.readyCountdown.textContent = count;
+        window.kvizSound.readyBeep(count);
+      }
+    }, 1000);
+  }
+
+  async function startKidsGame() {
+    window.kvizSound.ensureContext();
+    window.kvizSound.buttonClick('blue');
+    try {
+      const res = await fetch('/api/kids-questions');
+      kidsBank = await res.json();
+    } catch (e) {
+      if (!kidsBank.questions.length) {
+        showHomeError('Nem sikerült betölteni a gyerek kérdésbankot!');
+        return;
+      }
+    }
+
+    mode = 'solo';
+    solo.isKidsMode = true;
     clearSoloTimers();
     solo.roundNumber = 0;
     solo.score = 0;
@@ -685,11 +752,13 @@
     clearSoloTimers();
     solo.roundNumber++;
     solo.answered = null;
-    els.hudRound.textContent = `${solo.roundNumber}. kérdés`;
+    els.hudRound.textContent = solo.isKidsMode
+      ? `🧸 GYEREK • ${solo.roundNumber}. kérdés`
+      : `${solo.roundNumber}. kérdés`;
     els.hudScore.textContent = `${solo.score} PONT`;
     els.hudCategory.classList.add('hidden');
 
-    const pickEvery = solo.settings.categoryPickEvery;
+    const pickEvery = solo.isKidsMode ? 1 : solo.settings.categoryPickEvery;
     const shouldPickNow = pickEvery > 0 && ((solo.roundNumber - 1) % pickEvery === 0);
 
     if (shouldPickNow) {
@@ -705,17 +774,20 @@
     solo.phase = 'category';
     updateArcadeButtons(false);
 
-    let availCats = questionBank.categories.filter(c =>
-      questionBank.questions.some(q => q.category === c.id && !solo.usedIds.has(q.id))
+    const bank = getActiveSoloBank();
+    let availCats = bank.categories.filter(c =>
+      bank.questions.some(q => q.category === c.id && !solo.usedIds.has(q.id))
     );
     if (availCats.length === 0) {
       solo.usedIds.clear();
-      availCats = [...questionBank.categories];
+      availCats = [...bank.categories];
     }
 
     const options = [...availCats].sort(() => Math.random() - 0.5).slice(0, 4);
-    els.catPickerBadge.textContent = 'TÉMAKÖR VÁLASZTÁS';
-    els.catPrompt.textContent = 'Válassz témakört a következő kérdéshez!';
+    els.catPickerBadge.textContent = solo.isKidsMode ? '🧸 VÁLASSZ TÉMAKÖRT!' : 'TÉMAKÖR VÁLASZTÁS';
+    els.catPrompt.textContent = solo.isKidsMode
+      ? 'Melyik témából jöjjön a következő kérdés? Nyugodtan választhatsz!'
+      : 'Válassz témakört a következő kérdéshez!';
     els.catGrid.innerHTML = '';
 
     options.forEach(cat => {
@@ -729,10 +801,17 @@
       els.catGrid.appendChild(btn);
     });
 
-    solo.timeLeft = 10;
-    setAlarm(els.catAlarm, solo.timeLeft);
     window.kvizSound.categoryPick();
     showScreen('category');
+
+    if (solo.isKidsMode) {
+      solo.timeLeft = null;
+      setAlarm(els.catAlarm, null);
+      return;
+    }
+
+    solo.timeLeft = 10;
+    setAlarm(els.catAlarm, solo.timeLeft);
 
     solo.timer = setInterval(() => {
       solo.timeLeft--;
@@ -750,43 +829,52 @@
   function soloPickQuestion(categoryId) {
     clearSoloTimers();
     if (categoryId) solo.currentCategoryId = categoryId;
+    const bank = getActiveSoloBank();
+
     let pool = categoryId
-      ? questionBank.questions.filter(q => !solo.usedIds.has(q.id) && q.category === categoryId)
-      : questionBank.questions.filter(q => !solo.usedIds.has(q.id));
+      ? bank.questions.filter(q => !solo.usedIds.has(q.id) && q.category === categoryId)
+      : bank.questions.filter(q => !solo.usedIds.has(q.id));
     if (pool.length === 0) {
-      pool = questionBank.questions.filter(q => !solo.usedIds.has(q.id));
+      pool = bank.questions.filter(q => !solo.usedIds.has(q.id));
     }
     if (pool.length === 0) {
       solo.usedIds.clear();
-      pool = [...questionBank.questions];
+      pool = [...bank.questions];
     }
 
-    // Progressive difficulty based on solo.roundNumber
-    const rn = solo.roundNumber || 1;
     let diffPool = pool;
-    if (rn <= 2) {
-      const p = pool.filter(q => (q.difficulty || 1) <= 2);
-      if (p.length > 0) diffPool = p;
-    } else if (rn <= 4) {
-      const p = pool.filter(q => (q.difficulty || 1) >= 2);
-      if (p.length > 0) diffPool = p;
-    } else {
-      const p3 = pool.filter(q => (q.difficulty || 1) >= 3);
-      const p2 = pool.filter(q => (q.difficulty || 1) >= 2);
-      if (p3.length > 0) diffPool = p3;
-      else if (p2.length > 0) diffPool = p2;
+    if (!solo.isKidsMode) {
+      // Progressive difficulty based on solo.roundNumber (adult mode)
+      const rn = solo.roundNumber || 1;
+      if (rn <= 2) {
+        const p = pool.filter(q => (q.difficulty || 1) <= 2);
+        if (p.length > 0) diffPool = p;
+      } else if (rn <= 4) {
+        const p = pool.filter(q => (q.difficulty || 1) >= 2);
+        if (p.length > 0) diffPool = p;
+      } else {
+        const p3 = pool.filter(q => (q.difficulty || 1) >= 3);
+        const p2 = pool.filter(q => (q.difficulty || 1) >= 2);
+        if (p3.length > 0) diffPool = p3;
+        else if (p2.length > 0) diffPool = p2;
+      }
     }
 
-    // Balanced ~50/50 selection between photo questions and text_only questions
+    // Balanced selection: ~62% photo in Kids Mode, ~50% photo in Adult Mode
     const photoPool = diffPool.filter(q => q.type === 'two_images' || (q.type === 'one_image' && q.image));
     const textPool = diffPool.filter(q => q.type === 'text_only' || (q.type !== 'two_images' && !q.image));
     let targetPool = diffPool;
     if (photoPool.length > 0 && textPool.length > 0) {
       const pCnt = solo.photoCount || 0;
       const tCnt = solo.textCount || 0;
-      const wantPhoto = pCnt === 0 && tCnt === 0
-        ? Math.random() < 0.7
-        : (pCnt <= tCnt ? Math.random() < 0.68 : Math.random() < 0.32);
+      let wantPhoto;
+      if (solo.isKidsMode) {
+        wantPhoto = pCnt <= tCnt * 1.5 ? Math.random() < 0.72 : Math.random() < 0.35;
+      } else {
+        wantPhoto = pCnt === 0 && tCnt === 0
+          ? Math.random() < 0.7
+          : (pCnt <= tCnt ? Math.random() < 0.68 : Math.random() < 0.32);
+      }
       targetPool = wantPhoto ? photoPool : textPool;
     } else if (photoPool.length > 0) {
       targetPool = photoPool;
@@ -800,21 +888,24 @@
     if (isPhoto) solo.photoCount = (solo.photoCount || 0) + 1;
     else solo.textCount = (solo.textCount || 0) + 1;
 
-    // Dynamic bluff/decoy image (55% chance to show the WRONG answer's verified photo)
-    const q = (rawQ.type === 'one_image' && rawQ.decoyImage && Math.random() < 0.55)
+    // Dynamic bluff/decoy image ONLY in adult mode (NEVER in Kids Mode!)
+    const q = (!solo.isKidsMode && rawQ.type === 'one_image' && rawQ.decoyImage && Math.random() < 0.55)
       ? { ...rawQ, image: rawQ.decoyImage, isDecoyShown: true }
       : rawQ;
     solo.currentQuestion = q;
     solo.phase = 'question';
-    solo.timeLeft = solo.settings.answerTime || 10;
+    solo.timeLeft = solo.isKidsMode ? null : (solo.settings.answerTime || 10);
 
-    const cat = questionBank.categories.find(c => c.id === q.category);
+    const cat = bank.categories.find(c => c.id === q.category);
     els.hudCategory.textContent = cat ? `${cat.icon} ${cat.name}` : q.category;
     els.hudCategory.classList.remove('hidden');
 
     renderQuestionUI(q, solo.timeLeft, null, null);
     updateArcadeButtons(true, 'PIROS', 'KÉK');
     showScreen('question');
+
+    // NO countdown timer in Kids Mode!
+    if (solo.isKidsMode) return;
 
     solo.timer = setInterval(() => {
       solo.timeLeft--;
@@ -868,7 +959,7 @@
   function soloStartDecision() {
     clearSoloTimers();
     solo.phase = 'decision';
-    solo.timeLeft = 7;
+    solo.timeLeft = solo.isKidsMode ? null : 7;
 
     els.decCurrentVal.textContent = `${solo.score} PONT`;
     els.decNextVal.textContent = `${getLadderValue(solo.roundNumber + 1)} PONT`;
@@ -883,6 +974,8 @@
     updateArcadeButtons(true, 'MEGÁLL', 'TOVÁBB');
     window.kvizSound.decisionOpen();
     showScreen('decision');
+
+    if (solo.isKidsMode) return;
 
     solo.timer = setInterval(() => {
       solo.timeLeft--;
@@ -919,24 +1012,41 @@
     const finalScore = stoppedWithPoints ? solo.score : 0;
     const survived = stoppedWithPoints ? solo.roundNumber : Math.max(0, solo.roundNumber - 1);
 
-    if (stoppedWithPoints && solo.score > solo.bestScore) {
-      solo.bestScore = solo.score;
-      localStorage.setItem('kvizbox_solo_best', String(solo.bestScore));
-      els.soloBestLabel.textContent = solo.bestScore;
-    }
-
-    submitScoreToAccount(finalScore, survived, 'solo');
-
-    if (stoppedWithPoints) {
-      els.gameoverTitle.textContent = 'GRATULÁLUNK!';
-      els.gameoverTitle.classList.add('win-style');
-      els.gameoverSubtitle.textContent = `Biztosított nyereményed: ${solo.score} PONT (${solo.roundNumber} helyes válasz) • Rekord: ${solo.bestScore} PONT`;
-      window.kvizSound.victory();
+    if (solo.isKidsMode) {
+      if (stoppedWithPoints && solo.score > solo.kidsBestScore) {
+        solo.kidsBestScore = solo.score;
+        localStorage.setItem('kvizbox_kids_best', String(solo.kidsBestScore));
+        if (els.kidsBestLabel) els.kidsBestLabel.textContent = solo.kidsBestScore;
+      }
+      if (stoppedWithPoints) {
+        els.gameoverTitle.textContent = '🌟 SZUPER ÜGYES VOLTÁL!';
+        els.gameoverTitle.classList.add('win-style');
+        els.gameoverSubtitle.textContent = `Megszereztél ${solo.score} PONTOT (${solo.roundNumber} helyes válasz)! • Gyerek rekord: ${solo.kidsBestScore} PONT`;
+        window.kvizSound.victory();
+      } else {
+        els.gameoverTitle.textContent = '🧸 SZÉP PRÓBÁLKOZÁS!';
+        els.gameoverTitle.classList.remove('win-style');
+        els.gameoverSubtitle.textContent = `${survived} helyes választ találtál el! Próbáld újra! • Gyerek rekord: ${solo.kidsBestScore} PONT`;
+      }
     } else {
-      els.gameoverTitle.textContent = 'A JÁTÉKNAK VÉGE';
-      els.gameoverTitle.classList.remove('win-style');
-      const survived = Math.max(0, solo.roundNumber - 1);
-      els.gameoverSubtitle.textContent = `${survived} helyes válasz után estél ki • Saját rekord: ${solo.bestScore} PONT`;
+      if (stoppedWithPoints && solo.score > solo.bestScore) {
+        solo.bestScore = solo.score;
+        localStorage.setItem('kvizbox_solo_best', String(solo.bestScore));
+        els.soloBestLabel.textContent = solo.bestScore;
+      }
+
+      submitScoreToAccount(finalScore, survived, 'solo');
+
+      if (stoppedWithPoints) {
+        els.gameoverTitle.textContent = 'GRATULÁLUNK!';
+        els.gameoverTitle.classList.add('win-style');
+        els.gameoverSubtitle.textContent = `Biztosított nyereményed: ${solo.score} PONT (${solo.roundNumber} helyes válasz) • Rekord: ${solo.bestScore} PONT`;
+        window.kvizSound.victory();
+      } else {
+        els.gameoverTitle.textContent = 'A JÁTÉKNAK VÉGE';
+        els.gameoverTitle.classList.remove('win-style');
+        els.gameoverSubtitle.textContent = `${survived} helyes válasz után estél ki • Saját rekord: ${solo.bestScore} PONT`;
+      }
     }
 
     els.btnPlayAgain.classList.remove('hidden');
@@ -981,7 +1091,8 @@
       els.qLayoutTwo.classList.add('hidden');
       els.qLayoutOne.classList.add('hidden');
 
-      const catObj = questionBank.categories.find(c => c.id === q.category);
+      const catObj = (mode === 'solo' ? getActiveSoloBank().categories : questionBank.categories).find(c => c.id === q.category)
+        || questionBank.categories.find(c => c.id === q.category);
       els.qTextCatIcon.textContent = catObj ? catObj.icon : '❓';
       els.qTextCatName.textContent = catObj ? catObj.name : (q.categoryName || 'KVÍZ');
       els.qTextCatBadge.style.setProperty('--cat-color', catObj?.color || '#ffde59');
@@ -1401,6 +1512,7 @@
   els.btnLeaveRoom.addEventListener('click', returnToHome);
 
   els.btnSolo.addEventListener('click', openSoloSettings);
+  if (els.btnKids) els.btnKids.addEventListener('click', startKidsGame);
   els.btnSoloBack.addEventListener('click', () => showScreen('home'));
   els.btnSoloLaunch.addEventListener('click', startSoloGame);
   els.btnLeaderboard.addEventListener('click', () => {
@@ -1448,7 +1560,8 @@
 
   els.btnPlayAgain.addEventListener('click', () => {
     if (mode === 'solo') {
-      startSoloGame();
+      if (solo.isKidsMode) startKidsGame();
+      else startSoloGame();
     } else if (mode === 'multiplayer') {
       socket?.emit('room:restart');
     }

@@ -1,0 +1,5105 @@
+{
+  "categories": [
+    {
+      "id": "allatok",
+      "name": "Állatvilág",
+      "icon": "🐾",
+      "color": "#f39c12"
+    },
+    {
+      "id": "novenyek",
+      "name": "Növények & Természet",
+      "icon": "🌿",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "matek",
+      "name": "Matek & Logika",
+      "icon": "🔢",
+      "color": "#3498db"
+    },
+    {
+      "id": "mesek",
+      "name": "Mesék & Kultúra",
+      "icon": "🧚",
+      "color": "#e84393"
+    },
+    {
+      "id": "vilag",
+      "name": "Földünk & Világ",
+      "icon": "🌍",
+      "color": "#00cec9"
+    },
+    {
+      "id": "mindennapok",
+      "name": "Mindennapok & Sport",
+      "icon": "⚽",
+      "color": "#fd79a8"
+    }
+  ],
+  "questions": [
+    {
+      "id": "k_0001",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a tüskés pikó?",
+      "redImage": "/images/q_001_red.jpg",
+      "blueImage": "/images/q_001_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0002",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a vörös panda?",
+      "redImage": "/images/q_002_red.jpg",
+      "blueImage": "/images/q_002_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0003",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a gepárd?",
+      "redImage": "/images/q_003_red.jpg",
+      "blueImage": "/images/q_003_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0004",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a szurikáta?",
+      "redImage": "/images/q_004_red.jpg",
+      "blueImage": "/images/q_004_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0005",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a tőkés réce?",
+      "redImage": "/images/q_005_red.jpg",
+      "blueImage": "/images/q_005_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0006",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik kontinensen őshonos a képen látható állat?",
+      "image": "/images/q_006.jpg",
+      "redText": "Ausztrália",
+      "blueText": "Dél-Amerika",
+      "correct": "red"
+    },
+    {
+      "id": "k_0007",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Milyen állat látható a képen?",
+      "image": "/images/q_007.jpg",
+      "redText": "Vombat",
+      "blueText": "Kapibara",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0008",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Hány szíve van a képen látható állatnak?",
+      "image": "/images/q_008.jpg",
+      "redText": "Három",
+      "blueText": "Egy",
+      "correct": "red"
+    },
+    {
+      "id": "k_0009",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Mi a neve a képen látható magyar kutyafajtának?",
+      "image": "/images/q_009.jpg",
+      "redText": "Komondor",
+      "blueText": "Puli",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0010",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Milyen állat látható a képen?",
+      "image": "/images/q_010.jpg",
+      "redText": "Kacsacsőrű emlős",
+      "blueText": "Vidra",
+      "correct": "red"
+    },
+    {
+      "id": "k_0011",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik madár látható a képen?",
+      "image": "/images/q_011.jpg",
+      "redText": "Flamingó",
+      "blueText": "Tukán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0012",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "A világ leggyorsabb madara zuhanórepülésben:",
+      "image": "/images/q_012.jpg",
+      "redText": "Vándorsólyom",
+      "blueText": "Szirti sas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0013",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat látható a képen?",
+      "image": "/images/q_013.jpg",
+      "redText": "Gőte",
+      "blueText": "Axolotl",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0014",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik hüllő képes a színét gyorsan változtatni?",
+      "image": "/images/q_014.jpg",
+      "redText": "Kaméleon",
+      "blueText": "Leguán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0015",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Milyen fajtájú magyar őshonos állat látható a képen?",
+      "image": "/images/q_015.jpg",
+      "redText": "Racka juh",
+      "blueText": "Magyar szürke marha",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0016",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik tengeri emlős látható a képen?",
+      "image": "/images/q_016.jpg",
+      "redText": "Kardszárnyú delfin",
+      "blueText": "Kék bálna",
+      "correct": "red"
+    },
+    {
+      "id": "k_0017",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen növény látható a képen?",
+      "image": "/images/q_017.jpg",
+      "redText": "Málna",
+      "blueText": "Ribizli",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0018",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Mi a neve a képen látható növénynek?",
+      "image": "/images/q_018.jpg",
+      "redText": "Rózsa",
+      "blueText": "Parrot tulipán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0019",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Az alábbiak közül melyik a kukorica egyik népi elnevezése?",
+      "image": "/images/q_019.jpg",
+      "redText": "folyami",
+      "blueText": "tengeri",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0020",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a levendula?",
+      "redImage": "/images/q_020_red.jpg",
+      "blueImage": "/images/q_020_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0021",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a légyölő galóca?",
+      "redImage": "/images/q_021_red.jpg",
+      "blueImage": "/images/q_021_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0022",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a kaktusz?",
+      "redImage": "/images/q_022_red.jpg",
+      "blueImage": "/images/q_022_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0023",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a tulipán?",
+      "redImage": "/images/q_023_red.jpg",
+      "blueImage": "/images/q_023_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0024",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fűszernövény látható a képen?",
+      "image": "/images/q_024.jpg",
+      "redText": "Bazsalikom",
+      "blueText": "Rozmaring",
+      "correct": "red"
+    },
+    {
+      "id": "k_0025",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen gyümölcs látható a képen?",
+      "image": "/images/q_025.jpg",
+      "redText": "Füge",
+      "blueText": "Gránátalma",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0026",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fafajta termése a makk?",
+      "image": "/images/q_026.jpg",
+      "redText": "Tölgy",
+      "blueText": "Nyírfa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0027",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik tavaszi virág látható a képen?",
+      "image": "/images/q_027.jpg",
+      "redText": "Ibolya",
+      "blueText": "Hóvirág",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0028",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen húsevő növény látható a képen?",
+      "image": "/images/q_028.jpg",
+      "redText": "Vénusz légycsapója",
+      "blueText": "Orchidea",
+      "correct": "red"
+    },
+    {
+      "id": "k_0029",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik trópusi gyümölcs látható a képen?",
+      "image": "/images/q_029.jpg",
+      "redText": "Mangó",
+      "blueText": "Sárkánygyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0030",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen természeti jelenség látható a képen?",
+      "image": "/images/q_030.jpg",
+      "redText": "Sarki fény",
+      "blueText": "Délibáb",
+      "correct": "red"
+    },
+    {
+      "id": "k_0031",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fa nő a világ legmagasabb fái közé?",
+      "image": "/images/q_031.jpg",
+      "redText": "Fűzfa",
+      "blueText": "Mamutfenyő",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0032",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen fűszer származik ebből a virágból?",
+      "image": "/images/q_032.jpg",
+      "redText": "Sáfrány",
+      "blueText": "Fahéj",
+      "correct": "red"
+    },
+    {
+      "id": "k_0033",
+      "category": "vilag",
+      "type": "two_images",
+      "question": "Melyik képen látható a Colosseum?",
+      "redImage": "/images/q_034_red.jpg",
+      "blueImage": "/images/q_034_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0034",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik magyar tó látható a képen?",
+      "image": "/images/q_039.jpg",
+      "redText": "Balaton",
+      "blueText": "Fertő tó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0035",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_040.png",
+      "redText": "Dél-Korea",
+      "blueText": "Japán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0036",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik folyó szeli ketté Budapestet?",
+      "image": "/images/q_042.jpg",
+      "redText": "Tisza",
+      "blueText": "Duna",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0037",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik olasz városban található ez a ferde torony?",
+      "image": "/images/q_043.jpg",
+      "redText": "Pisa",
+      "blueText": "Velence",
+      "correct": "red"
+    },
+    {
+      "id": "k_0038",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik országban találhatók a gízai piramisok?",
+      "image": "/images/q_044.jpg",
+      "redText": "Marokkó",
+      "blueText": "Egyiptom",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0039",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik kontinensen található a Szahara sivatag?",
+      "image": "/images/q_045.jpg",
+      "redText": "Afrika",
+      "blueText": "Ázsia",
+      "correct": "red"
+    },
+    {
+      "id": "k_0040",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_046.png",
+      "redText": "Svájc",
+      "blueText": "Kanada",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0041",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik országban található a Fudzsi vulkán?",
+      "image": "/images/q_048.jpg",
+      "redText": "Kína",
+      "blueText": "Japán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0042",
+      "category": "vilag",
+      "type": "two_images",
+      "question": "Melyik képen látható a Szaturnusz bolygó?",
+      "redImage": "/images/q_064_red.png",
+      "blueImage": "/images/q_064_blue.png",
+      "correct": "red"
+    },
+    {
+      "id": "k_0043",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik bolygót nevezik „Vörös bolygónak”?",
+      "image": "/images/q_068.png",
+      "redText": "Mars",
+      "blueText": "Vénusz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0044",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Hány fokon forr a víz normál légnyomáson?",
+      "image": "/images/q_070.jpg",
+      "redText": "100 °C",
+      "blueText": "80 °C",
+      "correct": "red"
+    },
+    {
+      "id": "k_0045",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik a Naprendszer legnagyobb bolygója?",
+      "image": "/images/q_074.png",
+      "redText": "Jupiter",
+      "blueText": "Neptunusz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0046",
+      "category": "mindennapok",
+      "type": "two_images",
+      "question": "Melyik képen látható a lángos?",
+      "redImage": "/images/q_079_red.jpg",
+      "blueImage": "/images/q_079_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0047",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik magyar leves látható a képen?",
+      "image": "/images/q_083.jpg",
+      "redText": "Gulyásleves",
+      "blueText": "Halászlé",
+      "correct": "red"
+    },
+    {
+      "id": "k_0048",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik híres magyar sütemény látható a képen?",
+      "image": "/images/q_092.jpg",
+      "redText": "Eszterházy torta",
+      "blueText": "Dobostorta",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0049",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország konyhájához tartozik a croissant?",
+      "image": "/images/q_093.jpg",
+      "redText": "Franciaország",
+      "blueText": "Németország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0050",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág magyar legendája volt Puskás Ferenc?",
+      "image": "/images/q_098.jpg",
+      "redText": "Vízilabda",
+      "blueText": "Labdarúgás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0051",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány karikából áll az olimpiai zászló?",
+      "image": "/images/q_100.jpg",
+      "redText": "6",
+      "blueText": "5",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0052",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik városban rendezik a híres wimbledoni tenisztornát?",
+      "image": "/images/q_101.jpg",
+      "redText": "London",
+      "blueText": "Párizs",
+      "correct": "red"
+    },
+    {
+      "id": "k_0053",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban dobnak hárompontost?",
+      "image": "/images/q_105.jpg",
+      "redText": "Kosárlabda",
+      "blueText": "Kézilabda",
+      "correct": "red"
+    },
+    {
+      "id": "k_0054",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány bábuval kezd egy játékos a sakkban?",
+      "image": "/images/q_106.jpg",
+      "redText": "12",
+      "blueText": "16",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0055",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban versenyzett Hosszú Katinka?",
+      "image": "/images/q_107.jpg",
+      "redText": "Úszás",
+      "blueText": "Kajak-kenu",
+      "correct": "red"
+    },
+    {
+      "id": "k_0056",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágat játsszák jégen koronggal?",
+      "image": "/images/q_108.jpg",
+      "redText": "Curling",
+      "blueText": "Jégkorong",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0057",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Hány húrja van egy hagyományos klasszikus gitárnak?",
+      "image": "/images/q_114.png",
+      "redText": "6",
+      "blueText": "4",
+      "correct": "red"
+    },
+    {
+      "id": "k_0058",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszernek vannak fekete és fehér billentyűi?",
+      "image": "/images/q_118.jpg",
+      "redText": "Zongora",
+      "blueText": "Hárfa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0059",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik országból származik az origami papírhajtogatás?",
+      "image": "/images/q_123.jpg",
+      "redText": "Kína",
+      "blueText": "Japán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0060",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszer a rockzenekarok alapvető ütőhangszere?",
+      "image": "/images/q_124.png",
+      "redText": "Dobfelszerelés",
+      "blueText": "Xilofon",
+      "correct": "red"
+    },
+    {
+      "id": "k_0061",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a hiúz?",
+      "redImage": "/images/q_125_red.jpg",
+      "blueImage": "/images/q_125_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0062",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a krokodil?",
+      "redImage": "/images/q_126_red.jpg",
+      "blueImage": "/images/q_126_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0063",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a láma?",
+      "redImage": "/images/q_127_red.jpg",
+      "blueImage": "/images/q_127_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0064",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a vidra?",
+      "redImage": "/images/q_128_red.jpg",
+      "blueImage": "/images/q_128_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0065",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a gólya?",
+      "redImage": "/images/q_129_red.jpg",
+      "blueImage": "/images/q_129_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0066",
+      "category": "allatok",
+      "type": "two_images",
+      "question": "Melyik képen látható a fóka?",
+      "redImage": "/images/q_130_red.jpg",
+      "blueImage": "/images/q_130_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0067",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik a világ legnagyobb szárazföldi emlőse?",
+      "image": "/images/q_131.jpg",
+      "redText": "Afrikai elefánt",
+      "blueText": "Fehér orrszarvú",
+      "correct": "red"
+    },
+    {
+      "id": "k_0068",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Hány lába van egy póknak?",
+      "image": "/images/q_132.jpg",
+      "redText": "Hat",
+      "blueText": "Nyolc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0069",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat alszik téli álmot a fák üregében vagy barlangban?",
+      "image": "/images/q_133.jpg",
+      "redText": "Barna medve",
+      "blueText": "Farkas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0070",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik madár nem tud repülni?",
+      "image": "/images/q_134.jpg",
+      "redText": "Albatrosz",
+      "blueText": "Pingvin",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0071",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Mi a világ legmagasabb szárazföldi állata?",
+      "image": "/images/q_135.jpg",
+      "redText": "Zsiráf",
+      "blueText": "Teve",
+      "correct": "red"
+    },
+    {
+      "id": "k_0072",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Milyen színű a jegesmedve bőre a fehér szőre alatt?",
+      "image": "/images/q_136.jpg",
+      "redText": "Rózsaszín",
+      "blueText": "Fekete",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0073",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat látható a képen?",
+      "image": "/images/q_137.jpg",
+      "redText": "Vörös róka",
+      "blueText": "Aranysakál",
+      "correct": "red"
+    },
+    {
+      "id": "k_0074",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik a világ leggyorsabb szárazföldi állata?",
+      "image": "/images/q_138.jpg",
+      "redText": "Oroszlán",
+      "blueText": "Gepárd",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0075",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik rovar készíti a mézet?",
+      "image": "/images/q_139.jpg",
+      "redText": "Házi méh",
+      "blueText": "Darázs",
+      "correct": "red"
+    },
+    {
+      "id": "k_0076",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat látható a képen?",
+      "image": "/images/q_140.jpg",
+      "redText": "Sül",
+      "blueText": "Sün",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0077",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik magyar kutyafajta látható a képen?",
+      "image": "/images/q_141.jpg",
+      "redText": "Magyar vizsla",
+      "blueText": "Erdélyi kopó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0078",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állatnak van erszénye?",
+      "image": "/images/q_142.jpg",
+      "redText": "Szarvas",
+      "blueText": "Kenguru",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0079",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik tengeri élőlény látható a képen?",
+      "image": "/images/q_143.jpg",
+      "redText": "Csikóhal",
+      "blueText": "Medúza",
+      "correct": "red"
+    },
+    {
+      "id": "k_0080",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik emlős képes valódi repülésre?",
+      "image": "/images/q_144.jpg",
+      "redText": "Repülő mókus",
+      "blueText": "Denevér",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0081",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat látható a képen?",
+      "image": "/images/q_145.jpg",
+      "redText": "Lajhár",
+      "blueText": "Koala",
+      "correct": "red"
+    },
+    {
+      "id": "k_0082",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat neve jelent görögül „folyami lovat”?",
+      "image": "/images/q_146.jpg",
+      "redText": "Orrszarvú",
+      "blueText": "Víziló",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0083",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik ragadozó madár látható a képen?",
+      "image": "/images/q_147.jpg",
+      "redText": "Gyöngybagoly",
+      "blueText": "Kuvik",
+      "correct": "red"
+    },
+    {
+      "id": "k_0084",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik hal él együtt a tengeri rózsával (anemónával)?",
+      "image": "/images/q_148.jpg",
+      "redText": "Piranha",
+      "blueText": "Bohóchal",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0085",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik a világ legnagyobb madara?",
+      "image": "/images/q_150.jpg",
+      "redText": "Emu",
+      "blueText": "Strucc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0086",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik állat látható a képen?",
+      "image": "/images/q_151.jpg",
+      "redText": "Flamingó",
+      "blueText": "Pelikán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0087",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik magyar őshonos sertésfajta látható a képen?",
+      "image": "/images/q_152.jpg",
+      "redText": "Vaddisznó",
+      "blueText": "Mangalica",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0088",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a napraforgó?",
+      "redImage": "/images/q_153_red.jpg",
+      "blueImage": "/images/q_153_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0089",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható az orchidea?",
+      "redImage": "/images/q_154_red.jpg",
+      "blueImage": "/images/q_154_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0090",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a fenyőtoboz?",
+      "redImage": "/images/q_155_red.jpg",
+      "blueImage": "/images/q_155_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0091",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a bambusz?",
+      "redImage": "/images/q_156_red.jpg",
+      "blueImage": "/images/q_156_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0092",
+      "category": "novenyek",
+      "type": "two_images",
+      "question": "Melyik képen látható a pipacs?",
+      "redImage": "/images/q_157_red.jpg",
+      "blueImage": "/images/q_157_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0093",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik növény látható a képen?",
+      "image": "/images/q_158.png",
+      "redText": "Agávé",
+      "blueText": "Aloe vera",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0094",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik gyümölcs terem a képen látható fán?",
+      "image": "/images/q_159.jpg",
+      "redText": "Olívabogyó",
+      "blueText": "Szilva",
+      "correct": "red"
+    },
+    {
+      "id": "k_0095",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fűszernövény látható a képen?",
+      "image": "/images/q_160.jpg",
+      "redText": "Kakukkfű",
+      "blueText": "Rozmaring",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0096",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen vízinövény látható a képen?",
+      "image": "/images/q_161.jpg",
+      "redText": "Tavirózsa",
+      "blueText": "Nádas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0097",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fa levele látható Kanada zászlaján?",
+      "image": "/images/q_162.jpg",
+      "redText": "Bükk",
+      "blueText": "Juhar",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0098",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen gyümölcs látható a képen?",
+      "image": "/images/q_163.jpg",
+      "redText": "Kivi",
+      "blueText": "Egres",
+      "correct": "red"
+    },
+    {
+      "id": "k_0099",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik természeti jelenség látható a képen?",
+      "image": "/images/q_164.jpg",
+      "redText": "Gejzír",
+      "blueText": "Vulkánkitörés",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0100",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik bogyós gyümölcs látható a képen?",
+      "image": "/images/q_165.jpg",
+      "redText": "Szeder",
+      "blueText": "Áfonya",
+      "correct": "red"
+    },
+    {
+      "id": "k_0101",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik gyógynövény látható a képen?",
+      "image": "/images/q_166.jpg",
+      "redText": "Menta",
+      "blueText": "Kamilla",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0102",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen természeti jelenség látható a képen?",
+      "image": "/images/q_167.jpg",
+      "redText": "Szivárvány",
+      "blueText": "Haló jelenség",
+      "correct": "red"
+    },
+    {
+      "id": "k_0103",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fafajta kérge jellegzetesen fehér?",
+      "image": "/images/q_168.jpg",
+      "redText": "Hársfa",
+      "blueText": "Nyírfa",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0104",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik citrusféle látható a képen?",
+      "image": "/images/q_169.jpg",
+      "redText": "Lime",
+      "blueText": "Citrom",
+      "correct": "red"
+    },
+    {
+      "id": "k_0105",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik ehető gomba látható a képen?",
+      "image": "/images/q_170.jpg",
+      "redText": "Csiperke",
+      "blueText": "Rókagomba",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0106",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik növényből készül a csokoládé alapanyaga?",
+      "image": "/images/q_171.jpg",
+      "redText": "Kakaófa",
+      "blueText": "Kávécserje",
+      "correct": "red"
+    },
+    {
+      "id": "k_0107",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik természeti csoda látható a képen?",
+      "image": "/images/q_172.jpg",
+      "redText": "Vízesés",
+      "blueText": "Gejzír",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0108",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen virág látható a képen?",
+      "image": "/images/q_173.jpg",
+      "redText": "Cseresznyevirág",
+      "blueText": "Magnólia",
+      "correct": "red"
+    },
+    {
+      "id": "k_0109",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik zöldség látható a képen?",
+      "image": "/images/q_174.jpg",
+      "redText": "Brokkoli",
+      "blueText": "Articsóka",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0110",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik fűszer látható a képen?",
+      "image": "/images/q_175.jpg",
+      "redText": "Fahéj",
+      "blueText": "Szegfűszeg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0111",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik természeti jelenség látható a képen?",
+      "image": "/images/q_176.jpg",
+      "redText": "Cunami",
+      "blueText": "Tornádó",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0112",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik dióféle látható a képen?",
+      "image": "/images/q_177.jpg",
+      "redText": "Pisztácia",
+      "blueText": "Kesudió",
+      "correct": "red"
+    },
+    {
+      "id": "k_0113",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik gyümölcs látható a képen?",
+      "image": "/images/q_178.jpg",
+      "redText": "Datolya",
+      "blueText": "Füge",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0114",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik növény termése a csipkebogyó?",
+      "image": "/images/q_179.jpg",
+      "redText": "Vadrózsa",
+      "blueText": "Galagonya",
+      "correct": "red"
+    },
+    {
+      "id": "k_0115",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Milyen képződmény látható a képen?",
+      "image": "/images/q_180.jpg",
+      "redText": "Hínárerdő",
+      "blueText": "Korallzátony",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0116",
+      "category": "vilag",
+      "type": "two_images",
+      "question": "Melyik képen látható a Big Ben (Elizabeth Tower)?",
+      "redImage": "/images/q_181_red.jpg",
+      "blueImage": "/images/q_181_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0117",
+      "category": "vilag",
+      "type": "two_images",
+      "question": "Melyik képen látható a Niagara-vízesés?",
+      "redImage": "/images/q_183_red.jpg",
+      "blueImage": "/images/q_183_blue.jpg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0118",
+      "category": "vilag",
+      "type": "two_images",
+      "question": "Melyik képen látható Olaszország zászlaja?",
+      "redImage": "/images/q_184_red.png",
+      "blueImage": "/images/q_184_blue.png",
+      "correct": "red"
+    },
+    {
+      "id": "k_0119",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_185.png",
+      "redText": "Argentína",
+      "blueText": "Brazília",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0120",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik városban található a Lánchíd?",
+      "image": "/images/q_186.jpg",
+      "redText": "Budapest",
+      "blueText": "Bécs",
+      "correct": "red"
+    },
+    {
+      "id": "k_0121",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_191.png",
+      "redText": "Ausztria",
+      "blueText": "Svájc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0122",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_196.png",
+      "redText": "Görögország",
+      "blueText": "Finnország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0123",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik óceán a Föld legnagyobb óceánja?",
+      "image": "/images/q_199.jpg",
+      "redText": "Atlanti-óceán",
+      "blueText": "Csendes-óceán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0124",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik magyar vár látható a képen?",
+      "image": "/images/q_201.jpg",
+      "redText": "Sümegi vár",
+      "blueText": "Egri vár",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0125",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik ország zászlaja látható a képen?",
+      "image": "/images/q_202.png",
+      "redText": "Svédország",
+      "blueText": "Norvégia",
+      "correct": "red"
+    },
+    {
+      "id": "k_0126",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik híres híd látható a képen Londonban?",
+      "image": "/images/q_203.jpg",
+      "redText": "London Bridge",
+      "blueText": "Tower Bridge",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0127",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik a legmagasabb hegycsúcs Magyarországon?",
+      "image": "/images/q_205.jpg",
+      "redText": "Dobogókő",
+      "blueText": "Kékes",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0128",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik bolygó van legközelebb a Naphoz?",
+      "image": "/images/q_238.jpg",
+      "redText": "Vénusz",
+      "blueText": "Merkúr",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0129",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Hány bolygó található jelenleg a Naprendszerben?",
+      "image": "/images/q_243.jpg",
+      "redText": "8",
+      "blueText": "9",
+      "correct": "red"
+    },
+    {
+      "id": "k_0130",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Mi a neve a képen látható űrtávcsőnek?",
+      "image": "/images/q_247.png",
+      "redText": "James Webb",
+      "blueText": "Voyager",
+      "correct": "red"
+    },
+    {
+      "id": "k_0131",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik bolygó forog „az oldalán fekve”?",
+      "image": "/images/q_249.png",
+      "redText": "Szaturnusz",
+      "blueText": "Uránusz",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0132",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Milyen energiát hasznosít a képen látható erőmű?",
+      "image": "/images/q_250.jpg",
+      "redText": "Szélenergia",
+      "blueText": "Geotermikus energia",
+      "correct": "red"
+    },
+    {
+      "id": "k_0133",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik galaxisban található a Föld?",
+      "image": "/images/q_253.jpg",
+      "redText": "Androméda",
+      "blueText": "Tejútrendszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0134",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik eszköz látható a képen?",
+      "image": "/images/q_256.jpg",
+      "redText": "Iránytű",
+      "blueText": "Barométer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0135",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Hány fokon fagy meg a tiszta víz normál légnyomáson?",
+      "image": "/images/q_259.jpg",
+      "redText": "-4 °C",
+      "blueText": "0 °C",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0136",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik műszerrel vizsgálják a távoli csillagokat?",
+      "image": "/images/q_260.jpg",
+      "redText": "Távcső (teleszkóp)",
+      "blueText": "Szeizmográf",
+      "correct": "red"
+    },
+    {
+      "id": "k_0137",
+      "category": "mindennapok",
+      "type": "two_images",
+      "question": "Melyik képen látható a makaron (macaron)?",
+      "redImage": "/images/q_262_red.jpg",
+      "blueImage": "/images/q_262_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0138",
+      "category": "mindennapok",
+      "type": "two_images",
+      "question": "Melyik képen látható a perec?",
+      "redImage": "/images/q_264_red.jpg",
+      "blueImage": "/images/q_264_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0139",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik olasz tésztaétel látható a képen?",
+      "image": "/images/q_266.jpg",
+      "redText": "Ravioli",
+      "blueText": "Lasagne",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0140",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik olasz sajtból készül hagyományosan a Margherita pizza?",
+      "image": "/images/q_268.jpg",
+      "redText": "Parmezán",
+      "blueText": "Mozzarella",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0141",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik magyar étel látható a képen?",
+      "image": "/images/q_270.jpg",
+      "redText": "Paprikás csirke",
+      "blueText": "Halászlé",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0142",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik mexikói étel látható a képen?",
+      "image": "/images/q_272.jpg",
+      "redText": "Empanada",
+      "blueText": "Burrito",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0143",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik híres magyar húsétel látható a képen?",
+      "image": "/images/q_275.jpg",
+      "redText": "Csirkepaprikás",
+      "blueText": "Töltött káposzta",
+      "correct": "red"
+    },
+    {
+      "id": "k_0144",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik édesség látható a képen?",
+      "image": "/images/q_283.jpg",
+      "redText": "Fánk",
+      "blueText": "Churros",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0145",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik indiai étel látható a képen?",
+      "image": "/images/q_286.jpg",
+      "redText": "Curry",
+      "blueText": "Gulyás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0146",
+      "category": "mindennapok",
+      "type": "two_images",
+      "question": "Melyik képen látható a vívás?",
+      "redImage": "/images/q_288_red.jpg",
+      "blueImage": "/images/q_288_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0147",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány percig tart egy rendes labdarúgó-mérkőzés (hosszabbítás nélkül)?",
+      "image": "/images/q_290.jpg",
+      "redText": "80 perc",
+      "blueText": "90 perc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0148",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág legendája Michael Jordan?",
+      "image": "/images/q_291.jpg",
+      "redText": "Kosárlabda",
+      "blueText": "Baseball",
+      "correct": "red"
+    },
+    {
+      "id": "k_0149",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban nyerte 3 olimpiai aranyát Szilágyi Áron?",
+      "image": "/images/q_292.jpg",
+      "redText": "Kardvívás",
+      "blueText": "Ökölvívás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0150",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágat játsszák a képen látható pályán?",
+      "image": "/images/q_294.jpg",
+      "redText": "Golf",
+      "blueText": "Krikett",
+      "correct": "red"
+    },
+    {
+      "id": "k_0151",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány szett megnyerése kell férfi egyesben egy Grand Slam tenisztornán?",
+      "image": "/images/q_295.jpg",
+      "redText": "2 szett",
+      "blueText": "3 szett",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0152",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág látható a képen?",
+      "image": "/images/q_297.jpg",
+      "redText": "Kézilabda",
+      "blueText": "Röplabda",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0153",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány pontot ér egy gól a labdarúgásban?",
+      "image": "/images/q_298.jpg",
+      "redText": "1",
+      "blueText": "2",
+      "correct": "red"
+    },
+    {
+      "id": "k_0154",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban versenyeznek kajakkal és kenuval?",
+      "image": "/images/q_300.jpg",
+      "redText": "Kajak-kenu",
+      "blueText": "Vitorlázás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0155",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág látható a képen?",
+      "image": "/images/q_302.jpg",
+      "redText": "Ökölvívás",
+      "blueText": "Birkózás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0156",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Hány játékos alkot egy strandröplabda-csapatot?",
+      "image": "/images/q_303.jpg",
+      "redText": "4",
+      "blueText": "2",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0157",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik téli sportág látható a képen?",
+      "image": "/images/q_304.jpg",
+      "redText": "Síugrás",
+      "blueText": "Biatlon",
+      "correct": "red"
+    },
+    {
+      "id": "k_0158",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban nyerte 5 olimpiai aranyát Egerszegi Krisztina?",
+      "image": "/images/q_305.jpg",
+      "redText": "Torna",
+      "blueText": "Úszás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0159",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág látható a képen?",
+      "image": "/images/q_306.jpg",
+      "redText": "Asztalitenisz",
+      "blueText": "Tollaslabda",
+      "correct": "red"
+    },
+    {
+      "id": "k_0160",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportágban használják a „checkmate” (sakk-matt) kifejezést?",
+      "image": "/images/q_307.jpg",
+      "redText": "Sakk",
+      "blueText": "Dáma",
+      "correct": "red"
+    },
+    {
+      "id": "k_0161",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág látható a képen?",
+      "image": "/images/q_308.jpg",
+      "redText": "Műkorcsolya",
+      "blueText": "Torna",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0162",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik stadion a magyar labdarúgó-válogatott otthona?",
+      "image": "/images/q_309.jpg",
+      "redText": "Puskás Aréna",
+      "blueText": "Groupama Aréna",
+      "correct": "red"
+    },
+    {
+      "id": "k_0163",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik téli sportágban csúsztatnak gránitköveket a jégen?",
+      "image": "/images/q_311.jpg",
+      "redText": "Curling",
+      "blueText": "Bob",
+      "correct": "red"
+    },
+    {
+      "id": "k_0164",
+      "category": "mesek",
+      "type": "two_images",
+      "question": "Melyik képen látható a hárfa?",
+      "redImage": "/images/q_312_red.jpg",
+      "blueImage": "/images/q_312_blue.jpg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0165",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszer látható a képen?",
+      "image": "/images/q_319.jpg",
+      "redText": "Ukulele",
+      "blueText": "Mandolin",
+      "correct": "red"
+    },
+    {
+      "id": "k_0166",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik színházi műfajban énekelnek végig zenekari kísérettel?",
+      "image": "/images/q_321.jpg",
+      "redText": "Opera",
+      "blueText": "Balett",
+      "correct": "red"
+    },
+    {
+      "id": "k_0167",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik budapesti műemlék épület látható a képen?",
+      "image": "/images/q_323.jpg",
+      "redText": "Magyar Állami Operaház",
+      "blueText": "Vigadó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0168",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszer látható a képen?",
+      "image": "/images/q_325.jpg",
+      "redText": "Skót duda",
+      "blueText": "Klarinét",
+      "correct": "red"
+    },
+    {
+      "id": "k_0169",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik táncműfaj látható a képen?",
+      "image": "/images/q_330.jpg",
+      "redText": "Tangó",
+      "blueText": "Balett",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0170",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszer látható a képen?",
+      "image": "/images/q_332.jpg",
+      "redText": "Pánsíp",
+      "blueText": "Szájharmonika",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0171",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik híres osztrák zeneszerző írta a „Varázsfuvola” című operát?",
+      "image": "/images/q_335.jpg",
+      "redText": "Mozart",
+      "blueText": "Bach",
+      "correct": "red"
+    },
+    {
+      "id": "k_0172",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszer látható a képen?",
+      "image": "/images/q_337.jpg",
+      "redText": "Versenyzongora",
+      "blueText": "Csembaló",
+      "correct": "red"
+    },
+    {
+      "id": "k_0173",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) alma növényt?",
+      "image": "/images/q_1376.jpg",
+      "redText": "Zöldség",
+      "blueText": "Gyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0174",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) körte növényt?",
+      "image": "/images/q_1377.jpg",
+      "redText": "Zöldség",
+      "blueText": "Gyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0175",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) mangó növényt?",
+      "image": "/images/q_1378.jpg",
+      "redText": "Zöldség",
+      "blueText": "Gyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0176",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) ananász növényt?",
+      "image": "/images/q_1379.jpg",
+      "redText": "Zöldség",
+      "blueText": "Gyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0177",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) görögdinnye növényt?",
+      "image": "/images/q_1380.jpg",
+      "redText": "Gyümölcs",
+      "blueText": "Zöldség",
+      "correct": "red"
+    },
+    {
+      "id": "k_0178",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) gránátalma növényt?",
+      "image": "/images/q_1381.jpg",
+      "redText": "Zöldség",
+      "blueText": "Gyümölcs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0179",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) sárgarépa növényt?",
+      "image": "/images/q_1382.jpg",
+      "redText": "Gyökérzöldség",
+      "blueText": "Gyümölcs",
+      "correct": "red"
+    },
+    {
+      "id": "k_0180",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) retek növényt?",
+      "image": "/images/q_1383.jpg",
+      "redText": "Gyökérzöldség",
+      "blueText": "Gabona",
+      "correct": "red"
+    },
+    {
+      "id": "k_0181",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) cékla növényt?",
+      "image": "/images/q_1384.png",
+      "redText": "Gyümölcs",
+      "blueText": "Gyökérzöldség",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0182",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) búza növényt?",
+      "image": "/images/q_1385.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Hüvelyes",
+      "correct": "red"
+    },
+    {
+      "id": "k_0183",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) árpa növényt?",
+      "image": "/images/q_1386.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Hüvelyes",
+      "correct": "red"
+    },
+    {
+      "id": "k_0184",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) zab növényt?",
+      "image": "/images/q_1387.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Hüvelyes",
+      "correct": "red"
+    },
+    {
+      "id": "k_0185",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) rozs növényt?",
+      "image": "/images/q_1388.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Gyökérzöldség",
+      "correct": "red"
+    },
+    {
+      "id": "k_0186",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) rizs növényt?",
+      "image": "/images/q_1389.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Hüvelyes",
+      "correct": "red"
+    },
+    {
+      "id": "k_0187",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) lencse növényt?",
+      "image": "/images/q_1390.png",
+      "redText": "Hüvelyes",
+      "blueText": "Gabonaféle",
+      "correct": "red"
+    },
+    {
+      "id": "k_0188",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) bab növényt?",
+      "image": "/images/q_1393.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Hüvelyes",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0189",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) bazsalikom növényt?",
+      "image": "/images/q_1394.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Fűszernövény",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0190",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) oregánó növényt?",
+      "image": "/images/q_1395.jpg",
+      "redText": "Gyümölcs",
+      "blueText": "Fűszernövény",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0191",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) kakukkfű növényt?",
+      "image": "/images/q_1396.jpg",
+      "redText": "Fűszernövény",
+      "blueText": "Hüvelyes",
+      "correct": "red"
+    },
+    {
+      "id": "k_0192",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) majoránna növényt?",
+      "image": "/images/q_1397.jpg",
+      "redText": "Gyökérzöldség",
+      "blueText": "Fűszernövény",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0193",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) petrezselyem növényt?",
+      "image": "/images/q_1398.jpg",
+      "redText": "Gyümölcs",
+      "blueText": "Fűszernövény",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0194",
+      "category": "novenyek",
+      "type": "one_image",
+      "question": "Melyik csoportba soroljuk a(z) koriander növényt?",
+      "image": "/images/q_1399.jpg",
+      "redText": "Gabonaféle",
+      "blueText": "Fűszernövény",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0195",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Pizza Margherita?",
+      "image": "/images/q_1400.jpg",
+      "redText": "Kanada",
+      "blueText": "Olaszország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0196",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Gulyásleves?",
+      "image": "/images/q_1406.jpg",
+      "redText": "Franciaország",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0197",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Lángos?",
+      "image": "/images/q_1407.jpg",
+      "redText": "Törökország",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0198",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Hortobágyi palacsinta?",
+      "image": "/images/q_1408.jpg",
+      "redText": "Magyarország",
+      "blueText": "Mexikó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0199",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Halászlé?",
+      "image": "/images/q_1409.jpg",
+      "redText": "India",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0200",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Dobostorta?",
+      "image": "/images/q_1410.jpg",
+      "redText": "Magyarország",
+      "blueText": "Görögország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0201",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Churros?",
+      "image": "/images/q_1419.jpg",
+      "redText": "Észak-Afrika (Marokkó)",
+      "blueText": "Spanyolország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0202",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Croissant?",
+      "image": "/images/q_1420.jpg",
+      "redText": "Franciaország",
+      "blueText": "Olaszország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0203",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Taco?",
+      "image": "/images/q_1424.jpg",
+      "redText": "Belgium",
+      "blueText": "Mexikó",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0204",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik ország/térség híres étele a(z) Burrito?",
+      "image": "/images/q_1427.jpg",
+      "redText": "Mexikó",
+      "blueText": "Balkán (Bosznia/Szerbia)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0205",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Hosszú Katinka?",
+      "image": "/images/q_1526.jpg",
+      "redText": "Kajak-kenu",
+      "blueText": "Úszás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0206",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Milák Kristóf?",
+      "image": "/images/q_1527.jpg",
+      "redText": "Kajak-kenu",
+      "blueText": "Úszás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0207",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Egerszegi Krisztina?",
+      "image": "/images/q_1528.jpg",
+      "redText": "Ökölvívás",
+      "blueText": "Úszás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0208",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Gyurta Dániel?",
+      "image": "/images/q_1530.jpg",
+      "redText": "Úszás",
+      "blueText": "Tenisz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0209",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Cseh László?",
+      "image": "/images/q_1531.jpg",
+      "redText": "Sakk",
+      "blueText": "Úszás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0210",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Szilágyi Áron?",
+      "image": "/images/q_1533.jpg",
+      "redText": "Úszás",
+      "blueText": "Vívás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0211",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Szász Emese?",
+      "image": "/images/q_1534.jpg",
+      "redText": "Vívás",
+      "blueText": "Labdarúgás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0212",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Nagy Tímea?",
+      "image": "/images/q_1535.jpg",
+      "redText": "Vívás",
+      "blueText": "Atlétika",
+      "correct": "red"
+    },
+    {
+      "id": "k_0213",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Gerevich Aladár?",
+      "image": "/images/q_1536.jpg",
+      "redText": "Kajak-kenu",
+      "blueText": "Vívás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0214",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Kovács Katalin?",
+      "image": "/images/q_1538.jpg",
+      "redText": "Atlétika",
+      "blueText": "Kajak-kenu",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0215",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Janics Natasa?",
+      "image": "/images/q_1539.jpg",
+      "redText": "Birkózás",
+      "blueText": "Kajak-kenu",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0216",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Kopasz Bálint?",
+      "image": "/images/q_1541.jpg",
+      "redText": "Kajak-kenu",
+      "blueText": "Kézilabda",
+      "correct": "red"
+    },
+    {
+      "id": "k_0217",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Puskás Ferenc?",
+      "image": "/images/q_1542.jpg",
+      "redText": "Labdarúgás",
+      "blueText": "Kézilabda",
+      "correct": "red"
+    },
+    {
+      "id": "k_0218",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Szoboszlai Dominik?",
+      "image": "/images/q_1543.jpg",
+      "redText": "Sakk",
+      "blueText": "Labdarúgás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0219",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Albert Flórián?",
+      "image": "/images/q_1544.jpg",
+      "redText": "Tenisz",
+      "blueText": "Labdarúgás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0220",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Kocsis Sándor?",
+      "image": "/images/q_1545.jpg",
+      "redText": "Sakk",
+      "blueText": "Labdarúgás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0221",
+      "category": "mindennapok",
+      "type": "one_image",
+      "question": "Melyik sportág híres magyar képviselője Bozsik József?",
+      "image": "/images/q_1546.jpg",
+      "redText": "Sakk",
+      "blueText": "Labdarúgás",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0222",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik városban található a(z) Eiffel-torony?",
+      "image": "/images/q_1920.jpg",
+      "redText": "Rio de Janeiro",
+      "blueText": "Párizs",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0223",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik városban található a(z) Colosseum?",
+      "image": "/images/q_1924.jpg",
+      "redText": "Barcelona",
+      "blueText": "Róma",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0224",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik városban található a(z) Big Ben?",
+      "image": "/images/q_1928.jpg",
+      "redText": "Róma",
+      "blueText": "London",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0225",
+      "category": "vilag",
+      "type": "one_image",
+      "question": "Melyik városban található a(z) Tower Bridge?",
+      "image": "/images/q_1929.jpg",
+      "redText": "Sydney",
+      "blueText": "London",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0226",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Puli kutyafajta?",
+      "image": "/images/q_2023.jpg",
+      "redText": "Olaszország",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0227",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Komondor kutyafajta?",
+      "image": "/images/q_2024.jpg",
+      "redText": "Japán",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0228",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Kuvasz kutyafajta?",
+      "image": "/images/q_2025.jpg",
+      "redText": "Magyarország",
+      "blueText": "Horvátország (Dalmácia)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0229",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Magyar vizsla kutyafajta?",
+      "image": "/images/q_2026.jpg",
+      "redText": "Magyarország",
+      "blueText": "Horvátország (Dalmácia)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0230",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Pumi kutyafajta?",
+      "image": "/images/q_2027.jpg",
+      "redText": "Kanada",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0231",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Mudi kutyafajta?",
+      "image": "/images/q_2028.jpg",
+      "redText": "Skócia / Anglia",
+      "blueText": "Magyarország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0232",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Német juhászkutya kutyafajta?",
+      "image": "/images/q_2029.jpg",
+      "redText": "Németország",
+      "blueText": "Horvátország (Dalmácia)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0233",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Tacskó kutyafajta?",
+      "image": "/images/q_2030.jpg",
+      "redText": "Németország",
+      "blueText": "Olaszország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0234",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Rottweiler kutyafajta?",
+      "image": "/images/q_2031.jpg",
+      "redText": "Németország",
+      "blueText": "Magyarország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0235",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Dobermann kutyafajta?",
+      "image": "/images/q_2032.jpg",
+      "redText": "Skócia (Egyesült Királyság)",
+      "blueText": "Németország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0236",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Boxer kutyafajta?",
+      "image": "/images/q_2033.jpg",
+      "redText": "Németország",
+      "blueText": "Oroszország (Szibéria)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0237",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Golden Retriever kutyafajta?",
+      "image": "/images/q_2034.jpg",
+      "redText": "Skócia (Egyesült Királyság)",
+      "blueText": "Horvátország (Dalmácia)",
+      "correct": "red"
+    },
+    {
+      "id": "k_0238",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Angol buldog kutyafajta?",
+      "image": "/images/q_2035.jpg",
+      "redText": "Oroszország",
+      "blueText": "Anglia",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0239",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Beagle kutyafajta?",
+      "image": "/images/q_2036.jpg",
+      "redText": "Németország",
+      "blueText": "Anglia",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0240",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Yorkshire terrier kutyafajta?",
+      "image": "/images/q_2037.jpg",
+      "redText": "Anglia",
+      "blueText": "Oroszország",
+      "correct": "red"
+    },
+    {
+      "id": "k_0241",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Francia buldog kutyafajta?",
+      "image": "/images/q_2039.jpg",
+      "redText": "Franciaország",
+      "blueText": "Kanada",
+      "correct": "red"
+    },
+    {
+      "id": "k_0242",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Uszkár kutyafajta?",
+      "image": "/images/q_2040.jpg",
+      "redText": "Japán",
+      "blueText": "Franciaország / Németország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0243",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Labrador retriever kutyafajta?",
+      "image": "/images/q_2041.jpg",
+      "redText": "Magyarország",
+      "blueText": "Kanada",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0244",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Szibériai husky kutyafajta?",
+      "image": "/images/q_2042.jpg",
+      "redText": "Horvátország (Dalmácia)",
+      "blueText": "Oroszország (Szibéria)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0245",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Szamojéd kutyafajta?",
+      "image": "/images/q_2043.jpg",
+      "redText": "Oroszország",
+      "blueText": "Japán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0246",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Akita Inu kutyafajta?",
+      "image": "/images/q_2044.png",
+      "redText": "Skócia (Egyesült Királyság)",
+      "blueText": "Japán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0247",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Shiba Inu kutyafajta?",
+      "image": "/images/q_2045.jpg",
+      "redText": "Kína",
+      "blueText": "Japán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0248",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Csau-csau kutyafajta?",
+      "image": "/images/q_2046.jpg",
+      "redText": "Anglia",
+      "blueText": "Kína",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0249",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Mopsz kutyafajta?",
+      "image": "/images/q_2047.jpg",
+      "redText": "Kanada",
+      "blueText": "Kína",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0250",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Chihuahua kutyafajta?",
+      "image": "/images/q_2048.jpg",
+      "redText": "Japán",
+      "blueText": "Mexikó",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0251",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Dalmatin kutyafajta?",
+      "image": "/images/q_2049.jpg",
+      "redText": "Franciaország / Németország",
+      "blueText": "Horvátország (Dalmácia)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0252",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Bernáthegyi kutyafajta?",
+      "image": "/images/q_2050.jpg",
+      "redText": "Skócia / Anglia",
+      "blueText": "Svájc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0253",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Berni pásztorkutya kutyafajta?",
+      "image": "/images/q_2051.jpg",
+      "redText": "Olaszország",
+      "blueText": "Svájc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0254",
+      "category": "allatok",
+      "type": "one_image",
+      "question": "Melyik országból származik a(z) Cane Corso kutyafajta?",
+      "image": "/images/q_2052.png",
+      "redText": "Olaszország",
+      "blueText": "Skócia / Anglia",
+      "correct": "red"
+    },
+    {
+      "id": "k_0255",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) hegedű?",
+      "image": "/images/q_2053.png",
+      "redText": "Vonós hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0256",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) cselló?",
+      "image": "/images/q_2054.png",
+      "redText": "Pengetős hangszer",
+      "blueText": "Vonós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0257",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) nagybőgő?",
+      "image": "/images/q_2055.jpg",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Vonós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0258",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) brácsa?",
+      "image": "/images/q_2056.jpg",
+      "redText": "Pengetős hangszer",
+      "blueText": "Vonós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0259",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) gitár?",
+      "image": "/images/q_2057.png",
+      "redText": "Pengetős hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0260",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) hárfa?",
+      "image": "/images/q_2058.jpg",
+      "redText": "Pengetős hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0261",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) ukulele?",
+      "image": "/images/q_2059.jpg",
+      "redText": "Vonós hangszer",
+      "blueText": "Pengetős hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0262",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) mandolin?",
+      "image": "/images/q_2061.jpg",
+      "redText": "Pengetős hangszer",
+      "blueText": "Vonós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0263",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) fuvola?",
+      "image": "/images/q_2062.png",
+      "redText": "Rézfúvós hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0264",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) klarinét?",
+      "image": "/images/q_2063.png",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Pengetős hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0265",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) oboa?",
+      "image": "/images/q_2064.jpg",
+      "redText": "Billentyűs hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0266",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) fagott?",
+      "image": "/images/q_2065.png",
+      "redText": "Rézfúvós hangszer",
+      "blueText": "Fafúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0267",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) szaxofon?",
+      "image": "/images/q_2066.png",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Ütőhangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0268",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) trombita?",
+      "image": "/images/q_2067.jpg",
+      "redText": "Billentyűs hangszer",
+      "blueText": "Rézfúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0269",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) harsona?",
+      "image": "/images/q_2068.jpg",
+      "redText": "Vonós hangszer",
+      "blueText": "Rézfúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0270",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) tuba?",
+      "image": "/images/q_2069.jpg",
+      "redText": "Billentyűs hangszer",
+      "blueText": "Rézfúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0271",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) kürt?",
+      "image": "/images/q_2070.jpg",
+      "redText": "Vonós hangszer",
+      "blueText": "Rézfúvós hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0272",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) dobfelszerelés?",
+      "image": "/images/q_2071.png",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Ütőhangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0273",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) üstdob?",
+      "image": "/images/q_2073.jpg",
+      "redText": "Ütőhangszer",
+      "blueText": "Vonós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0274",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) cintányér?",
+      "image": "/images/q_2074.jpg",
+      "redText": "Ütőhangszer",
+      "blueText": "Rézfúvós hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0275",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) zongora?",
+      "image": "/images/q_2075.jpg",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Billentyűs hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0276",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) orgona?",
+      "image": "/images/q_2076.jpg",
+      "redText": "Fafúvós hangszer",
+      "blueText": "Billentyűs hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0277",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) harmonika?",
+      "image": "/images/q_2077.jpg",
+      "redText": "Billentyűs / fújtatós hangszer",
+      "blueText": "Pengetős hangszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0278",
+      "category": "mesek",
+      "type": "one_image",
+      "question": "Melyik hangszercsaládba tartozik a(z) csembaló?",
+      "image": "/images/q_2078.jpg",
+      "redText": "Pengetős hangszer",
+      "blueText": "Billentyűs hangszer",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0279",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a ló kicsinyét?",
+      "redText": "Csikó",
+      "blueText": "Boci",
+      "correct": "red"
+    },
+    {
+      "id": "k_0280",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a tehén kicsinyét?",
+      "redText": "Bárány",
+      "blueText": "Borjú (boci)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0281",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a juh (birka) kicsinyét?",
+      "redText": "Bárány",
+      "blueText": "Gida",
+      "correct": "red"
+    },
+    {
+      "id": "k_0282",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják az őz kicsinyét?",
+      "redText": "Bocs",
+      "blueText": "Őzgida",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0283",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a medve kicsinyét?",
+      "redText": "Bocs",
+      "blueText": "Kölyökcsikó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0284",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a sertés kicsinyét?",
+      "redText": "Kiscsibe",
+      "blueText": "Malac",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0285",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a kacsa kicsinyét?",
+      "redText": "Kiskacsa",
+      "blueText": "Pulykacsibe",
+      "correct": "red"
+    },
+    {
+      "id": "k_0286",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a szarvas hímjét?",
+      "redText": "Kos",
+      "blueText": "Szarvasbika",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0287",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a juh hímjét?",
+      "redText": "Kos",
+      "blueText": "Kakas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0288",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a tyúk hímjét?",
+      "redText": "Gúnár",
+      "blueText": "Kakas",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0289",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hogy hívják a lúd (liba) hímjét?",
+      "redText": "Gúnár",
+      "blueText": "Kakas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0290",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat mondja azt, hogy „bőg” vagy „búg”?",
+      "redText": "Kecske",
+      "blueText": "Tehén",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0291",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik madár költözik el télre melegebb vidékre?",
+      "redText": "Fecske",
+      "blueText": "Veréb",
+      "correct": "red"
+    },
+    {
+      "id": "k_0292",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik madár marad itt nálunk télen is?",
+      "redText": "Fehér gólya",
+      "blueText": "Széncinege",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0293",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat alszik téli álmot a hideg hónapokban?",
+      "redText": "Sün",
+      "blueText": "Őz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0294",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat gyűjt makkot és diót télire a fa odvába?",
+      "redText": "Róka",
+      "blueText": "Mókus",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0295",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hány lába van minden rovarnak (például a hangyának vagy a méhecskének)?",
+      "redText": "6 lába",
+      "blueText": "8 lába",
+      "correct": "red"
+    },
+    {
+      "id": "k_0296",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Hány lába van a pókoknak?",
+      "redText": "6 lába",
+      "blueText": "8 lába",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0297",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik rovar készít selyemfonalat a gubójához?",
+      "redText": "Selyemhernyó",
+      "blueText": "Katicabogár",
+      "correct": "red"
+    },
+    {
+      "id": "k_0298",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Miből fejlődik ki a gyönyörű pillangó?",
+      "redText": "Szitakötőből",
+      "blueText": "Hernyóból (bábból)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0299",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Miből fejlődik ki a béka a vízben?",
+      "redText": "Ebihalból",
+      "blueText": "Kishalból",
+      "correct": "red"
+    },
+    {
+      "id": "k_0300",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik a világ legnagyobb élő állata?",
+      "redText": "Afrikai elefánt",
+      "blueText": "Kék bálna",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0301",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állatnak van a leghosszabb nyaka?",
+      "redText": "Zsiráf",
+      "blueText": "Teve",
+      "correct": "red"
+    },
+    {
+      "id": "k_0302",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat tudja a színét változtatni, hogy beleolvadjon a környezetébe?",
+      "redText": "Teknős",
+      "blueText": "Kaméleon",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0303",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat hordja a hátán a saját „házát”?",
+      "redText": "Csiga és teknős",
+      "blueText": "Sün és vakond",
+      "correct": "red"
+    },
+    {
+      "id": "k_0304",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat ás járatokat a föld alatt, és alig lát?",
+      "redText": "Mezei nyúl",
+      "blueText": "Vakond",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0305",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik tengeri állatnak van 8 karja és tintát tud spriccelni?",
+      "redText": "Polip",
+      "blueText": "Csikóhal",
+      "correct": "red"
+    },
+    {
+      "id": "k_0306",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állatnak van erszénye, amiben a kicsinyét hordja?",
+      "redText": "Zebra",
+      "blueText": "Kenguru",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0307",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat fekete-fehér csíkos bundájáról híres?",
+      "redText": "Zebra",
+      "blueText": "Gepárd",
+      "correct": "red"
+    },
+    {
+      "id": "k_0308",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat a „sivatag hajója”, mert sokáig bírja víz nélkül?",
+      "redText": "Láma",
+      "blueText": "Teve",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0309",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik ragadozó madár vadászik főleg éjszaka?",
+      "redText": "Bagoly",
+      "blueText": "Fecske",
+      "correct": "red"
+    },
+    {
+      "id": "k_0310",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik madár kopácsolja a fák kérgét, ezért az „erdő doktora”?",
+      "redText": "Szarka",
+      "blueText": "Harkály",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0311",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat épít gátat faágakból a folyókban és patakokban?",
+      "redText": "Hód",
+      "blueText": "Vidra",
+      "correct": "red"
+    },
+    {
+      "id": "k_0312",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik kutya híres magyar pásztorkutya, amelyiknek zsinóros a szőre?",
+      "redText": "Tacskó",
+      "blueText": "Puli",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0313",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik tengeri állat emlős, tehát levegőt kell vennie a felszínen?",
+      "redText": "Delfin",
+      "blueText": "Cápa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0314",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat eszik szinte kizárólag bambuszt?",
+      "redText": "Jegesmedve",
+      "blueText": "Óriáspanda",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0315",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat eszik eukaliptuszlevelet Ausztráliában?",
+      "redText": "Koala",
+      "blueText": "Kenguru",
+      "correct": "red"
+    },
+    {
+      "id": "k_0316",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik madár nem tud repülni, viszont fantasztikusan úszik a jéghideg vízben?",
+      "redText": "Sirály",
+      "blueText": "Pingvin",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0317",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik a világ leggyorsabban futó szárazföldi állata?",
+      "redText": "Gepárd",
+      "blueText": "Oroszlán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0318",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik kerti bogár piros szárnyán fekete pöttyök vannak, és megeszi a levéltetveket?",
+      "redText": "Szarvasbogár",
+      "blueText": "Katicabogár",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0319",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat tudja a farkát ledobni veszély esetén, ami később visszanő?",
+      "redText": "Gyík",
+      "blueText": "Béka",
+      "correct": "red"
+    },
+    {
+      "id": "k_0320",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat hímjének van hatalmas sörénye?",
+      "redText": "Tigris",
+      "blueText": "Oroszlán",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0321",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állatnak van ormányos orra és két nagy agyara?",
+      "redText": "Elefánt",
+      "blueText": "Víziló",
+      "correct": "red"
+    },
+    {
+      "id": "k_0322",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik állat alszik fejjel lefelé lógva barlangokban vagy padlásokon?",
+      "redText": "Bagoly",
+      "blueText": "Denevér",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0323",
+      "category": "allatok",
+      "type": "text_only",
+      "question": "Melyik háziállat ad nekünk gyapjút, amiből meleg pulóver készül?",
+      "redText": "Juh (birka)",
+      "blueText": "Tehén",
+      "correct": "red"
+    },
+    {
+      "id": "k_0324",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik évszakban rügyeznek a fák és nyílik a hóvirág?",
+      "redText": "Ősszel",
+      "blueText": "Tavasszal",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0325",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik évszakban sárgulnak és hullanak le a fák levelei?",
+      "redText": "Ősszel",
+      "blueText": "Tavasszal",
+      "correct": "red"
+    },
+    {
+      "id": "k_0326",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fa termése a makk?",
+      "redText": "Fűzfa",
+      "blueText": "Tölgyfa",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0327",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fa termése a barna, fényes vadgesztenye?",
+      "redText": "Vadgesztenyefa",
+      "blueText": "Nyírfa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0328",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fa termése a toboz?",
+      "redText": "Almafa",
+      "blueText": "Fenyőfa",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0329",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fa marad télen is zöld, mert tűlevelei vannak?",
+      "redText": "Lucfenyő",
+      "blueText": "Tölgyfa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0330",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növény része szívja fel a vizet a talajból?",
+      "redText": "Szirom",
+      "blueText": "Gyökér",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0331",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növény része készíti el a táplálékot a napfény segítségével?",
+      "redText": "Levél",
+      "blueText": "Gyökér",
+      "correct": "red"
+    },
+    {
+      "id": "k_0332",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik virág fordul egész nap a Nap irányába?",
+      "redText": "Tulipán",
+      "blueText": "Napraforgó",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0333",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik piros szirmú vadvirág nyílik nyáron a búzamezőkön?",
+      "redText": "Pipacs",
+      "blueText": "Hóvirág",
+      "correct": "red"
+    },
+    {
+      "id": "k_0334",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fehér tavaszi virág bújik ki legelőször, akár a hó alól is?",
+      "redText": "Őszirózsa",
+      "blueText": "Hóvirág",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0335",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik zöldségnek a gyökerét esszük meg a levesben?",
+      "redText": "Sárgarépa",
+      "blueText": "Paradicsom",
+      "correct": "red"
+    },
+    {
+      "id": "k_0336",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növényből készül a kenyérhez való liszt?",
+      "redText": "Napraforgóból",
+      "blueText": "Búzából",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0337",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növény magjából készül a pattogatott kukorica?",
+      "redText": "Kukoricából",
+      "blueText": "Rizsből",
+      "correct": "red"
+    },
+    {
+      "id": "k_0338",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik gyümölcs nő fürtökben a szőlőtőkén?",
+      "redText": "Cseresznye",
+      "blueText": "Szőlő",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0339",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik gyümölcsnek van sárga, meghámozható héja, és majmok is imádják?",
+      "redText": "Banán",
+      "blueText": "Körte",
+      "correct": "red"
+    },
+    {
+      "id": "k_0340",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik zöldség csípi a szemünket, amikor felszeleteljük?",
+      "redText": "Uborka",
+      "blueText": "Vöröshagyma",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0341",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fűszernövényből készül a finom, piros őrölt paprika?",
+      "redText": "Fűszerpaprikából",
+      "blueText": "Paradicsomból",
+      "correct": "red"
+    },
+    {
+      "id": "k_0342",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik sivatagi növénynek vannak tüskéi levelek helyett, és sok vizet tárol?",
+      "redText": "Páfrány",
+      "blueText": "Kaktusz",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0343",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik vízinövény nagy, kerek levelei úsznak a tavak felszínén?",
+      "redText": "Tavirózsa",
+      "blueText": "Bambusz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0344",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Mi kell feltétlenül ahhoz, hogy egy kis magból növény csírázzon?",
+      "redText": "Hó és jég",
+      "blueText": "Víz és meleg",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0345",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik apró, kék bogyós gyümölcs nő bokrokon?",
+      "redText": "Áfonya",
+      "blueText": "Görögdinnye",
+      "correct": "red"
+    },
+    {
+      "id": "k_0346",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növény termése a csipkebogyó, amiből télen teát főzünk?",
+      "redText": "Bodza",
+      "blueText": "Vadrózsa",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0347",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik fafajta kérge hófehér, fekete csíkokkal?",
+      "redText": "Nyírfa",
+      "blueText": "Diófa",
+      "correct": "red"
+    },
+    {
+      "id": "k_0348",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Milyen színű a szivárvány legfelső (külső) sávja?",
+      "redText": "Lila",
+      "blueText": "Piros",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0349",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Hány színből áll hagyományosan a szivárvány?",
+      "redText": "7 színből",
+      "blueText": "4 színből",
+      "correct": "red"
+    },
+    {
+      "id": "k_0350",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Mi történik a vízzel, ha 0 °C alá hűl?",
+      "redText": "Elpárolog",
+      "blueText": "Megfagy (jég lesz belőle)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0351",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Milyen halmazállapotú a vízgőz?",
+      "redText": "Légnemű (gáz)",
+      "blueText": "Szilárd",
+      "correct": "red"
+    },
+    {
+      "id": "k_0352",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik természeti jelenség hallatszik a villámlás után viharban?",
+      "redText": "Szivárvány",
+      "blueText": "Mennydörgés",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0353",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik évszakban a leghosszabbak a nappalok és legrövidebbek az éjszakák?",
+      "redText": "Nyáron",
+      "blueText": "Télen",
+      "correct": "red"
+    },
+    {
+      "id": "k_0354",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik hónapban kezdődik a naptári tavasz?",
+      "redText": "Februárban",
+      "blueText": "Márciusban",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0355",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik hónap a nyári szünet első teljes hónapja?",
+      "redText": "Július",
+      "blueText": "Május",
+      "correct": "red"
+    },
+    {
+      "id": "k_0356",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növény termése a dió?",
+      "redText": "Cseresznyefa",
+      "blueText": "Diófa",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0357",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik gyümölcs kívül zöld, belül piros és fekete magjai vannak?",
+      "redText": "Görögdinnye",
+      "blueText": "Sárgadinnye",
+      "correct": "red"
+    },
+    {
+      "id": "k_0358",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik növényből készül a csokoládé?",
+      "redText": "Kávébabból",
+      "blueText": "Kakaóbabból",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0359",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik gomba ehető és finom az alábbiak közül?",
+      "redText": "Csiperke (sampinyon)",
+      "blueText": "Gyilkos galóca",
+      "correct": "red"
+    },
+    {
+      "id": "k_0360",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Miért fontosak a méhek a növényeknek?",
+      "redText": "Megrágják a gyökereket",
+      "blueText": "Beporozzák a virágokat",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0361",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik természeti képződményből tör ki forró láva?",
+      "redText": "Vulkánból",
+      "blueText": "Gejzírből",
+      "correct": "red"
+    },
+    {
+      "id": "k_0362",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Mi a neve a Földet körülvevő levegőrétegnek?",
+      "redText": "Világűr",
+      "blueText": "Légkör",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0363",
+      "category": "novenyek",
+      "type": "text_only",
+      "question": "Melyik kerti gyümölcs nő alacsony bokron, és piros, szív alakú?",
+      "redText": "Eper (szamóca)",
+      "blueText": "Szilva",
+      "correct": "red"
+    },
+    {
+      "id": "k_0364",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 6 × 7?",
+      "redText": "48",
+      "blueText": "42",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0365",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 8 × 7?",
+      "redText": "56",
+      "blueText": "54",
+      "correct": "red"
+    },
+    {
+      "id": "k_0366",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 9 × 6?",
+      "redText": "56",
+      "blueText": "54",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0367",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 8 × 8?",
+      "redText": "64",
+      "blueText": "72",
+      "correct": "red"
+    },
+    {
+      "id": "k_0368",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 9 × 9?",
+      "redText": "79",
+      "blueText": "81",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0369",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 7 × 7?",
+      "redText": "49",
+      "blueText": "42",
+      "correct": "red"
+    },
+    {
+      "id": "k_0370",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 6 × 8?",
+      "redText": "46",
+      "blueText": "48",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0371",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 9 × 7?",
+      "redText": "63",
+      "blueText": "64",
+      "correct": "red"
+    },
+    {
+      "id": "k_0372",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 4 × 9?",
+      "redText": "32",
+      "blueText": "36",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0373",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 8 × 9?",
+      "redText": "72",
+      "blueText": "74",
+      "correct": "red"
+    },
+    {
+      "id": "k_0374",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 5 × 12?",
+      "redText": "55",
+      "blueText": "60",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0375",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 36 ÷ 4?",
+      "redText": "9",
+      "blueText": "8",
+      "correct": "red"
+    },
+    {
+      "id": "k_0376",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 56 ÷ 8?",
+      "redText": "6",
+      "blueText": "7",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0377",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 63 ÷ 9?",
+      "redText": "7",
+      "blueText": "8",
+      "correct": "red"
+    },
+    {
+      "id": "k_0378",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 48 ÷ 6?",
+      "redText": "7",
+      "blueText": "8",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0379",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 72 ÷ 8?",
+      "redText": "9",
+      "blueText": "8",
+      "correct": "red"
+    },
+    {
+      "id": "k_0380",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 45 ÷ 5?",
+      "redText": "8",
+      "blueText": "9",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0381",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 81 ÷ 9?",
+      "redText": "9",
+      "blueText": "8",
+      "correct": "red"
+    },
+    {
+      "id": "k_0382",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 35 + 47?",
+      "redText": "72",
+      "blueText": "82",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0383",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 100 − 37?",
+      "redText": "63",
+      "blueText": "73",
+      "correct": "red"
+    },
+    {
+      "id": "k_0384",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 250 + 350?",
+      "redText": "500",
+      "blueText": "600",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0385",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 1000 − 250?",
+      "redText": "750",
+      "blueText": "850",
+      "correct": "red"
+    },
+    {
+      "id": "k_0386",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 120 + 85?",
+      "redText": "195",
+      "blueText": "205",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0387",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 500 − 180?",
+      "redText": "320",
+      "blueText": "380",
+      "correct": "red"
+    },
+    {
+      "id": "k_0388",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 15 × 4?",
+      "redText": "50",
+      "blueText": "60",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0389",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 25 × 4?",
+      "redText": "100",
+      "blueText": "80",
+      "correct": "red"
+    },
+    {
+      "id": "k_0390",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 12 × 3?",
+      "redText": "32",
+      "blueText": "36",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0391",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mennyi 0 × 99?",
+      "redText": "0",
+      "blueText": "99",
+      "correct": "red"
+    },
+    {
+      "id": "k_0392",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány perc van 1 órában?",
+      "redText": "100 perc",
+      "blueText": "60 perc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0393",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány perc másfél óra?",
+      "redText": "90 perc",
+      "blueText": "75 perc",
+      "correct": "red"
+    },
+    {
+      "id": "k_0394",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány óra van 1 teljes napban?",
+      "redText": "12 óra",
+      "blueText": "24 óra",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0395",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány napból áll egy hét?",
+      "redText": "7 napból",
+      "blueText": "5 napból",
+      "correct": "red"
+    },
+    {
+      "id": "k_0396",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány hónap van egy évben?",
+      "redText": "10 hónap",
+      "blueText": "12 hónap",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0397",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány napos egy normál (nem szökő) év?",
+      "redText": "365 napos",
+      "blueText": "360 napos",
+      "correct": "red"
+    },
+    {
+      "id": "k_0398",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány centiméter 1 méter?",
+      "redText": "10 cm",
+      "blueText": "100 cm",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0399",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány centiméter 2 méter?",
+      "redText": "200 cm",
+      "blueText": "20 cm",
+      "correct": "red"
+    },
+    {
+      "id": "k_0400",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány milliméter 1 centiméter?",
+      "redText": "100 mm",
+      "blueText": "10 mm",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0401",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány dekagramm 1 kilogramm?",
+      "redText": "100 dkg",
+      "blueText": "10 dkg",
+      "correct": "red"
+    },
+    {
+      "id": "k_0402",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány gramm 1 kilogramm?",
+      "redText": "100 g",
+      "blueText": "1000 g",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0403",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány deciliter 1 liter?",
+      "redText": "10 dl",
+      "blueText": "100 dl",
+      "correct": "red"
+    },
+    {
+      "id": "k_0404",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány oldala van egy háromszögnek?",
+      "redText": "4",
+      "blueText": "3",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0405",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány oldala van egy hatszögnek?",
+      "redText": "6",
+      "blueText": "8",
+      "correct": "red"
+    },
+    {
+      "id": "k_0406",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány csúcsa van egy négyzetnek?",
+      "redText": "6",
+      "blueText": "4",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0407",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány lapja van egy dobókockának?",
+      "redText": "6 lapja",
+      "blueText": "8 lapja",
+      "correct": "red"
+    },
+    {
+      "id": "k_0408",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik szám páros az alábbiak közül?",
+      "redText": "47",
+      "blueText": "48",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0409",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik szám páratlan az alábbiak közül?",
+      "redText": "73",
+      "blueText": "74",
+      "correct": "red"
+    },
+    {
+      "id": "k_0410",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik a nagyobb: 309 vagy 390?",
+      "redText": "309",
+      "blueText": "390",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0411",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Egy dobozban 4 sorban 6-6 bonbon van. Hány bonbon van összesen?",
+      "redText": "24",
+      "blueText": "20",
+      "correct": "red"
+    },
+    {
+      "id": "k_0412",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Anna 300 forintot kapott, és vett egy 140 forintos fagyit. Mennyi pénze maradt?",
+      "redText": "140 Ft",
+      "blueText": "160 Ft",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0413",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Egy buszon 18 gyerek utazott, majd felszállt még 7. Hányan lettek?",
+      "redText": "25",
+      "blueText": "23",
+      "correct": "red"
+    },
+    {
+      "id": "k_0414",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Ha 32 almát 4 kosárba osztunk el egyenlően, hány alma jut 1 kosárba?",
+      "redText": "6 alma",
+      "blueText": "8 alma",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0415",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Egy háromszög oldalai 5 cm, 5 cm és 5 cm. Mennyi a kerülete?",
+      "redText": "15 cm",
+      "blueText": "25 cm",
+      "correct": "red"
+    },
+    {
+      "id": "k_0416",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Egy négyzet oldala 6 cm. Mennyi a kerülete?",
+      "redText": "12 cm",
+      "blueText": "24 cm",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0417",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik szám van pontosan 40 és 50 között félúton?",
+      "redText": "45",
+      "blueText": "44",
+      "correct": "red"
+    },
+    {
+      "id": "k_0418",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Ha most 14:30 van, hány óra lesz 1 óra múlva?",
+      "redText": "16:00",
+      "blueText": "15:30",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0419",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Hány lába van összesen 3 kutyának és 1 kacsának?",
+      "redText": "14 lába",
+      "blueText": "12 lába",
+      "correct": "red"
+    },
+    {
+      "id": "k_0420",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mi a következő szám a sorozatban: 5, 10, 15, 20, ...?",
+      "redText": "30",
+      "blueText": "25",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0421",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Mi a következő szám a sorozatban: 2, 4, 8, 16, ...?",
+      "redText": "32",
+      "blueText": "24",
+      "correct": "red"
+    },
+    {
+      "id": "k_0422",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik római szám jelöli az 5-öt?",
+      "redText": "X",
+      "blueText": "V",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0423",
+      "category": "matek",
+      "type": "text_only",
+      "question": "Melyik római szám jelöli a 10-et?",
+      "redText": "X",
+      "blueText": "V",
+      "correct": "red"
+    },
+    {
+      "id": "k_0424",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen állat a híres magyar rajzfilm főszereplője, Vuk?",
+      "redText": "Kis farkas",
+      "blueText": "Kis róka",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0425",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hány feje van Süsünek, a híres bábfilmsorozat sárkányának?",
+      "redText": "1 feje",
+      "blueText": "7 feje",
+      "correct": "red"
+    },
+    {
+      "id": "k_0426",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Ki volt a szőke kisfiú legjobb barátja a „Pom Pom meséi” sorozatban?",
+      "redText": "Mekk Elek",
+      "blueText": "Picur (és Gombóc Artúr)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0427",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mit szeretett a világon a legjobban Gombóc Artúr?",
+      "redText": "A csokoládét",
+      "blueText": "A spenótot",
+      "correct": "red"
+    },
+    {
+      "id": "k_0428",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen állat a híres mesefigura, Micimackó legjobb barátja, Malacka?",
+      "redText": "Nyuszi",
+      "blueText": "Kismalac",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0429",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mit szeret a legjobban enni Micimackó?",
+      "redText": "Mézet",
+      "blueText": "Sajtot",
+      "correct": "red"
+    },
+    {
+      "id": "k_0430",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hány törpe lakott együtt Hófehérkével az erdei házikóban?",
+      "redText": "5 törpe",
+      "blueText": "7 törpe",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0431",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mit veszített el Hamupipőke éjfélkor a bálból elfutva?",
+      "redText": "Az üvegcipellőjét",
+      "blueText": "A koronáját",
+      "correct": "red"
+    },
+    {
+      "id": "k_0432",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hova vitt finomságokat Piroska a kosarában?",
+      "redText": "A királyhoz",
+      "blueText": "A nagymamájához",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0433",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében találtak a gyerekek egy mézeskalács házikót az erdőben?",
+      "redText": "Jancsi és Juliska",
+      "blueText": "Piroska és a farkas",
+      "correct": "red"
+    },
+    {
+      "id": "k_0434",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében fújta el a farkas a szalma- és a faházat, de a téglaházat nem bírta?",
+      "redText": "A brémai muzsikusok",
+      "blueText": "A három kismalac",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0435",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve a „Jégvarázs” (Frozen) vicces hóemberének?",
+      "redText": "Olaf",
+      "blueText": "Sven",
+      "correct": "red"
+    },
+    {
+      "id": "k_0436",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve „Az oroszlánkirály” főszereplő kis oroszlánjának?",
+      "redText": "Timon",
+      "blueText": "Szimba",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0437",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen halacska a főszereplője a „Némó nyomában” mesének?",
+      "redText": "Bohóchal",
+      "blueText": "Aranyhal",
+      "correct": "red"
+    },
+    {
+      "id": "k_0438",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve a fa bábunak, akinek megnő az orra, ha hazudik?",
+      "redText": "Pán Péter",
+      "blueText": "Pinokkió",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0439",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében nem akar felnőni a kisfiú, és Sohaországban él?",
+      "redText": "Pán Péter",
+      "blueText": "Aladdin",
+      "correct": "red"
+    },
+    {
+      "id": "k_0440",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mit talált Aladdin a barlangban, amiből egy dzsinn bújt elő?",
+      "redText": "Varázspálcát",
+      "blueText": "Csodalámpát",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0441",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve a kis varázslófiúnak, aki a Roxfort iskolába jár?",
+      "redText": "Harry Potter",
+      "blueText": "Frodo",
+      "correct": "red"
+    },
+    {
+      "id": "k_0442",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hogyan hívják Harry Potter hófehér baglyát?",
+      "redText": "Csámpás",
+      "blueText": "Hedvig",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0443",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve a két vicces, kék-fehér csíkos nadrágos gall hősnek?",
+      "redText": "Asterix és Obelix",
+      "blueText": "Tom és Jerry",
+      "correct": "red"
+    },
+    {
+      "id": "k_0444",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen állat Tom és Jerry?",
+      "redText": "Kutya és macska",
+      "blueText": "Macska és egér",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0445",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik híres magyar népmesében adta vissza háromszor a verést a főhős Döbröginek?",
+      "redText": "Lúdas Matyi",
+      "blueText": "János vitéz",
+      "correct": "red"
+    },
+    {
+      "id": "k_0446",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Ki írta a „János vitéz” című verses mesét?",
+      "redText": "Arany János",
+      "blueText": "Petőfi Sándor",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0447",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hogyan hívták eredetileg János vitézt, mielőtt hős lett?",
+      "redText": "Kukorica Jancsi",
+      "blueText": "Toldi Miklós",
+      "correct": "red"
+    },
+    {
+      "id": "k_0448",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében aludt el a királylány száz évre egy orsó szúrásától?",
+      "redText": "Aranyhaj",
+      "blueText": "Csipkerózsika",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0449",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik hercegnőnek volt varázslatos, nagyon hosszú szőke haja a toronyban?",
+      "redText": "Aranyhaj",
+      "blueText": "Hamupipőke",
+      "correct": "red"
+    },
+    {
+      "id": "k_0450",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik magyar rajzfilm főszereplője a kis kék kutya, aki a gazdájával kalandozik?",
+      "redText": "Süsü",
+      "blueText": "Frakk (vagy Kockásfülű nyúl)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0451",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik híres magyar rajzfilmfigurának vannak kockás fülei, amikkel repülni is tud?",
+      "redText": "A kockásfülű nyúl",
+      "blueText": "Vizipók",
+      "correct": "red"
+    },
+    {
+      "id": "k_0452",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hol lakott Vizipók-csodapók a híres magyar rajzfilmben?",
+      "redText": "Felhők felett",
+      "blueText": "Víz alatti kristálypalotában",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0453",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik magyar rajzfilmben szerepel Grabowski, az egér és a macskák?",
+      "redText": "Macskafogó",
+      "blueText": "Vuk",
+      "correct": "red"
+    },
+    {
+      "id": "k_0454",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében kelnek életre a játékok (Woody és Buzz Lightyear), ha a gyerekek nincsenek a szobában?",
+      "redText": "Verdák",
+      "blueText": "Toy Story (Játékháború)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0455",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Mi a neve a piros versenyautónak a „Verdák” meséből?",
+      "redText": "Villám McQueen",
+      "blueText": "Matuka",
+      "correct": "red"
+    },
+    {
+      "id": "k_0456",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik zöld ogre él a mocsárban, és Szamár a legjobb barátja?",
+      "redText": "Kung Fu Panda",
+      "blueText": "Shrek",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0457",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik két szín keveréséből lesz a ZÖLD szín?",
+      "redText": "Sárga és kék",
+      "blueText": "Piros és kék",
+      "correct": "red"
+    },
+    {
+      "id": "k_0458",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik két szín keveréséből lesz a NARANCS szín?",
+      "redText": "Kék és piros",
+      "blueText": "Piros és sárga",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0459",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik két szín keveréséből lesz a LILA szín?",
+      "redText": "Piros és kék",
+      "blueText": "Sárga és zöld",
+      "correct": "red"
+    },
+    {
+      "id": "k_0460",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Hogyan hívják a magyar himnusz költőjét?",
+      "redText": "Petőfi Sándor",
+      "blueText": "Kölcsey Ferenc",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0461",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen hangszeren játszunk vonóval?",
+      "redText": "Hegedűn",
+      "blueText": "Zongorán",
+      "correct": "red"
+    },
+    {
+      "id": "k_0462",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik hangszert ütővel szólaltatjuk meg?",
+      "redText": "Fuvola",
+      "blueText": "Dob",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0463",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik mesében szerepel a csizmás kandúr?",
+      "redText": "Csizmás kandúr",
+      "blueText": "A kis hableány",
+      "correct": "red"
+    },
+    {
+      "id": "k_0464",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Milyen állat SpongyaBob legjobb barátja, Patrik?",
+      "redText": "Rák",
+      "blueText": "Tengeri csillag",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0465",
+      "category": "mesek",
+      "type": "text_only",
+      "question": "Melyik városban élnek a „Mancs őrjárat” kutyusai?",
+      "redText": "Kaland-öbölben",
+      "blueText": "Meseországban",
+      "correct": "red"
+    },
+    {
+      "id": "k_0466",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Mi Magyarország fővárosa?",
+      "redText": "Debrecen",
+      "blueText": "Budapest",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0467",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik a legnagyobb tó Magyarországon (és Közép-Európában)?",
+      "redText": "Balaton",
+      "blueText": "Velencei-tó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0468",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik nagy folyó folyik át Budapesten?",
+      "redText": "Tisza",
+      "blueText": "Duna",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0469",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik a legmagasabb hegycsúcs Magyarországon?",
+      "redText": "Kékes",
+      "blueText": "Gellért-hegy",
+      "correct": "red"
+    },
+    {
+      "id": "k_0470",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Milyen színű a magyar zászló felülről lefelé?",
+      "redText": "Zöld, fehér, piros",
+      "blueText": "Piros, fehér, zöld",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0471",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik kontinensen fekszik Magyarország?",
+      "redText": "Európában",
+      "blueText": "Ázsiában",
+      "correct": "red"
+    },
+    {
+      "id": "k_0472",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik bolygón élünk mi, emberek?",
+      "redText": "A Marson",
+      "blueText": "A Földön",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0473",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Mi kering a Föld körül, és világít éjszaka az égen?",
+      "redText": "A Hold",
+      "blueText": "A Mars",
+      "correct": "red"
+    },
+    {
+      "id": "k_0474",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Mi a Nap: bolygó vagy csillag?",
+      "redText": "Bolygó",
+      "blueText": "Csillag",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0475",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik égtáj felé kel fel a Nap minden reggel?",
+      "redText": "Keleten",
+      "blueText": "Nyugaton",
+      "correct": "red"
+    },
+    {
+      "id": "k_0476",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik égtáj felé nyugszik le a Nap este?",
+      "redText": "Északon",
+      "blueText": "Nyugaton",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0477",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik irányba mutat mindig az iránytű tűje?",
+      "redText": "Észak felé",
+      "blueText": "Kelet felé",
+      "correct": "red"
+    },
+    {
+      "id": "k_0478",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik a legnagyobb bolygó a Naprendszerünkben?",
+      "redText": "Föld",
+      "blueText": "Jupiter",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0479",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik bolygó híres a hatalmas, szép gyűrűiről?",
+      "redText": "Szaturnusz",
+      "blueText": "Merkúr",
+      "correct": "red"
+    },
+    {
+      "id": "k_0480",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik bolygót hívják Vörös bolygónak?",
+      "redText": "Neptunusz",
+      "blueText": "Mars",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0481",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Hány bolygó kering a Nap körül a Naprendszerben?",
+      "redText": "8 bolygó",
+      "blueText": "5 bolygó",
+      "correct": "red"
+    },
+    {
+      "id": "k_0482",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik kontinensen élnek vadon a zsiráfok, oroszlánok és zebrák?",
+      "redText": "Európában",
+      "blueText": "Afrikában",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0483",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik kontinensen élnek vadon a kenguruk és a koalák?",
+      "redText": "Ausztráliában",
+      "blueText": "Dél-Amerikában",
+      "correct": "red"
+    },
+    {
+      "id": "k_0484",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Hol van a világ leghidegebb, jéggel borított földrésze, ahol a császárpingvinek élnek?",
+      "redText": "Afrikában",
+      "blueText": "Antarktiszon",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0485",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik országban épültek a hatalmas egyiptomi piramisok?",
+      "redText": "Egyiptomban",
+      "blueText": "Olaszországban",
+      "correct": "red"
+    },
+    {
+      "id": "k_0486",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik városban áll az Eiffel-torony?",
+      "redText": "Londonban",
+      "blueText": "Párizsban",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0487",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik országban található a Kínai Nagy Fal?",
+      "redText": "Kínában",
+      "blueText": "Japánban",
+      "correct": "red"
+    },
+    {
+      "id": "k_0488",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik ország formája hasonlít egy csizmára a térképen?",
+      "redText": "Spanyolország",
+      "blueText": "Olaszország",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0489",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik a világ legnagyobb óceánja?",
+      "redText": "Csendes-óceán",
+      "blueText": "Jeges-tenger",
+      "correct": "red"
+    },
+    {
+      "id": "k_0490",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik a világ legmagasabb hegycsúcsa?",
+      "redText": "Kékes",
+      "blueText": "Mount Everest",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0491",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik magyar városban van a híres Egri vár?",
+      "redText": "Egerben",
+      "blueText": "Szegeden",
+      "correct": "red"
+    },
+    {
+      "id": "k_0492",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik budapesti híd két végén őrködnek kőoroszlánok?",
+      "redText": "Szabadság híd",
+      "blueText": "Lánchíd",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0493",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik magyar puszta híres a Kilenclyukú hídról és a szürkemarhákról?",
+      "redText": "Hortobágy",
+      "blueText": "Bakony",
+      "correct": "red"
+    },
+    {
+      "id": "k_0494",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Hogyan hívják azokat az embereket, akik űrhajóval eljutnak a világűrbe?",
+      "redText": "Búvárok",
+      "blueText": "Űrhajósok (asztronauták)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0495",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Ki volt az első magyar űrhajós?",
+      "redText": "Farkas Bertalan",
+      "blueText": "Puskás Ferenc",
+      "correct": "red"
+    },
+    {
+      "id": "k_0496",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Milyen alakú a Föld bolygó?",
+      "redText": "Kocka alakú",
+      "blueText": "Gömb alakú",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0497",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Miért váltakoznak a nappalok és az éjszakák?",
+      "redText": "Mert a Föld forog a tengelye körül",
+      "blueText": "Mert a Nap alszik éjszaka",
+      "correct": "red"
+    },
+    {
+      "id": "k_0498",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik szomszédos országunk van tőlünk nyugatra (Bécs a fővárosa)?",
+      "redText": "Románia",
+      "blueText": "Ausztria",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0499",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Melyik országból származik a lego kocka?",
+      "redText": "Dániából",
+      "blueText": "Japánból",
+      "correct": "red"
+    },
+    {
+      "id": "k_0500",
+      "category": "vilag",
+      "type": "text_only",
+      "question": "Hány kontinens (földrész) van a Földön?",
+      "redText": "3",
+      "blueText": "7",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0501",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Mit jelent a gyalogos közlekedési lámpán a ZÖLD emberke?",
+      "redText": "Szabad átkelni a zebrán",
+      "blueText": "Meg kell állni",
+      "correct": "red"
+    },
+    {
+      "id": "k_0502",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Mit jelent a közlekedési lámpán a PIROS fény?",
+      "redText": "Sietni kell átkelni",
+      "blueText": "Tilos átkelni, állj meg!",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0503",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Mit érdemes MINDIG felvenni a fejedre, ha biciklizel vagy rollerezel?",
+      "redText": "Bukósisakot",
+      "blueText": "Baseball sapkát",
+      "correct": "red"
+    },
+    {
+      "id": "k_0504",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik segélyhívó számot kell hívni Magyarországon és Európában baj esetén?",
+      "redText": "911",
+      "blueText": "112",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0505",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Naponta legalább hányszor ajánlott fogat mosni?",
+      "redText": "Kétszer (reggel és este)",
+      "blueText": "Hetente egyszer",
+      "correct": "red"
+    },
+    {
+      "id": "k_0506",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik vitaminból van sok a narancsban, citromban és paprikában?",
+      "redText": "F-vitaminból",
+      "blueText": "C-vitaminból",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0507",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik szervünk dobog a mellkasunkban, és pumpálja a vért?",
+      "redText": "A szívünk",
+      "blueText": "A gyomrunk",
+      "correct": "red"
+    },
+    {
+      "id": "k_0508",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik szervünkkel lélegzünk be levegőt?",
+      "redText": "A májunkkal",
+      "blueText": "A tüdőnkkel",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0509",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik érzékszervünkkel halljuk a zenét?",
+      "redText": "A fülünkkel",
+      "blueText": "Az orrunkkal",
+      "correct": "red"
+    },
+    {
+      "id": "k_0510",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Hány foga van egy kisgyereknek a tejfogakból?",
+      "redText": "50 tejfoga",
+      "blueText": "20 tejfoga",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0511",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Hány ujja van egy embernek összesen a két kezén?",
+      "redText": "10 ujja",
+      "blueText": "8 ujja",
+      "correct": "red"
+    },
+    {
+      "id": "k_0512",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik sportágban rúgják a labdát kapuba, és a mezőnyjátékos nem érhet hozzá kézzel?",
+      "redText": "Kosárlabda",
+      "blueText": "Labdarúgás (foci)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0513",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik sportágban kell a labdát a magasban lévő gyűrűbe dobni?",
+      "redText": "Kosárlabda",
+      "blueText": "Röplabda",
+      "correct": "red"
+    },
+    {
+      "id": "k_0514",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik sportágat játsszák ütővel és kis sárga labdával háló felett?",
+      "redText": "Vízilabda",
+      "blueText": "Tenisz",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0515",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik téli sportágban csúsznak le két hosszú léccel a havas hegyoldalon?",
+      "redText": "Síelés",
+      "blueText": "Kajakozás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0516",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik sportágban játszanak 64 fekete-fehér mezős táblán királyokkal és bástyákkal?",
+      "redText": "Darts",
+      "blueText": "Sakk",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0517",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Hány karika van az olimpiai zászlón?",
+      "redText": "5 karika",
+      "blueText": "7 karika",
+      "correct": "red"
+    },
+    {
+      "id": "k_0518",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Milyen színű érmet kap az, aki az 1. helyen végez egy versenyen?",
+      "redText": "Ezüstérmet",
+      "blueText": "Aranyérmet",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0519",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Milyen színű érmet kap a 2. helyezett?",
+      "redText": "Ezüstérmet",
+      "blueText": "Bronzérmet",
+      "correct": "red"
+    },
+    {
+      "id": "k_0520",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Milyen színű érmet kap a 3. helyezett?",
+      "redText": "Aranyérmet",
+      "blueText": "Bronzérmet",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0521",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Ki gyógyítja meg a beteg állatokat?",
+      "redText": "Az állatorvos",
+      "blueText": "A pék",
+      "correct": "red"
+    },
+    {
+      "id": "k_0522",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Ki süti a friss kenyeret és kiflit hajnalban?",
+      "redText": "A könyvtáros",
+      "blueText": "A pék",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0523",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Ki oltja el a tüzet és segít baleseteknél piros autóval?",
+      "redText": "A tűzoltó",
+      "blueText": "A postás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0524",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik jármű közlekedik síneken a városban?",
+      "redText": "Helikopter",
+      "blueText": "Villamos",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0525",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik jármű tud a víz alatt is közlekedni?",
+      "redText": "Tengeralattjáró",
+      "blueText": "Vitorlás",
+      "correct": "red"
+    },
+    {
+      "id": "k_0526",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Miből készül a sajt és a vaj?",
+      "redText": "Lisztből",
+      "blueText": "Tejből",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0527",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik kukába dobjuk a kiürült műanyag palackot szelektív gyűjtésnél?",
+      "redText": "Sárga kukába",
+      "blueText": "Kék (papír) kukába",
+      "correct": "red"
+    },
+    {
+      "id": "k_0528",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik kukába dobjuk a régi újságpapírt és kartondobozt?",
+      "redText": "Zöld (üveg) kukába",
+      "blueText": "Kék kukába",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0529",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Találós kérdés: Kívül zöld, belül piros, fekete gombokkal van tele. Mi az?",
+      "redText": "Görögdinnye",
+      "blueText": "Alma",
+      "correct": "red"
+    },
+    {
+      "id": "k_0530",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Találós kérdés: Fehér mezőben fekete magvak, aki veti, okos, aki szedi, okosabb. Mi az?",
+      "redText": "A sakktábla",
+      "blueText": "A könyv (írás és olvasás)",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0531",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Találós kérdés: Négy lába van, mégsem jár. Mi az?",
+      "redText": "Asztal vagy szék",
+      "blueText": "Kiskutya",
+      "correct": "red"
+    },
+    {
+      "id": "k_0532",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Találós kérdés: Télen alszik, nyáron jár, ha fúj a szél, nagyot száll. Nem madár, mégis szárnya van. Mi az?",
+      "redText": "Hóember",
+      "blueText": "Pillangó",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0533",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Találós kérdés: Nappal alszik, éjjel lát, huhogva járja a sötét fát. Mi az?",
+      "redText": "Bagoly",
+      "blueText": "Veréb",
+      "correct": "red"
+    },
+    {
+      "id": "k_0534",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Melyik a legfontosabb étkezés reggel, mielőtt iskolába indulsz?",
+      "redText": "A vacsora",
+      "blueText": "A reggeli",
+      "correct": "blue"
+    },
+    {
+      "id": "k_0535",
+      "category": "mindennapok",
+      "type": "text_only",
+      "question": "Mit kell tenned evés előtt és mosdó után minden alkalommal?",
+      "redText": "Szappannal kezet mosni",
+      "blueText": "Cipőt pucolni",
+      "correct": "red"
+    }
+  ]
+}

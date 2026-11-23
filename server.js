@@ -17,11 +17,17 @@ const PORT = process.env.PORT || 3000;
 
 // Load question bank
 const QUESTIONS_PATH = path.join(__dirname, 'data', 'questions.json');
+const KIDS_QUESTIONS_PATH = path.join(__dirname, 'data', 'kids_questions.json');
 function loadQuestionBank() {
   const raw = fs.readFileSync(QUESTIONS_PATH, 'utf8');
   return JSON.parse(raw);
 }
+function loadKidsQuestionBank() {
+  const raw = fs.readFileSync(KIDS_QUESTIONS_PATH, 'utf8');
+  return JSON.parse(raw);
+}
 let questionBank = loadQuestionBank();
+let kidsQuestionBank = loadKidsQuestionBank();
 
 // Classic KVIZBOX 11-step ladder (in points, no money) + endless bonus levels
 const BASE_LADDER = [50, 100, 200, 400, 600, 800, 1200, 1600, 2400, 3600, 6000];
@@ -88,6 +94,19 @@ app.get('/api/questions', (req, res) => {
   res.json({
     categories: questionBank.categories,
     questions: questionBank.questions,
+    baseLadder: BASE_LADDER
+  });
+});
+
+app.get('/api/kids-questions', (req, res) => {
+  try {
+    kidsQuestionBank = loadKidsQuestionBank();
+  } catch (e) {
+    // fallback to cached
+  }
+  res.json({
+    categories: kidsQuestionBank.categories,
+    questions: kidsQuestionBank.questions,
     baseLadder: BASE_LADDER
   });
 });
