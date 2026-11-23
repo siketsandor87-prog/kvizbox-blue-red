@@ -151,6 +151,7 @@
     screenHud: document.getElementById('screen-hud'),
     hudRound: document.getElementById('hud-round'),
     hudCategory: document.getElementById('hud-category'),
+    btnReadAloud: document.getElementById('btn-read-aloud'),
     hudAlive: document.getElementById('hud-alive'),
     hudScore: document.getElementById('hud-score'),
     spectatorBanner: document.getElementById('spectator-banner'),
@@ -293,6 +294,90 @@
 
   function getActiveSoloBank() {
     return solo.isKidsMode ? kidsBank : questionBank;
+  }
+
+  // ==================== KIDS VOICE READER (HU-HU SPEECH SYNTHESIS) ====================
+  const speech = {
+    supported: typeof window !== 'undefined' && 'speechSynthesis' in window,
+    huVoice: null,
+    lastText: ''
+  };
+
+  function pickHungarianVoice() {
+    if (!speech.supported) return null;
+    const voices = window.speechSynthesis.getVoices() || [];
+    const hu = voices.find(v => /^hu[-_]?HU/i.test(v.lang))
+      || voices.find(v => /^hu/i.test(v.lang))
+      || voices.find(v => /hungarian|magyar/i.test(v.name));
+    if (hu) speech.huVoice = hu;
+    return speech.huVoice;
+  }
+  if (speech.supported) {
+    pickHungarianVoice();
+    window.speechSynthesis.onvoiceschanged = pickHungarianVoice;
+  }
+
+  function cleanTextForHungarianSpeech(text) {
+    return String(text || '')
+      .replace(/a\(z\)\s+([aáeéiíoóöőuúüűAÁEÉIÍOÓÖŐUÚÜŰ])/g, 'az $1')
+      .replace(/a\(z\)\s+/g, 'a ')
+      .replace(/\s*×\s*/g, ' szorozva ')
+      .replace(/\s*÷\s*/g, ' osztva ')
+      .replace(/\s*−\s*/g, ' mínusz ')
+      .replace(/\s*\+\s*/g, ' meg ')
+      .replace(/°C/g, ' Celsius-fok')
+      .replace(/\bcm\b/g, ' centiméter')
+      .replace(/\bmm\b/g, ' milliméter')
+      .replace(/\bdkg\b/g, ' dekagramm')
+      .replace(/\bdl\b/g, ' deciliter')
+      .replace(/\bFt\b/g, ' forint')
+      .replace(/[🧸🐾🌿🔢🧚🌍⚽🌟🏆∞]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function stopKidsSpeech() {
+    if (speech.supported) {
+      try { window.speechSynthesis.cancel(); } catch {}
+    }
+  }
+
+  function unlockKidsSpeech() {
+    if (!speech.supported) return;
+    try {
+      pickHungarianVoice();
+      const u = new SpeechSynthesisUtterance('');
+      u.lang = 'hu-HU';
+      u.volume = 0;
+      window.speechSynthesis.speak(u);
+    } catch {}
+  }
+
+  function speakKidsText(text, saveAsLast = true) {
+    if (!speech.supported || !solo.isKidsMode) return;
+    if (window.kvizSound && window.kvizSound.muted) return;
+    const cleaned = cleanTextForHungarianSpeech(text);
+    if (!cleaned) return;
+    if (saveAsLast) speech.lastText = cleaned;
+
+    stopKidsSpeech();
+    try {
+      const utter = new SpeechSynthesisUtterance(cleaned);
+      utter.lang = 'hu-HU';
+      const v = pickHungarianVoice();
+      if (v) utter.voice = v;
+      utter.rate = 0.93;
+      utter.pitch = 1.04;
+      window.speechSynthesis.speak(utter);
+    } catch {}
+  }
+
+  function buildKidsQuestionSpeech(q) {
+    if (!q) return '';
+    if (q.type === 'two_images') {
+      return `${q.question} Válassz a piros, vagy a kék kép közül!`;
+    }
+    return `${q.question} Piros: ${q.redText}. Kék: ${q.blueText}.`;
   }
 
   // Multiplayer state
@@ -671,6 +756,8 @@
 
     mode = 'solo';
     solo.isKidsMode = false;
+    stopKidsSpeech();
+    if (els.btnReadAloud) els.btnReadAloud.classList.add('hidden');
     clearSoloTimers();
     solo.roundNumber = 0;
     solo.score = 0;
@@ -704,6 +791,7 @@
 
   async function startKidsGame() {
     window.kvizSound.ensureContext();
+    unlockKidsSpeech();
     window.kvizSound.buttonClick('blue');
     try {
       const res = await fetch('/api/kids-questions');
@@ -717,6 +805,8 @@
 
     mode = 'solo';
     solo.isKidsMode = true;
+    stopKidsSpeech();
+    if (els.btnReadAloud) els.btnReadAloud.classList.remove('hidden');
     clearSoloTimers();
     solo.roundNumber = 0;
     solo.score = 0;
@@ -807,6 +897,8 @@
     if (solo.isKidsMode) {
       solo.timeLeft = null;
       setAlarm(els.catAlarm, null);
+      const catNames = options.map(c => c.name).join(', ');
+      setTimeout(() => speakKidsText(`Válassz témakört! ${catNames}.`), 250);
       return;
     }
 
@@ -904,8 +996,11 @@
     updateArcadeButtons(true, 'PIROS', 'KÉK');
     showScreen('question');
 
-    // NO countdown timer in Kids Mode!
-    if (solo.isKidsMode) return;
+    // NO countdown timer in Kids Mode — read question & answers aloud instead!
+    if (solo.isKidsMode) {
+      setTimeout(() => speakKidsText(buildKidsQuestionSpeech(q)), 260);
+      return;
+    }
 
     solo.timer = setInterval(() => {
       solo.timeLeft--;
@@ -935,6 +1030,10 @@
 
     if (isCorrect) {
       window.kvizSound.correct();
+      if (solo.isKidsMode) {
+        const praises = ['Ügyes vagy! Helyes válasz!', 'Szuper! Eltaláltad!', 'Bravó! Nagyon jó!'];
+        speakKidsText(praises[solo.roundNumber % praises.length], false);
+      }
       solo.score = getLadderValue(solo.roundNumber);
       els.hudScore.textContent = `${solo.score} PONT`;
       solo.timeout = setTimeout(() => {
@@ -944,15 +1043,21 @@
         } else {
           soloNextRound();
         }
-      }, 2200);
+      }, solo.isKidsMode ? 2400 : 2200);
     } else {
       window.kvizSound.wrong();
+      if (solo.isKidsMode) {
+        const rightAns = q.type === 'two_images'
+          ? (q.correct === 'red' ? 'a piros kép' : 'a kék kép')
+          : (q.correct === 'red' ? q.redText : q.blueText);
+        speakKidsText(`Nem baj! A helyes válasz: ${rightAns}.`, false);
+      }
       solo.score = 0;
       els.hudScore.textContent = `0 PONT`;
       solo.timeout = setTimeout(() => {
         els.resultOverlay.classList.add('hidden');
         soloFinish(false);
-      }, 2400);
+      }, solo.isKidsMode ? 3200 : 2400);
     }
   }
 
@@ -975,7 +1080,10 @@
     window.kvizSound.decisionOpen();
     showScreen('decision');
 
-    if (solo.isKidsMode) return;
+    if (solo.isKidsMode) {
+      setTimeout(() => speakKidsText(`Szuper! Már ${solo.score} pontod van. Megállsz, vagy mész tovább? Piros: Megáll. Kék: Tovább.`), 300);
+      return;
+    }
 
     solo.timer = setInterval(() => {
       solo.timeLeft--;
@@ -1490,6 +1598,9 @@
 
   function returnToHome() {
     clearSoloTimers();
+    stopKidsSpeech();
+    solo.isKidsMode = false;
+    if (els.btnReadAloud) els.btnReadAloud.classList.add('hidden');
     if (mode === 'multiplayer' && socket) {
       socket.emit('room:leave');
     }
@@ -1505,7 +1616,19 @@
   els.btnMute.addEventListener('click', () => {
     const muted = window.kvizSound.toggleMute();
     els.btnMute.textContent = muted ? '🔇' : '🔊';
+    if (muted) stopKidsSpeech();
   });
+
+  if (els.btnReadAloud) {
+    els.btnReadAloud.addEventListener('click', () => {
+      if (!solo.isKidsMode) return;
+      if (solo.phase === 'question' && solo.currentQuestion) {
+        speakKidsText(buildKidsQuestionSpeech(solo.currentQuestion));
+      } else if (speech.lastText) {
+        speakKidsText(speech.lastText, false);
+      }
+    });
+  }
 
   els.btnHomeTop.addEventListener('click', returnToHome);
   els.btnBackHome.addEventListener('click', returnToHome);

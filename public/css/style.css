@@ -1677,3 +1677,17 @@ html, body {
   margin-top: 1px;
   opacity: 0.95;
 }
+
+.hud-speak-btn {
+  background: linear-gradient(180deg, #43e97b 0%, #16b877 100%);
+  border: 1.5px solid #d6ffe5;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 0 10px rgba(67, 233, 123, 0.5);
+  transition: transform 0.12s, filter 0.15s;
+}
+.hud-speak-btn:hover { filter: brightness(1.1); }
+.hud-speak-btn:active { transform: scale(0.95); }
